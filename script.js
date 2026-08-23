@@ -7,10 +7,7 @@ const VARIANT_LABELS = {
 };
 
 const CROSS_SELL = [
-  { id: "cs1", name: "Colágeno Marino", price: 38000, emoji: "✨" },
-  { id: "cs2", name: "Magnesio Nocturno", price: 27000, emoji: "🌙" },
-  { id: "cs3", name: "Vitamina D3+K2", price: 22000, emoji: "☀️" },
-  { id: "cs4", name: "Omega-3 Algas", price: 33000, emoji: "🐟" },
+  { id: "cs1", name: "Crema Calmante Anti-Rojeces para Rosácea", price: 35000, emoji: "🧴" },
 ];
 
 const CART_KEY = "naturcalm_ar_cart";
