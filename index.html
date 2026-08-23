@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurora Studio — Tienda</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#" class="logo">Aurora Studio</a>
+    <nav class="main-nav">
+      <a href="#productos">Productos</a>
+      <a href="#coleccion">Colección</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="cart-btn" id="cartToggle" aria-label="Abrir carrito">
+      🛍️ <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <p class="eyebrow">Nueva colección</p>
+    <h1>Diseño simple.<br>Calidad que se nota.</h1>
+    <p class="hero-sub">Piezas hechas a mano, pensadas para durar. Envío gratis en pedidos superiores a 50€.</p>
+    <a href="#productos" class="btn btn-primary">Ver productos</a>
+  </div>
+</section>
+
+<section class="products" id="productos">
+  <div class="container">
+    <div class="section-head">
+      <h2>Más vendidos</h2>
+      <p>Selección de nuestros clientes</p>
+    </div>
+    <div class="product-grid" id="productGrid"></div>
+  </div>
+</section>
+
+<section class="banner" id="coleccion">
+  <div class="container banner-inner">
+    <div class="banner-text">
+      <h2>Colección Otoño</h2>
+      <p>Tonos cálidos, materiales naturales y acabados artesanales para esta temporada.</p>
+      <a href="#productos" class="btn btn-outline">Explorar colección</a>
+    </div>
+  </div>
+</section>
+
+<section class="perks">
+  <div class="container perks-grid">
+    <div class="perk">
+      <span class="perk-icon">🚚</span>
+      <h3>Envío gratis</h3>
+      <p>En pedidos superiores a 50€</p>
+    </div>
+    <div class="perk">
+      <span class="perk-icon">↩️</span>
+      <h3>Devoluciones fáciles</h3>
+      <p>30 días para cambios y devoluciones</p>
+    </div>
+    <div class="perk">
+      <span class="perk-icon">🔒</span>
+      <h3>Pago seguro</h3>
+      <p>Tus datos siempre protegidos</p>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter" id="nosotros">
+  <div class="container newsletter-inner">
+    <h2>Únete a nuestra lista</h2>
+    <p>Recibe novedades, descuentos y lanzamientos exclusivos.</p>
+    <form id="newsletterForm" class="newsletter-form">
+      <input type="email" id="newsletterEmail" placeholder="tu@email.com" required>
+      <button type="submit" class="btn btn-primary">Suscribirme</button>
+    </form>
+    <p class="form-msg" id="formMsg"></p>
+  </div>
+</section>
+
+<footer class="site-footer" id="contacto">
+  <div class="container footer-inner">
+    <div>
+      <a href="#" class="logo">Aurora Studio</a>
+      <p>Diseño y artesanía desde 2020.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Tienda</h4>
+      <a href="#productos">Productos</a>
+      <a href="#coleccion">Colección</a>
+    </div>
+    <div class="footer-col">
+      <h4>Ayuda</h4>
+      <a href="#">Envíos</a>
+      <a href="#">Devoluciones</a>
+      <a href="#">Contacto</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; 2026 Aurora Studio. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>Tu carrito</h3>
+    <button id="cartClose" aria-label="Cerrar carrito">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">0,00 €</span>
+    </div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">Finalizar compra</button>
+  </div>
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>
