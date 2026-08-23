@@ -182,6 +182,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .product-info h1 { font-size: 2.2rem; }
+.hero-tagline { font-weight: 700; color: var(--accent); font-size: 1.05rem; margin-bottom: 4px; }
 .hero-sub { font-size: 1rem; }
 
 .stars-row { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; font-size: 0.9rem; }
@@ -332,6 +333,7 @@ a { color: inherit; text-decoration: none; }
   text-align: center;
 }
 .difference-icon { font-size: 2rem; display: block; margin-bottom: 10px; }
+.difference-icon-img { width: 56px; height: 56px; margin-bottom: 12px; }
 .difference-card h3 { color: #fff; font-size: 1.05rem; font-family: -apple-system, sans-serif; }
 .difference-card p { color: #e8d9df; font-size: 0.9rem; }
 
