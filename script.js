@@ -1,9 +1,9 @@
 const MAIN_PRODUCT = { id: "pro20", name: "Pro 20+" };
 
 const VARIANT_LABELS = {
-  "1": "1 Frasco",
-  "3": "3 Frascos",
-  "6": "6 Frascos",
+  "1": "1 Unidad",
+  "2+1": "2+1 (3 unidades)",
+  "3+2": "3+2 (5 unidades)",
 };
 
 const CROSS_SELL = [
@@ -15,7 +15,7 @@ const CROSS_SELL = [
 
 const CART_KEY = "naturcalm_ar_cart";
 let selectedVariant = "1";
-let selectedPrice = 42000;
+let selectedPrice = 34900;
 let quantity = 1;
 
 function loadCart() {
