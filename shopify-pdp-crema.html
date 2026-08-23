@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NaturCalm Pro 20+</title>
+<title>NaturCalm Crema Calmante</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -398,15 +398,6 @@ a { color: inherit; }
   text-align: center;
 }
 .pillar img { width: 46px; height: 46px; object-fit: contain; margin: 0 auto 16px; }
-.ic {
-  width: 50px; height: 50px;
-  border-radius: 14px;
-  background: var(--wine);
-  display: grid;
-  place-items: center;
-  margin: 0 auto 18px;
-}
-.ic svg { width: 24px; height: 24px; }
 .pillar h3 { margin-bottom: 6px; }
 .pillar p { font-size: .88rem; margin: 0; }
 
@@ -674,133 +665,206 @@ a { color: inherit; }
   .gallery-thumbs { grid-template-columns: repeat(5, 1fr); gap: 7px; }
   .btn { padding: 16px 22px; font-size: .95rem; }
 }
+
+/* ---------- Específico de la crema ---------- */
+
+/* Placeholder de fotografía de producto (reemplazar por fotos reales) */
+.photo-ph {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--r-lg);
+  border: 1px dashed #D8C7B4;
+  background: linear-gradient(160deg, var(--cream-2) 0%, #fff 100%);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 34px;
+}
+.photo-ph-inner { max-width: 260px; }
+.photo-ph .ph-mark {
+  font-family: var(--font-head);
+  font-size: 1.45rem;
+  color: var(--wine);
+  margin-bottom: 4px;
+  display: block;
+}
+.photo-ph .ph-sub {
+  font-size: .74rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 18px;
+}
+.photo-ph p { font-size: .84rem; margin: 0; }
+.photo-ph svg { margin: 0 auto 14px; display: block; }
+
+/* Iconos vectoriales propios */
+.ic {
+  width: 50px; height: 50px;
+  border-radius: 14px;
+  background: var(--wine);
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+}
+.ic svg { width: 24px; height: 24px; }
+
+/* Bloque de ingrediente destacado */
+.ing-list { display: grid; gap: 14px; margin-top: 34px; }
+.ing {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 22px 24px;
+}
+.ing-name {
+  font-family: var(--font-head);
+  font-size: 1.18rem;
+  color: var(--wine);
+  display: block;
+  margin-bottom: 2px;
+}
+.ing-role {
+  font-size: .7rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 10px;
+}
+.ing p { margin: 0; font-size: .93rem; }
+
+/* Aviso de prueba de parche */
+.patch {
+  margin-top: 28px;
+  background: rgba(184,145,47,.08);
+  border: 1px solid rgba(184,145,47,.3);
+  border-radius: var(--r-md);
+  padding: 20px 22px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.patch svg { flex: none; margin-top: 2px; }
+.patch p { margin: 0; font-size: .9rem; color: var(--ink); }
+.patch strong { display: block; margin-bottom: 3px; }
+
+/* Cross-sell */
+.xsell {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 26px;
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 28px;
+  margin-top: 40px;
+}
+@media (min-width: 760px) { .xsell { grid-template-columns: 190px 1fr auto; } }
+.xsell img { border-radius: var(--r-md); width: 100%; }
+.xsell h3 { margin-bottom: 6px; }
+.xsell p { margin: 0; font-size: .92rem; }
 </style>
 </head>
 <body>
 
 <!-- ============================================================
-     1 · HERO  +  2 · PRECIO Y OFERTA  +  3 · SELECTOR  +  4 · CTA
+     1 · HERO  ·  2 · PRECIO  ·  3 · CANTIDAD  ·  4 · CTA
      ============================================================ -->
 <section class="hero">
   <div class="wrap hero-grid">
 
-    <!-- Galería (imágenes propias de NaturCalm) -->
+    <!-- ========================================================
+         GALERÍA — PLACEHOLDER
+         Este producto todavía no tiene fotografía cargada.
+         Cuando subas las fotos a Shopify, reemplazá este bloque
+         por la misma estructura .gallery-main / .gallery-thumbs
+         que usa la página de Pro 20+.
+         ======================================================== -->
     <div>
-      <div class="gallery-main">
-        <span class="gallery-tag">Pre · Pro · Posbiótico</span>
-        <img id="galMain"
-             src="https://cdn.shopify.com/s/files/1/0868/2536/9793/files/product-bottle-box.png?v=1787509122"
-             alt="Frasco y caja de NaturCalm Pro 20+, probiótico en gotas de 50 ml">
-      </div>
-      <div class="gallery-thumbs" id="galThumbs">
-        <button class="thumb" type="button" aria-current="true"
-                data-src="https://cdn.shopify.com/s/files/1/0868/2536/9793/files/product-bottle-box.png?v=1787509122">
-          <img src="https://cdn.shopify.com/s/files/1/0868/2536/9793/files/product-bottle-box.png?v=1787509122" alt="Frasco y caja">
-        </button>
-        <button class="thumb" type="button"
-                data-src="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/hero-bottle-hand.png">
-          <img src="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/hero-bottle-hand.png" alt="Frasco en mano">
-        </button>
-        <button class="thumb" type="button"
-                data-src="https://cdn.shopify.com/s/files/1/0868/2536/9793/files/step2-dropper-mouth.png?v=1787509121">
-          <img src="https://cdn.shopify.com/s/files/1/0868/2536/9793/files/step2-dropper-mouth.png?v=1787509121" alt="Tomando la gota diaria">
-        </button>
-        <button class="thumb" type="button"
-                data-src="https://cdn.shopify.com/s/files/1/0868/2536/9793/files/card-strains-complex-natcalm.png?v=1787509122">
-          <img src="https://cdn.shopify.com/s/files/1/0868/2536/9793/files/card-strains-complex-natcalm.png?v=1787509122" alt="Las 4 cepas probióticas">
-        </button>
-        <button class="thumb" type="button"
-                data-src="https://cdn.shopify.com/s/files/1/0868/2536/9793/files/card-features-natcalm.png?v=1787509121">
-          <img src="https://cdn.shopify.com/s/files/1/0868/2536/9793/files/card-features-natcalm.png?v=1787509121" alt="Beneficios NaturCalm">
-        </button>
+      <div class="photo-ph">
+        <div class="photo-ph-inner">
+          <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#B8912F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <path d="M21 15l-5-5L5 21"/>
+          </svg>
+          <span class="ph-mark">Crema Calmante</span>
+          <span class="ph-sub">75 g</span>
+          <p>Fotografía de producto pendiente de carga.</p>
+        </div>
       </div>
     </div>
 
     <!-- Panel de compra -->
     <div class="buybox">
-      <p class="kicker">NaturCalm · Suplemento diario</p>
-      <h1>Pro 20+</h1>
-      <p class="hero-sub">Equilibrio intestinal en una gota. Para pieles que reaccionan a todo.</p>
+      <p class="kicker">NaturCalm · Cuidado facial</p>
+      <h1>Crema Calmante</h1>
+      <p class="hero-sub">Anti-rojeces, sin esteroides. Para piel sensible que se irrita con todo.</p>
 
-      <p>Si tu piel se enciende con el calor, el estrés o una comida, el problema pocas veces empieza en la cara.
-        Pro 20+ es un probiótico líquido de 1 ml diario, formulado para acompañar el equilibrio de tu microbiota
-        intestinal — la base sobre la que se apoya una piel menos reactiva.</p>
+      <p>Una crema de uso diario formulada para pieles reactivas: hidrata, ayuda a aliviar la sensación
+        de ardor y molestia, y acompaña la función de barrera de la piel frente a los factores que
+        suelen desencadenar los brotes — calor, cambios bruscos de clima, estrés.</p>
 
       <ul class="hero-bullets">
-        <li><strong>20 mil millones de UFC</strong> por dosis diaria</li>
-        <li><strong>4 cepas probióticas</strong> con roles diferenciados</li>
-        <li>Fermentado con <strong>10 superalimentos</strong> ricos en polifenoles</li>
-        <li>Sin azúcares añadidos · sin gluten · apto vegano</li>
+        <li><strong>Libre de esteroides</strong> — pensada para uso diario y prolongado</li>
+        <li>Sin parabenos ni sulfatos</li>
+        <li>Con <strong>niacinamida, centella asiática y aceite de jojoba</strong></li>
+        <li>Hipoalergénica, apta para piel sensible</li>
       </ul>
 
       <hr class="divider">
 
-      <!-- 2 · Precio y oferta  ·  3 · Selector de cantidad -->
+      <!-- 2 · Precio  ·  3 · Cantidad -->
       <div class="offer-head">
-        <p class="offer-title">Elegí tu plan</p>
-        <p class="offer-note">Cada frasco rinde 50 días</p>
+        <p class="offer-title">Cantidad</p>
+        <p class="offer-note">Pote de 75 g</p>
       </div>
 
       <div class="packs" id="packs">
-
         <div class="pack">
-          <input type="radio" name="pack" id="pack1"
-                 data-variant="50521491046593"
-                 data-total="$34.900">
-          <label for="pack1">
+          <input type="radio" name="qty" id="qty1" checked data-qty="1" data-total="$35.000">
+          <label for="qty1">
             <span class="radio"></span>
             <span>
-              <span class="pack-name">1 frasco</span>
-              <span class="pack-meta">50 días · $698 por día</span>
+              <span class="pack-name">1 unidad</span>
+              <span class="pack-meta">75 g</span>
             </span>
-            <span class="pack-price">
-              <span class="pack-now">$34.900</span>
-            </span>
+            <span class="pack-price"><span class="pack-now">$35.000</span></span>
           </label>
         </div>
-
         <div class="pack">
-          <span class="pack-flag">Más elegido</span>
-          <input type="radio" name="pack" id="pack3" checked
-                 data-variant="50521491079361"
-                 data-total="$54.900">
-          <label for="pack3">
+          <input type="radio" name="qty" id="qty2" data-qty="2" data-total="$70.000">
+          <label for="qty2">
             <span class="radio"></span>
             <span>
-              <span class="pack-name">3 frascos</span>
-              <span class="pack-meta">150 días · $366 por día</span>
+              <span class="pack-name">2 unidades</span>
+              <span class="pack-meta">150 g en total</span>
             </span>
-            <span class="pack-price">
-              <span class="pack-now">$18.300<small>/u</small></span>
-              <span class="pack-was">$34.900</span>
-            </span>
+            <span class="pack-price"><span class="pack-now">$70.000</span></span>
           </label>
         </div>
-
         <div class="pack">
-          <span class="pack-flag">Mejor precio</span>
-          <input type="radio" name="pack" id="pack5"
-                 data-variant="50521491112129"
-                 data-total="$78.900">
-          <label for="pack5">
+          <input type="radio" name="qty" id="qty3" data-qty="3" data-total="$105.000">
+          <label for="qty3">
             <span class="radio"></span>
             <span>
-              <span class="pack-name">5 frascos</span>
-              <span class="pack-meta">250 días · $316 por día</span>
+              <span class="pack-name">3 unidades</span>
+              <span class="pack-meta">225 g en total</span>
             </span>
-            <span class="pack-price">
-              <span class="pack-now">$15.780<small>/u</small></span>
-              <span class="pack-was">$34.900</span>
-            </span>
+            <span class="pack-price"><span class="pack-now">$105.000</span></span>
           </label>
         </div>
-
       </div>
 
-      <!-- 4 · CTA de compra (usa el carrito nativo de Shopify) -->
+      <!-- 4 · CTA — carrito nativo de Shopify -->
       <a class="btn btn--primary btn--block" id="buyBtn" target="_top"
-         href="/cart/add?id=50521491079361&quantity=1">
-        Agregar al carrito — <span id="buyTotal">$54.900</span>
+         href="/cart/add?id=50521487933633&quantity=1">
+        Agregar al carrito — <span id="buyTotal">$35.000</span>
       </a>
       <p class="cta-price">Pago seguro procesado por Shopify</p>
 
@@ -819,27 +883,28 @@ a { color: inherit; }
         </div>
       </div>
 
-      <!-- Acordeón informativo -->
       <div class="acc">
         <details open>
           <summary>Qué contiene</summary>
           <div class="acc-body">
-            <p>Complejo probiótico de 4 cepas (20 mil millones de UFC por dosis) sobre una base de
-              10 superalimentos fermentados. Sin azúcares añadidos, sin gluten, apto vegano.
-              Frasco de 50 ml con gotero dosificador.</p>
+            <p>Crema facial con niacinamida, centella asiática y aceite de jojoba.
+              Sin esteroides, sin parabenos y sin sulfatos. Presentación de 75 g.</p>
           </div>
         </details>
         <details>
           <summary>Modo de uso</summary>
           <div class="acc-body">
-            <p>Agitá el frasco, cargá el gotero hasta la marca de 1 ml y tomalo directamente
-              o mezclado con agua. Una vez al día, preferentemente por la mañana.</p>
+            <p>Sobre la piel limpia y seca, aplicá una capa fina sobre las zonas a tratar
+              y masajeá suavemente hasta absorber.</p>
+            <!-- PLACEHOLDER: confirmar la frecuencia de aplicación indicada en el rótulo. -->
           </div>
         </details>
         <details>
-          <summary>Conservación</summary>
+          <summary>Precauciones</summary>
           <div class="acc-body">
-            <p>No requiere refrigeración. Conservar en un lugar fresco y seco, lejos de la luz solar directa.</p>
+            <p>Uso externo. Realizá una prueba de parche antes del primer uso. Evitá el contacto
+              con los ojos. Suspendé el uso si aparece irritación y consultá a tu dermatólogo/a
+              si los síntomas persisten.</p>
           </div>
         </details>
         <details>
@@ -860,30 +925,30 @@ a { color: inherit; }
      ============================================================ -->
 <section class="section section--white">
   <div class="wrap">
-    <p class="eyebrow center">Por qué Pro 20+</p>
-    <h2 class="center">Pensado para piel sensible y reactiva</h2>
-    <p class="lede center">Cuatro decisiones de formulación que definen el producto.</p>
+    <p class="eyebrow center">Por qué esta crema</p>
+    <h2 class="center">Formulada para no agregar irritación</h2>
+    <p class="lede center">Cuatro decisiones que definen la fórmula.</p>
 
     <div class="pillars">
       <div class="pillar">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="7.5" r="2.6"/><circle cx="17" cy="7.5" r="2.6"/><circle cx="12" cy="16.5" r="2.6"/><path d="M9.6 7.5h4.8M8.3 9.8l2.4 4.4M15.7 9.8l-2.4 4.4"/></svg></div>
-        <h3>Cepas diferenciadas</h3>
-        <p>Cada una de las 4 cepas fue elegida por un rol distinto, no para inflar el número de UFC.</p>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></div>
+        <h3>Sin esteroides</h3>
+        <p>Pensada para uso diario y sostenido, sin los límites de tiempo de un corticoide.</p>
       </div>
       <div class="pillar">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2s5.2 5.9 5.2 9.3a5.2 5.2 0 0 1-10.4 0c0-3.4 5.2-9.3 5.2-9.3z"/></svg></div>
-        <h3>1 ml, sin tragar nada</h3>
-        <p>Formato líquido con gotero. Sin cápsulas grandes ni polvos que hay que disolver.</p>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Sin parabenos ni sulfatos</h3>
+        <p>Fórmula corta, sin los tensioactivos agresivos que suelen resecar la piel reactiva.</p>
       </div>
       <div class="pillar">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 19.5C4.5 10.5 10.5 4.5 19.5 4.5c0 9-6 15-15 15z"/><path d="M4.5 19.5c2.4-4.4 5.6-7.2 9.5-8.8"/></svg></div>
-        <h3>Base de fruta real</h3>
-        <p>10 superalimentos fermentados como matriz, en lugar de rellenos de azúcar o almidón.</p>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3.5 3.5 5 6 5 8.5A5 5 0 0 1 7 11.5C7 9 8.5 6.5 12 3z"/></svg></div>
+        <h3>Activos con función</h3>
+        <p>Niacinamida, centella asiática y jojoba, cada uno con un rol definido en la fórmula.</p>
       </div>
       <div class="pillar">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.8"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg></div>
-        <h3>Fórmula sobria</h3>
-        <p>Sin azúcares añadidos, sin gluten y sin ingredientes que no cumplan una función.</p>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21.2l8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
+        <h3>Hipoalergénica</h3>
+        <p>Formulada específicamente para piel sensible y con tendencia a reaccionar.</p>
       </div>
     </div>
   </div>
@@ -895,41 +960,32 @@ a { color: inherit; }
 <section class="section section--cream2">
   <div class="wrap">
     <p class="eyebrow center">La fórmula en números</p>
-    <h2 class="center">Lo que hay dentro del frasco</h2>
+    <h2 class="center">Lo que hay en el pote</h2>
 
     <div class="proof-grid">
       <div class="proof-card">
-        <span class="proof-num">20 mil M</span>
-        <p class="proof-label">UFC por dosis diaria</p>
+        <span class="proof-num">75 g</span>
+        <p class="proof-label">Contenido por unidad</p>
       </div>
       <div class="proof-card">
-        <span class="proof-num">4</span>
-        <p class="proof-label">Cepas probióticas</p>
+        <span class="proof-num">3</span>
+        <p class="proof-label">Activos principales</p>
       </div>
       <div class="proof-card">
-        <span class="proof-num">10</span>
-        <p class="proof-label">Superalimentos fermentados</p>
-      </div>
-      <div class="proof-card">
-        <span class="proof-num">50</span>
-        <p class="proof-label">Días por frasco</p>
+        <span class="proof-num">0</span>
+        <p class="proof-label">Esteroides, parabenos y sulfatos</p>
       </div>
     </div>
 
     <!-- ========================================================
          PLACEHOLDER — RESEÑAS
-         Cuando tengas reseñas reales de clientes, reemplazá este
-         bloque. Formato sugerido por reseña:
-           <div class="proof-card">
-             <p>"Texto textual de la reseña"</p>
-             <strong>Nombre · Compra verificada</strong>
-           </div>
-         No publiques reseñas que no provengan de clientes reales.
+         Reemplazar cuando haya reseñas reales de clientes.
+         No publicar reseñas que no provengan de compras reales.
          ======================================================== -->
     <div class="reviews-empty">
       <h3>Todavía no hay reseñas publicadas</h3>
-      <p>Pro 20+ es un lanzamiento reciente. Vamos a publicar acá las opiniones de clientas
-        y clientes reales a medida que lleguen — sin editarlas.</p>
+      <p>Vamos a publicar acá las opiniones de clientas y clientes reales
+        a medida que lleguen — sin editarlas.</p>
     </div>
   </div>
 </section>
@@ -938,153 +994,114 @@ a { color: inherit; }
      7 · EXPLICACIÓN DEL PRODUCTO
      ============================================================ -->
 <section class="section section--white">
-  <div class="wrap split">
-    <div>
-      <p class="eyebrow">El punto de partida</p>
-      <h2>Tu piel refleja lo que pasa en tu intestino</h2>
-      <p>La microbiota intestinal participa en procesos que van bastante más allá de la digestión:
-        interviene en la regulación inmune y en el nivel de inflamación general del organismo.</p>
-      <p>Cuando ese equilibrio se altera, la piel suele ser uno de los lugares donde se nota — sobre todo
-        en pieles que ya son reactivas de base. Por eso Pro 20+ no actúa sobre la superficie:
-        trabaja sobre el terreno.</p>
-
-      <ol class="steps-list">
-        <li>
-          <strong>Se repuebla</strong>
-          <span>Las 4 cepas llegan al intestino y aportan microorganismos beneficiosos.</span>
-        </li>
-        <li>
-          <strong>Se alimenta</strong>
-          <span>Los polifenoles de los 10 superalimentos funcionan como sustrato prebiótico.</span>
-        </li>
-        <li>
-          <strong>Se sostiene</strong>
-          <span>La toma diaria mantiene el aporte constante en el tiempo, que es donde está el efecto.</span>
-        </li>
-      </ol>
+  <div class="wrap">
+    <div style="max-width:720px;">
+      <p class="eyebrow">Qué hace</p>
+      <h2>Calmar sin agredir</h2>
+      <p>La piel reactiva tiene un problema de fondo: muchos productos que prometen calmarla
+        terminan sumando irritación. Esta crema se formuló al revés — primero sacando todo
+        lo que sobra, y después eligiendo activos con una función clara.</p>
     </div>
-    <div class="split-media">
-      <img src="https://cdn.shopify.com/s/files/1/0868/2536/9793/files/card-gut-talks-natcalm.png?v=1787509121"
-           alt="Diagrama NaturCalm sobre la relación entre intestino, digestión, piel y ánimo">
+
+    <ol class="steps-list" style="max-width:720px;">
+      <li>
+        <strong>Hidrata</strong>
+        <span>Una piel deshidratada reacciona más. La base emoliente apunta a sostener
+          el nivel de hidratación durante el día.</span>
+      </li>
+      <li>
+        <strong>Alivia la sensación de ardor</strong>
+        <span>Los activos calmantes buscan reducir esa sensación de tirantez e incomodidad
+          típica de los días en que la piel está más sensible.</span>
+      </li>
+      <li>
+        <strong>Acompaña la barrera cutánea</strong>
+        <span>Una barrera en mejor estado tolera mejor los disparadores habituales:
+          calor, viento, cambios de temperatura, estrés.</span>
+      </li>
+    </ol>
+
+    <div class="patch" style="max-width:720px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B8912F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16.5v.01"/></svg>
+      <p><strong>Es un cosmético, no un medicamento.</strong>
+        No trata ni cura la rosácea ni ninguna otra afección de la piel. Si tenés un
+        diagnóstico dermatológico, esta crema puede acompañar tu rutina, pero no reemplaza
+        el tratamiento que te indicó tu profesional.</p>
     </div>
   </div>
 </section>
 
 <!-- ============================================================
-     8 · INGREDIENTES — cepas
+     8 · INGREDIENTES
      ============================================================ -->
 <section class="section section--wine">
   <div class="wrap">
     <p class="eyebrow center">Ingredientes</p>
-    <h2 class="center">Las 4 cepas</h2>
-    <p class="lede center">Cada cepa aporta 5 mil millones de UFC. Ninguna está repetida:
-      las cuatro cumplen funciones distintas dentro de la fórmula.</p>
+    <h2 class="center">Los 3 activos</h2>
+    <p class="lede center">Cada uno cumple una función distinta dentro de la fórmula.</p>
 
-    <div class="strain-list">
-      <div class="strain">
-        <div>
-          <span class="strain-name">Lacticaseibacillus rhamnosus</span>
-          <div class="strain-tags"><span>Barrera intestinal</span><span>Eje intestino-piel</span></div>
-        </div>
-        <span class="strain-cfu">5 mil M</span>
+    <div class="ing-list" style="max-width:760px;margin-left:auto;margin-right:auto;">
+      <div class="ing">
+        <span class="ing-name">Niacinamida</span>
+        <span class="ing-role">Barrera cutánea</span>
+        <p>Forma parte de las vitaminas del grupo B. Es uno de los activos más usados en
+          cosmética para pieles sensibles por su aporte al cuidado de la barrera de la piel
+          y su buena tolerancia.</p>
       </div>
-      <div class="strain">
-        <div>
-          <span class="strain-name">Lactiplantibacillus plantarum</span>
-          <div class="strain-tags"><span>Soporte inmune</span><span>Equilibrio de flora</span></div>
-        </div>
-        <span class="strain-cfu">5 mil M</span>
+      <div class="ing">
+        <span class="ing-name">Centella asiática</span>
+        <span class="ing-role">Efecto calmante</span>
+        <p>Extracto vegetal de uso tradicional prolongado en cuidado de la piel, muy asociado
+          a formulaciones pensadas para pieles irritadas y reactivas.</p>
       </div>
-      <div class="strain">
-        <div>
-          <span class="strain-name">Lacticaseibacillus paracasei</span>
-          <div class="strain-tags"><span>Estrés oxidativo</span><span>Antioxidante</span></div>
-        </div>
-        <span class="strain-cfu">5 mil M</span>
-      </div>
-      <div class="strain">
-        <div>
-          <span class="strain-name">Bifidobacterium longum</span>
-          <div class="strain-tags"><span>Eje intestino-cerebro</span><span>Confort digestivo</span></div>
-        </div>
-        <span class="strain-cfu">5 mil M</span>
+      <div class="ing">
+        <span class="ing-name">Aceite de jojoba</span>
+        <span class="ing-role">Emoliente</span>
+        <p>Su composición es cercana a la del sebo natural de la piel, lo que lo vuelve un
+          emoliente de textura liviana y buena afinidad cutánea.</p>
       </div>
     </div>
 
-    <p class="strain-total">Total por dosis diaria <strong>20 mil millones de UFC</strong></p>
-
-    <!-- PLACEHOLDER: si contás con referencias bibliográficas o estudios propios
-         sobre estas cepas, este es el lugar para citarlos. No agregar afirmaciones
-         clínicas sin respaldo documental. -->
-  </div>
-</section>
-
-<!-- ============================================================
-     8b · INGREDIENTES — superalimentos
-     ============================================================ -->
-<section class="section section--white">
-  <div class="wrap split split--rev">
-    <div class="split-media">
-      <img src="https://cdn.shopify.com/s/files/1/0868/2536/9793/files/card-strains-complex-natcalm.png?v=1787509122"
-           alt="Complejo de cepas y superalimentos de NaturCalm Pro 20+">
-    </div>
-    <div>
-      <p class="eyebrow">La base</p>
-      <h2>10 superalimentos, un solo fermentado</h2>
-      <p>En lugar de una base neutra de azúcar o almidón, las cepas se cultivan sobre una matriz
-        de 10 frutas y vegetales ricos en polifenoles. El proceso de fermentación es lo que integra
-        todo en un único líquido.</p>
-
-      <ul class="sf-list">
-        <li><span class="sf-name">Aronia</span><span class="sf-tag">Antocianinas</span></li>
-        <li><span class="sf-name">Ciruela Kakadu</span><span class="sf-tag">Vitamina C</span></li>
-        <li><span class="sf-name">Saúco</span><span class="sf-tag">Flavonoides</span></li>
-        <li><span class="sf-name">Arándano</span><span class="sf-tag">Antocianinas</span></li>
-        <li><span class="sf-name">Granada</span><span class="sf-tag">Punicalaginas</span></li>
-        <li><span class="sf-name">Arándano rojo</span><span class="sf-tag">Proantocianidinas</span></li>
-        <li><span class="sf-name">Uva blanca con semilla</span><span class="sf-tag">OPC</span></li>
-        <li><span class="sf-name">Manzana</span><span class="sf-tag">Pectina</span></li>
-        <li><span class="sf-name">Cacao</span><span class="sf-tag">Flavanoles</span></li>
-        <li><span class="sf-name">Cúrcuma</span><span class="sf-tag">Curcumina</span></li>
-      </ul>
-
-      <!-- PLACEHOLDER: completar con la lista de ingredientes tal como figura
-           en el rótulo aprobado del producto (INCI / rotulado nutricional). -->
-      <p class="note">La lista completa de ingredientes y la información nutricional
-        figuran en el rótulo del envase.</p>
-    </div>
+    <!-- PLACEHOLDER: reemplazar por la lista INCI completa tal como figura
+         en el rótulo aprobado del producto. -->
+    <p class="strain-total" style="margin-top:26px;">
+      La lista completa de ingredientes figura en el envase
+    </p>
   </div>
 </section>
 
 <!-- ============================================================
      9 · CÓMO USARLO
      ============================================================ -->
-<section class="section section--cream2">
-  <div class="wrap split">
-    <div>
-      <p class="eyebrow">Cómo usarlo</p>
-      <h2>Diez segundos, una vez por día</h2>
-      <p>No hay que mezclar, medir con balanza ni tomar varias cápsulas. El gotero ya viene
-        marcado en 1 ml, que es exactamente la dosis diaria.</p>
-
-      <ol class="steps-list">
-        <li>
-          <strong>Agitá el frasco</strong>
-          <span>La fórmula se asienta entre tomas. Un movimiento corto alcanza.</span>
-        </li>
-        <li>
-          <strong>Cargá hasta 1 ml</strong>
-          <span>Apretá el bulbo del gotero y soltá hasta llegar a la marca.</span>
-        </li>
-        <li>
-          <strong>Tomalo</strong>
-          <span>Directo en la boca o mezclado con agua, jugo o tu batido de la mañana.</span>
-        </li>
-      </ol>
+<section class="section section--white">
+  <div class="wrap">
+    <div style="max-width:720px;">
+      <p class="eyebrow">Cómo usarla</p>
+      <h2>Tres pasos, empezando por la prueba de parche</h2>
+      <p>En piel sensible el primer uso importa. Antes de aplicarla en la cara, probala
+        en una zona chica.</p>
     </div>
-    <div class="split-media">
-      <img src="https://cdn.shopify.com/s/files/1/0868/2536/9793/files/step2-dropper-mouth.png?v=1787509121"
-           alt="Persona tomando la dosis diaria de 1 ml de NaturCalm Pro 20+">
+
+    <ol class="steps-list" style="max-width:720px;">
+      <li>
+        <strong>Prueba de parche</strong>
+        <span>Aplicá una pequeña cantidad en la cara interna del antebrazo y esperá 24 horas
+          antes del primer uso en el rostro.</span>
+      </li>
+      <li>
+        <strong>Limpiá y secá</strong>
+        <span>Sobre piel limpia y seca. Secá con toques suaves, sin frotar.</span>
+      </li>
+      <li>
+        <strong>Aplicá una capa fina</strong>
+        <span>Sobre las zonas a tratar, masajeando con suavidad hasta que se absorba.</span>
+      </li>
+    </ol>
+
+    <div class="patch" style="max-width:720px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B8912F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16.5v.01"/></svg>
+      <p><strong>Si aparece irritación, suspendé el uso.</strong>
+        Evitá el contacto con los ojos. Ante cualquier duda, consultá con tu dermatólogo/a.</p>
     </div>
   </div>
 </section>
@@ -1092,55 +1109,45 @@ a { color: inherit; }
 <!-- ============================================================
      10 · BENEFICIOS EN EL TIEMPO
      ============================================================ -->
-<section class="section section--white">
+<section class="section section--cream2">
   <div class="wrap">
     <p class="eyebrow center">Qué esperar</p>
-    <h2 class="center">Es una rutina, no un tratamiento exprés</h2>
-    <p class="lede center">Los probióticos actúan por acumulación. Este es un marco realista
-      de cómo suele ordenarse la experiencia — puede variar bastante de una persona a otra.</p>
+    <h2 class="center">Es cuidado diario, no un efecto inmediato</h2>
+    <p class="lede center">Los resultados en piel reactiva se construyen con constancia
+      y con una rutina que no la agreda. Este es un marco realista — puede variar bastante
+      de una persona a otra.</p>
 
     <div class="timeline">
       <div class="tl-row">
+        <div class="tl-when">Primeros días</div>
+        <div class="tl-body">
+          <h3>Tolerancia</h3>
+          <ul>
+            <li>Prueba de parche y primeras aplicaciones</li>
+            <li>Lo que se busca acá es que la piel la tolere bien</li>
+            <li>Sensación inmediata de hidratación y confort</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-row">
         <div class="tl-when">Semanas 1 – 2</div>
         <div class="tl-body">
-          <h3>Adaptación</h3>
+          <h3>Rutina</h3>
           <ul>
-            <li>El organismo se acostumbra al aporte diario</li>
-            <li>Suele notarse primero en el confort digestivo</li>
-            <li>La toma se vuelve parte de la rutina de la mañana</li>
+            <li>La aplicación se vuelve parte del día</li>
+            <li>Menor sensación de tirantez entre aplicaciones</li>
+            <li>Buen momento para sacar de la rutina los productos que irritan</li>
           </ul>
         </div>
       </div>
       <div class="tl-row">
-        <div class="tl-when">Semanas 3 – 4</div>
+        <div class="tl-when">Semanas 4 – 8</div>
         <div class="tl-body">
-          <h3>Continuidad</h3>
-          <ul>
-            <li>El aporte de cepas ya es sostenido en el tiempo</li>
-            <li>Buen momento para sumar el cuidado tópico diario</li>
-            <li>Conviene no interrumpir la toma en esta etapa</li>
-          </ul>
-        </div>
-      </div>
-      <div class="tl-row">
-        <div class="tl-when">Semanas 6 – 8</div>
-        <div class="tl-body">
-          <h3>Consolidación</h3>
+          <h3>Constancia</h3>
           <ul>
             <li>Es el plazo habitual para evaluar cómo te resultó</li>
-            <li>Un frasco cubre esta etapa completa con margen</li>
+            <li>Conviene sostener el uso diario sin interrupciones</li>
             <li>Momento razonable para hacer un balance</li>
-          </ul>
-        </div>
-      </div>
-      <div class="tl-row">
-        <div class="tl-when">Semana 8 en adelante</div>
-        <div class="tl-body">
-          <h3>Mantenimiento</h3>
-          <ul>
-            <li>La constancia es lo que sostiene cualquier resultado</li>
-            <li>Los packs de 3 y 5 frascos están pensados para esta etapa</li>
-            <li>Seguí el control con tu profesional de salud</li>
           </ul>
         </div>
       </div>
@@ -1151,133 +1158,126 @@ a { color: inherit; }
 <!-- ============================================================
      11 · FAQ
      ============================================================ -->
-<section class="section section--cream2">
+<section class="section section--white">
   <div class="wrap">
     <p class="eyebrow center">Preguntas frecuentes</p>
     <h2 class="center">Antes de comprar</h2>
 
     <div class="faq">
       <details open>
-        <summary>¿Qué es exactamente Pro 20+?</summary>
-        <div class="faq-body"><p>Un suplemento probiótico líquido. Cada dosis de 1 ml aporta
-          20 mil millones de UFC de 4 cepas, sobre una base de 10 superalimentos fermentados
-          que funcionan como componente prebiótico.</p></div>
-      </details>
-      <details>
         <summary>¿Sirve para la rosácea?</summary>
-        <div class="faq-body"><p>No. Pro 20+ es un suplemento alimentario, no un medicamento, y no
-          trata ni cura la rosácea ni ninguna otra condición de la piel. Está pensado para acompañar
-          el equilibrio de la microbiota intestinal, que es un factor entre muchos. Si tenés rosácea
-          diagnosticada, seguí el tratamiento que te indicó tu dermatólogo/a.</p></div>
+        <div class="faq-body"><p>Es un producto cosmético, no un medicamento: no trata ni cura
+          la rosácea. Está formulada para el cuidado diario de pieles sensibles y con
+          tendencia al enrojecimiento, y puede acompañar la rutina que te haya indicado
+          tu dermatólogo/a, sin reemplazarla.</p></div>
       </details>
       <details>
-        <summary>¿Se puede combinar con la crema NaturCalm?</summary>
-        <div class="faq-body"><p>Sí. Son productos complementarios: Pro 20+ se toma, y la
-          Crema Calmante Anti-Rojeces se aplica sobre la piel. No interfieren entre sí.</p></div>
+        <summary>¿Tiene corticoides o esteroides?</summary>
+        <div class="faq-body"><p>No. Justamente por eso está pensada para uso diario y
+          prolongado, sin los límites de tiempo que tienen los corticoides tópicos.</p></div>
       </details>
       <details>
-        <summary>¿Cuánto tarda en notarse?</summary>
-        <div class="faq-body"><p>Depende mucho de cada persona y no podemos prometer un plazo.
-          Lo habitual con probióticos es evaluar después de 6 a 8 semanas de toma continua.</p></div>
+        <summary>¿La puedo usar si tengo piel muy sensible?</summary>
+        <div class="faq-body"><p>Está formulada para piel sensible y es hipoalergénica. Aun así,
+          en pieles muy reactivas siempre recomendamos hacer la prueba de parche 24 horas
+          antes del primer uso en el rostro.</p></div>
       </details>
       <details>
-        <summary>¿A qué sabe?</summary>
-        <div class="faq-body"><p>Es un líquido de sabor suave y afrutado, por la base de fruta
-          fermentada. No tiene la textura calcárea de los polvos ni deja regusto amargo.</p></div>
+        <summary>¿Se puede combinar con Pro 20+?</summary>
+        <div class="faq-body"><p>Sí. Son productos complementarios y no interfieren entre sí:
+          la crema se aplica sobre la piel y Pro 20+ se toma.</p></div>
       </details>
       <details>
-        <summary>¿Necesita heladera?</summary>
-        <div class="faq-body"><p>No. Se conserva a temperatura ambiente, en un lugar fresco y
-          seco, lejos de la luz directa.</p></div>
+        <summary>¿Lleva perfume?</summary>
+        <div class="faq-body">
+          <!-- PLACEHOLDER: completar según la formulación real -->
+          <p>Consultá la lista de ingredientes del envase para el detalle de la fórmula.</p>
+        </div>
       </details>
       <details>
-        <summary>¿Es apto vegano y sin gluten?</summary>
-        <div class="faq-body"><p>Sí: la fórmula es apta vegana, sin gluten y sin azúcares añadidos.</p></div>
-      </details>
-      <details>
-        <summary>¿Lo pueden tomar chicos, embarazadas o personas en lactancia?</summary>
-        <div class="faq-body"><p>Está formulado para adultos. En embarazo, lactancia, en menores
-          de edad o si tomás medicación, consultá con tu profesional de salud antes de empezar.</p></div>
-      </details>
-      <details>
-        <summary>¿Cuánto dura un frasco?</summary>
-        <div class="faq-body"><p>El frasco es de 50 ml y la dosis diaria es de 1 ml, así que rinde
-          50 días tomándolo una vez por día.</p></div>
+        <summary>¿La puedo usar en embarazo o lactancia?</summary>
+        <div class="faq-body"><p>Consultá con tu profesional de salud antes de incorporar
+          cualquier producto nuevo durante el embarazo o la lactancia.</p></div>
       </details>
     </div>
   </div>
 </section>
 
 <!-- ============================================================
-     12 · CTA FINAL
+     12 · CTA FINAL + CROSS-SELL
      ============================================================ -->
+<section class="section section--cream2">
+  <div class="wrap">
+    <p class="eyebrow center">Rutina completa</p>
+    <h2 class="center">Desde afuera y desde adentro</h2>
+    <p class="lede center">La crema trabaja sobre la piel. Pro 20+ acompaña el equilibrio
+      intestinal. Muchas personas usan los dos en paralelo.</p>
+
+    <div class="xsell">
+      <img src="https://cdn.shopify.com/s/files/1/0868/2536/9793/files/product-bottle-box.png?v=1787509122"
+           alt="NaturCalm Pro 20+, probiótico en gotas">
+      <div>
+        <h3>NaturCalm Pro 20+ · Probiótico en gotas</h3>
+        <p>20 mil millones de UFC por dosis diaria, en 1 ml. Un frasco rinde 50 días.</p>
+      </div>
+      <a class="btn btn--ghost" target="_top" href="/products/naturcalm-pro-20-probiotico-en-gotas">
+        Ver producto
+      </a>
+    </div>
+  </div>
+</section>
+
 <section class="section section--wine final">
   <div class="wrap final-inner">
-    <img src="https://cdn.shopify.com/s/files/1/0868/2536/9793/files/product-bottle-box.png?v=1787509122"
-         alt="NaturCalm Pro 20+">
     <p class="eyebrow">Empezá hoy</p>
-    <h2>Una gota por día, sostenida en el tiempo</h2>
-    <p>El pack de 3 frascos cubre 150 días — el plazo con el que tiene sentido evaluar
-      un probiótico sin quedarte a mitad de camino.</p>
-    <a class="btn btn--light" target="_top" href="/cart/add?id=50521491079361&quantity=1">
-      Llevar el pack de 3 — $54.900
+    <h2>Cuidado diario para piel que reacciona</h2>
+    <p>Pote de 75 g, sin esteroides, para usar todos los días.</p>
+    <a class="btn btn--light" target="_top" href="/cart/add?id=50521487933633&quantity=1">
+      Agregar al carrito — $35.000
     </a>
-    <p class="final-note">También disponible por unidad y en pack de 5 frascos.</p>
   </div>
 </section>
 
 <!-- ---------- Aviso legal ---------- -->
 <div class="legal">
   <div class="wrap">
-    <p>Este producto es un suplemento dietario. No es un medicamento y no reemplaza una
-      alimentación variada ni un tratamiento médico. No se sugiere el consumo por parte de
-      menores, embarazadas ni personas en período de lactancia sin consulta profesional.
-      Ante cualquier duda, consultá a tu médico/a.</p>
+    <p>Producto cosmético de uso externo. No es un medicamento y no reemplaza un tratamiento
+      dermatológico. Realizá una prueba de parche antes del primer uso. Evitá el contacto con
+      los ojos. Suspendé el uso ante cualquier signo de irritación y consultá a tu profesional
+      de salud si los síntomas persisten.</p>
   </div>
 </div>
 
 <script>
 (function () {
-  /* La página se sirve dentro de un iframe srcdoc. El base URL se hereda del
-     documento padre, así que "/cart/add" ya resuelve contra la tienda. Igual
-     fijamos el origen real cuando es accesible, por las dudas. */
+  /* La página se sirve dentro de un iframe srcdoc: fijamos el origen real
+     de la tienda cuando es accesible, para que los enlaces al carrito
+     y al otro producto resuelvan bien. */
   var shopOrigin = '';
   try { shopOrigin = window.top.location.origin; } catch (e) { shopOrigin = ''; }
 
-  function cartUrl(variantId) {
-    return shopOrigin + '/cart/add?id=' + variantId + '&quantity=1';
+  var VARIANT = '50521487933633';
+
+  function cartUrl(qty) {
+    return shopOrigin + '/cart/add?id=' + VARIANT + '&quantity=' + qty;
   }
 
   if (shopOrigin) {
     Array.prototype.forEach.call(
-      document.querySelectorAll('a[href^="/cart/add"]'),
+      document.querySelectorAll('a[href^="/cart/add"], a[href^="/products/"]'),
       function (a) { a.setAttribute('href', shopOrigin + a.getAttribute('href')); }
     );
   }
 
-  /* Galería: cambiar la imagen principal al tocar una miniatura */
-  var main = document.getElementById('galMain');
-  var thumbs = document.getElementById('galThumbs');
-  if (main && thumbs) {
-    thumbs.addEventListener('click', function (e) {
-      var btn = e.target.closest('.thumb');
-      if (!btn) return;
-      main.src = btn.getAttribute('data-src');
-      Array.prototype.forEach.call(thumbs.querySelectorAll('.thumb'), function (t) {
-        t.setAttribute('aria-current', t === btn ? 'true' : 'false');
-      });
-    });
-  }
-
-  /* Selector de pack: actualiza el CTA para que apunte a la variante real de Shopify */
+  /* Selector de cantidad: actualiza el CTA principal */
   var packs = document.getElementById('packs');
   var buyBtn = document.getElementById('buyBtn');
   var buyTotal = document.getElementById('buyTotal');
   if (packs && buyBtn) {
     packs.addEventListener('change', function (e) {
       var input = e.target;
-      if (!input || input.name !== 'pack') return;
-      buyBtn.setAttribute('href', cartUrl(input.getAttribute('data-variant')));
+      if (!input || input.name !== 'qty') return;
+      buyBtn.setAttribute('href', cartUrl(input.getAttribute('data-qty')));
       if (buyTotal) buyTotal.textContent = input.getAttribute('data-total');
     });
   }
