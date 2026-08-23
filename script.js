@@ -7,15 +7,15 @@ const VARIANT_LABELS = {
 };
 
 const CROSS_SELL = [
-  { id: "cs1", name: "Colágeno Marino", price: 28.00, emoji: "✨" },
-  { id: "cs2", name: "Magnesio Nocturno", price: 19.50, emoji: "🌙" },
-  { id: "cs3", name: "Vitamina D3+K2", price: 16.00, emoji: "☀️" },
-  { id: "cs4", name: "Omega-3 Algas", price: 24.00, emoji: "🐟" },
+  { id: "cs1", name: "Colágeno Marino", price: 38000, emoji: "✨" },
+  { id: "cs2", name: "Magnesio Nocturno", price: 27000, emoji: "🌙" },
+  { id: "cs3", name: "Vitamina D3+K2", price: 22000, emoji: "☀️" },
+  { id: "cs4", name: "Omega-3 Algas", price: 33000, emoji: "🐟" },
 ];
 
-const CART_KEY = "grahams_cart";
+const CART_KEY = "naturcalm_ar_cart";
 let selectedVariant = "1";
-let selectedPrice = 39.00;
+let selectedPrice = 42000;
 let quantity = 1;
 
 function loadCart() {
@@ -31,7 +31,7 @@ function saveCart(cart) {
 }
 
 function formatPrice(value) {
-  return value.toFixed(2).replace(".", ",") + " €";
+  return "$" + Math.round(value).toLocaleString("es-AR");
 }
 
 /* Gallery */
