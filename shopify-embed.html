@@ -1,0 +1,1470 @@
+<style>
+:root {
+  --ink: #1a1a1a;
+  --paper: #faf7f2;
+  --paper-2: #f3ede4;
+  --accent: #6d1f3c;
+  --accent-dark: #501530;
+  --gold: #c99a3a;
+  --navy: #0d1b2a;
+  --border: #e6ddd0;
+  --radius: 10px;
+  --max-width: 1180px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+}
+
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; margin: 0 0 0.4em; }
+p { margin: 0 0 1em; color: #4a4a4a; }
+a { color: inherit; text-decoration: none; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.center { text-align: center; }
+.light { color: #fff; }
+
+.section-kicker {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.section-kicker.light { color: var(--gold); }
+
+/* Topbar */
+.topbar {
+  background: var(--accent);
+  color: #fff;
+  text-align: center;
+  font-size: 0.78rem;
+  padding: 8px 12px;
+  letter-spacing: 0.3px;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(250, 247, 242, 0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.logo span { color: var(--accent); font-weight: 400; }
+
+.main-nav { display: flex; gap: 26px; }
+.main-nav a { font-size: 0.92rem; }
+.main-nav a:hover { color: var(--accent); }
+
+.header-icons { display: flex; align-items: center; gap: 6px; }
+
+.icon-btn, .cart-btn {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 6px 8px;
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -2px;
+  right: 0;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.62rem;
+  font-family: sans-serif;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 13px 26px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.15s, background 0.15s, color 0.15s;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-dark); }
+.btn-block { width: 100%; text-align: center; }
+
+/* PRODUCT HERO */
+.product-hero { padding: 48px 0 64px; }
+
+.product-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.gallery-main {
+  position: relative;
+  background: linear-gradient(135deg, var(--paper-2), #fff);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  overflow: hidden;
+}
+
+.gallery-main img { width: 100%; height: 100%; object-fit: contain; }
+
+.gallery-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery-arrow-prev { left: 14px; }
+.gallery-arrow-next { right: 14px; }
+
+.gallery-thumbs { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+
+.thumb {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumb img { width: 100%; height: 100%; object-fit: contain; }
+
+.thumb.active { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.78rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.product-info h1 { font-size: 2.2rem; margin-bottom: 4px; }
+.hero-subhead { font-family: -apple-system, sans-serif; font-size: 1.1rem; margin-bottom: 10px; }
+.hero-tagline { font-weight: 700; color: var(--accent); font-size: 1.05rem; margin-bottom: 4px; }
+.hero-sub { font-size: 0.95rem; }
+
+.hero-bullets { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 6px; }
+.hero-bullets li { position: relative; padding-left: 20px; font-size: 0.92rem; }
+.hero-bullets li::before { content: "•"; position: absolute; left: 4px; color: var(--accent); font-weight: 700; }
+
+.hero-price { font-size: 1.6rem; font-weight: 700; margin-bottom: 10px; }
+
+.stars-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 0.9rem; }
+.stars { color: var(--gold); letter-spacing: 1px; }
+.stars.small { font-size: 0.85rem; }
+
+.save-more-label {
+  text-align: center;
+  font-weight: 700;
+  font-family: -apple-system, sans-serif;
+  font-size: 0.95rem;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-bottom: 14px;
+}
+
+.variant-select { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 12px; }
+
+.variant-card {
+  position: relative;
+  background: #fff;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 8px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.variant-card.selected, .variant-card:hover { border-color: var(--accent); }
+.variant-card.best { border-color: var(--accent); }
+
+.variant-badge {
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.62rem;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.variant-radio {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  margin: 6px 0 4px;
+}
+.variant-radio.checked { border-color: var(--accent); background: radial-gradient(var(--accent) 0 40%, transparent 44%); }
+
+.variant-title { font-weight: 700; }
+.variant-note {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent-dark);
+  border-radius: 999px;
+  padding: 3px 8px;
+  margin: 2px 0;
+}
+.variant-price { font-weight: 700; color: var(--ink); font-size: 1rem; }
+.variant-price small { font-weight: 500; font-size: 0.7rem; color: #888; }
+.variant-old-price { font-size: 0.78rem; color: #999; text-decoration: line-through; }
+
+.free-shipping-note { text-align: center; font-size: 0.85rem; color: #666; border-top: 1px solid var(--border); padding-top: 12px; margin-bottom: 16px; }
+
+.btn-buy { display: block; width: 100%; text-align: center; padding: 16px; font-size: 1rem; margin-bottom: 16px; }
+
+.trust-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  font-size: 0.82rem;
+  color: #666;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.trust-row div { display: flex; align-items: center; gap: 6px; }
+
+.science-quote {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: var(--paper-2);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 20px;
+}
+.science-quote-icon { font-size: 1.3rem; }
+.science-quote p { margin: 0; font-size: 0.85rem; font-style: italic; color: #555; }
+
+.accordion details {
+  border-top: 1px solid var(--border);
+  padding: 12px 0;
+}
+.accordion summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.accordion p { margin-top: 10px; font-size: 0.9rem; }
+
+/* RESULTS STRIP */
+.results-strip { padding: 70px 0; background: var(--paper-2); }
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+.result-card { text-align: center; }
+.result-photo {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  aspect-ratio: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.result-photo img { width: 100%; height: 100%; object-fit: cover; }
+.result-age { font-weight: 600; margin-bottom: 4px; }
+
+/* SCIENCE */
+.science { padding: 80px 0; }
+.science-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.science-list { list-style: none; padding: 0; margin: 20px 0 0; display: flex; flex-direction: column; gap: 16px; }
+.science-list li { display: flex; flex-direction: column; gap: 2px; }
+.science-list strong { color: var(--accent); }
+.science-list span { font-size: 0.92rem; color: #555; }
+
+.science-visual { display: flex; justify-content: center; }
+.axis-image { max-width: 100%; width: 340px; height: auto; }
+
+/* DIFFERENCE BAND */
+.difference-band { background: var(--accent); color: #fff; padding: 80px 0; }
+.difference-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 34px;
+  text-align: center;
+}
+.difference-icon { font-size: 2rem; display: block; margin-bottom: 10px; }
+.difference-icon-img { width: 64px; height: 64px; margin: 0 auto 12px; display: block; border-radius: 14px; }
+.difference-card h3 { color: #fff; font-size: 1.05rem; font-family: -apple-system, sans-serif; }
+.difference-card p { color: #e8d9df; font-size: 0.9rem; }
+
+/* HOW TO */
+.how-to { padding: 80px 0; }
+.how-to-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+.how-to-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+}
+.step-badge {
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  background: var(--accent);
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+.how-to-image { font-size: 3rem; margin-bottom: 10px; }
+.how-to-photo {
+  aspect-ratio: 4/3;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.how-to-photo img { width: 100%; height: 100%; object-fit: cover; }
+.how-to-caption { text-align: center; font-style: italic; color: var(--accent-dark); margin-top: 20px; }
+
+/* PROCESS */
+.process { padding: 80px 0; background: var(--paper-2); }
+.process-icons-row { display: block; max-width: 100%; width: 640px; margin: 30px auto 0; height: auto; }
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.process-subtitle { max-width: 640px; margin: 12px auto 0; }
+.process-text { text-align: center; }
+.process-eyebrow { display: block; text-transform: uppercase; letter-spacing: 1px; font-size: 0.72rem; color: #888; margin-bottom: 2px; }
+.process-text h3 { font-size: 1.3rem; color: var(--accent); margin-bottom: 6px; }
+.process-text p { font-size: 0.88rem; margin: 0 0 10px; }
+.process-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+
+/* STRAINS */
+.strains { padding: 80px 0; }
+.strains-intro { max-width: 640px; margin: 20px auto 30px; text-align: center; }
+.strains-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+.strain-row { display: flex; gap: 16px; align-items: flex-start; border-bottom: 1px solid var(--border); padding-bottom: 16px; }
+.strain-icon { font-size: 1.6rem; }
+.strain-row > div { flex: 1; }
+.strain-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.strain-head strong { display: block; margin-bottom: 4px; }
+.strain-count { font-size: 0.85rem; color: var(--accent); font-weight: 700; white-space: nowrap; }
+.strain-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+.strain-tags span {
+  font-size: 0.78rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px 10px;
+  color: #666;
+}
+.strains-total {
+  max-width: 720px;
+  margin: 24px auto 0;
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  color: #888;
+}
+.strains-total strong { color: var(--accent); font-size: 1rem; text-transform: none; letter-spacing: normal; }
+
+/* SUPERFOODS */
+.superfoods { padding: 80px 0; background: var(--paper-2); }
+.superfoods-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.superfoods-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+.superfoods-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.92rem;
+  counter-increment: sf;
+}
+.superfoods-list li::before {
+  content: counter(sf, decimal-leading-zero) "  ";
+  color: #bbb;
+  font-weight: 700;
+  margin-right: 8px;
+}
+.superfoods-list { counter-reset: sf; }
+.sf-name { font-weight: 600; flex: 1; }
+.sf-tag { font-size: 0.78rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.5px; }
+.superfoods-visual { font-size: 3rem; text-align: center; letter-spacing: 8px; }
+
+/* COMPARISON */
+.comparison { background: var(--navy); padding: 80px 0; }
+.comparison-table { max-width: 780px; margin: 34px auto 0; border-radius: var(--radius); overflow: hidden; }
+.comparison-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  padding: 14px 18px;
+  color: #dfe3e8;
+  font-size: 0.86rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  gap: 8px;
+}
+.comparison-row span { text-align: center; }
+.comparison-row span:first-child { text-align: left; }
+.comparison-head { background: rgba(255,255,255,0.06); font-weight: 700; color: #fff; }
+.col-us { color: var(--gold); font-weight: 700; }
+
+/* TIMELINE */
+.timeline { padding: 80px 0; }
+.timeline-list { max-width: 680px; margin: 34px auto 0; display: flex; flex-direction: column; gap: 26px; }
+.timeline-row { display: flex; gap: 20px; align-items: flex-start; }
+.timeline-marker {
+  flex-shrink: 0;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.timeline-row h3 { font-size: 1.1rem; font-family: -apple-system, sans-serif; margin-bottom: 8px; }
+.timeline-row p { margin: 0; font-size: 0.9rem; }
+.timeline-row ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
+.timeline-row li { font-size: 0.9rem; color: #4a4a4a; }
+
+/* FAQ */
+.faq { padding: 80px 0; background: var(--paper-2); }
+.faq-list { max-width: 720px; margin: 30px auto 0; }
+.faq-list details {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 10px;
+}
+.faq-list summary { cursor: pointer; font-weight: 600; }
+.faq-list p { margin: 10px 0 0; font-size: 0.9rem; }
+
+/* PRODUCTS GRID (reused for cross-sell) */
+.cross-sell { padding: 80px 0; }
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+.product-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.product-image {
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.6rem;
+  background: var(--paper-2);
+}
+.product-info-card { padding: 14px 16px 18px; display: flex; flex-direction: column; flex: 1; }
+.product-info-card h3 { font-size: 1rem; font-family: -apple-system, sans-serif; }
+.product-price { font-weight: 700; margin-bottom: 12px; color: var(--accent); }
+.add-to-cart {
+  margin-top: auto;
+  background: var(--ink);
+  color: #fff;
+  border: none;
+  padding: 9px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.add-to-cart:hover { background: var(--accent); }
+.add-to-cart.added { background: #2e7d32; }
+
+/* REVIEWS */
+.reviews { padding: 80px 0; }
+.reviews-summary {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 30px 0 40px;
+}
+.reviews-score { text-align: center; }
+.score-number { display: block; font-size: 2.6rem; font-family: Georgia, serif; font-weight: 700; }
+.reviews-bars { display: flex; flex-direction: column; gap: 6px; min-width: 220px; }
+.bar-row { display: flex; align-items: center; gap: 10px; font-size: 0.8rem; }
+.bar { flex: 1; height: 8px; background: var(--paper-2); border-radius: 999px; overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--gold); }
+
+.review-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.review-card {
+  background: var(--paper-2);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+.review-card p { font-style: italic; margin: 10px 0; }
+.verified { display: block; font-size: 0.75rem; color: #888; font-weight: 400; }
+
+/* FOOTER */
+.site-footer { background: var(--navy); color: #b8c0c9; padding: 60px 0 0; }
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.4fr;
+  gap: 32px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-inner .logo { color: #fff; }
+.footer-inner .logo span { color: var(--gold); }
+.footer-inner p { color: #8a94a1; }
+.social-icons { display: flex; gap: 10px; font-size: 1.1rem; margin-top: 10px; }
+.footer-col { display: flex; flex-direction: column; gap: 10px; }
+.footer-col h4 { color: #fff; margin-bottom: 4px; font-size: 0.92rem; }
+.footer-col a { color: #b8c0c9; font-size: 0.88rem; }
+.footer-col a:hover { color: #fff; }
+.newsletter-form { display: flex; gap: 8px; }
+.newsletter-form input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  font-size: 0.88rem;
+}
+.newsletter-form input::placeholder { color: #7c8592; }
+.form-msg { font-size: 0.82rem; color: var(--gold); min-height: 1.2em; margin-top: 8px; }
+
+.footer-bottom {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: #7c8592;
+}
+
+/* CART DRAWER */
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  z-index: 200;
+}
+.cart-overlay.open { opacity: 1; pointer-events: auto; }
+
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: min(380px, 90vw);
+  background: #fff;
+  box-shadow: -8px 0 24px rgba(0,0,0,0.15);
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+  z-index: 201;
+  display: flex;
+  flex-direction: column;
+}
+.cart-drawer.open { transform: translateX(0); }
+.cart-header { display: flex; align-items: center; justify-content: space-between; padding: 20px; border-bottom: 1px solid var(--border); }
+.cart-header button { background: none; border: none; font-size: 1.1rem; cursor: pointer; }
+.cart-items { flex: 1; overflow-y: auto; padding: 16px 20px; }
+.cart-empty { color: #999; text-align: center; margin-top: 40px; }
+.cart-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--border); gap: 10px; }
+.cart-item-name { font-size: 0.92rem; flex: 1; }
+.cart-item-qty { font-size: 0.85rem; color: #888; }
+.cart-item-remove { background: none; border: none; cursor: pointer; color: #b33; font-size: 0.85rem; }
+.cart-footer { padding: 20px; border-top: 1px solid var(--border); }
+.cart-total { display: flex; justify-content: space-between; font-weight: 700; margin-bottom: 14px; }
+
+@media (max-width: 900px) {
+  .product-hero-grid, .science-grid, .superfoods-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .main-nav { display: none; }
+  .variant-select { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+  .comparison-row { grid-template-columns: 1.3fr 1fr 1fr 1fr; font-size: 0.7rem; padding: 10px 8px; }
+}
+
+</style>
+
+
+
+<div class="topbar">Envío gratis a todo el país en pedidos +$50.000 &nbsp;·&nbsp; Garantía de devolución de 60 días &nbsp;·&nbsp; Hasta 6 cuotas sin interés</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#" class="logo">NATUR<span>CALM</span></a>
+    <nav class="main-nav">
+      <a href="#producto">Producto</a>
+      <a href="#ciencia">Ciencia</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#faq">FAQ</a>
+      <a href="#reseñas">Reseñas</a>
+    </nav>
+    <div class="header-icons">
+      <button class="icon-btn" aria-label="Buscar">🔍</button>
+      <button class="icon-btn" aria-label="Cuenta">👤</button>
+      <button class="cart-btn" id="cartToggle" aria-label="Abrir carrito">
+        🛍️ <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO / PRODUCT -->
+<section class="product-hero" id="producto">
+  <div class="container product-hero-grid">
+    <div class="gallery">
+      <div class="gallery-main" id="galleryMain">
+        <span class="gallery-badge">BIÓTICO 3 EN 1</span>
+        <img src="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/product-bottle-box.png" alt="Frasco y caja de NaturCalm Pro 20+">
+        <button class="gallery-arrow gallery-arrow-prev" id="galleryPrev" aria-label="Imagen anterior">←</button>
+        <button class="gallery-arrow gallery-arrow-next" id="galleryNext" aria-label="Imagen siguiente">→</button>
+      </div>
+      <div class="gallery-thumbs" id="galleryThumbs">
+        <button class="thumb active" data-type="img" data-img="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/product-bottle-box.png"><img src="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/product-bottle-box.png" alt="Frasco y caja"></button>
+        <button class="thumb" data-type="img" data-img="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/step2-dropper-mouth.png"><img src="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/step2-dropper-mouth.png" alt="Aplicando la gota"></button>
+        <button class="thumb" data-type="img" data-img="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/card-strains-complex-natcalm.png"><img src="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/card-strains-complex-natcalm.png" alt="4 complejos y sinergia probiótica"></button>
+        <button class="thumb" data-type="img" data-img="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/card-gut-talks-natcalm.png"><img src="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/card-gut-talks-natcalm.png" alt="Tu intestino habla de todo"></button>
+        <button class="thumb" data-type="img" data-img="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/card-features-natcalm.png"><img src="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/card-features-natcalm.png" alt="Salud intestinal, piel radiante, sistema inmune"></button>
+      </div>
+    </div>
+
+    <div class="product-info">
+      <div class="stars-row">
+        <span class="stars">★★★★★</span>
+        <a href="#reseñas">5 reseñas</a>
+      </div>
+      <h1>Pro 20+</h1>
+      <h2 class="hero-subhead">Tratá la fuente, no solo la superficie</h2>
+      <p class="hero-sub">Tu intestino define mucho más que la digestión — moldea tu piel, tu ánimo y tu energía. Pro 20+ aporta 20+ mil millones de cultivos vivos en una sola gota diaria de 1 ml, actuando sobre el eje intestino-piel-cerebro para calmar la inflamación en su origen, antes de que llegue a la superficie.</p>
+      <ul class="hero-bullets">
+        <li>Calma la inflamación en su origen</li>
+        <li>La primera gota pre, pro y posbiótica del mercado</li>
+        <li>20+ mil millones de UFC, 4 cepas clínicamente estudiadas</li>
+        <li>Actúa sobre el eje intestino-piel-cerebro</li>
+      </ul>
+
+      <p class="hero-price">$34.900</p>
+
+      <p class="save-more-label">Sé constante. Ahorrá más</p>
+      <div class="variant-select" id="variantSelect">
+        <button class="variant-card" data-variant="1" data-price="34900">
+          <span class="variant-badge">Precio completo</span>
+          <span class="variant-radio"></span>
+          <span class="variant-title">1 Unidad</span>
+          <span class="variant-note">30 días · $1.163/día</span>
+          <span class="variant-price">$34.900</span>
+        </button>
+        <button class="variant-card best" data-variant="2+1" data-price="54900">
+          <span class="variant-badge">Llevás 3, pagás 2</span>
+          <span class="variant-radio checked"></span>
+          <span class="variant-title">2+1</span>
+          <span class="variant-note">90 días · $610/día</span>
+          <span class="variant-price">$18.300<small>/unidad</small></span>
+          <span class="variant-old-price">$34.900</span>
+        </button>
+        <button class="variant-card" data-variant="3+2" data-price="78900">
+          <span class="variant-badge">Llevás 5, pagás 3</span>
+          <span class="variant-radio"></span>
+          <span class="variant-title">3+2</span>
+          <span class="variant-note">150 días · $526/día</span>
+          <span class="variant-price">$15.780<small>/unidad</small></span>
+          <span class="variant-old-price">$34.900</span>
+        </button>
+      </div>
+
+      <p class="free-shipping-note">Envío gratis en compras de 2 o más unidades</p>
+
+      <button class="btn btn-primary btn-buy" id="addToCartBtn">Comprar ahora — <span id="addToCartPrice">$54.900</span> ↗</button>
+
+      <div class="trust-row">
+        <div><span>📦</span>60 días de devolución fácil</div>
+        <div><span>💳</span>Hasta 6 cuotas sin interés</div>
+      </div>
+
+      <div class="science-quote">
+        <span class="science-quote-icon">⚛️</span>
+        <p>"La disregulación del eje intestino-piel está cada vez más asociada a brotes crónicos, por eso tratar el microbioma y la barrera de la piel en conjunto tiene sentido biológico."</p>
+      </div>
+
+      <div class="accordion">
+        <details open>
+          <summary>Ingredientes</summary>
+          <p>Mezcla de 4 cepas probióticas vivas, fermentado con 10 superalimentos, sin azúcares añadidos, sin gluten, apto vegano.</p>
+        </details>
+        <details>
+          <summary>Modo de uso</summary>
+          <p>1 gotero al día, directamente en la boca o mezclado con agua. Preferiblemente por la mañana en ayunas.</p>
+        </details>
+        <details>
+          <summary>Envío y devoluciones</summary>
+          <p>Envío a todo el país en 3 a 5 días hábiles (24-48h en CABA y GBA). Si no estás satisfecho, te devolvemos el dinero dentro de los primeros 60 días.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS STRIP -->
+<section class="results-strip">
+  <div class="container">
+    <p class="section-kicker center">La marca</p>
+    <h2 class="center">Más de 25 años de resultados</h2>
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="result-photo"><img src="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/before-after-eczema-face.png" alt="Antes y después de eczema"></div>
+        <p class="result-age">Eczema</p>
+        <span class="stars small">★★★★★</span>
+      </div>
+      <div class="result-card">
+        <div class="result-photo"><img src="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/before-after-eczema-hand.png" alt="Antes y después de eczema en la mano"></div>
+        <p class="result-age">Eczema</p>
+        <span class="stars small">★★★★★</span>
+      </div>
+      <div class="result-card">
+        <div class="result-photo"><img src="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/before-after-psoriasis.png" alt="Antes y después de psoriasis"></div>
+        <p class="result-age">Psoriasis</p>
+        <span class="stars small">★★★★★</span>
+      </div>
+      <div class="result-card">
+        <div class="result-photo"><img src="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/before-after-rosacea.png" alt="Antes y después de rosácea"></div>
+        <p class="result-age">Rosácea</p>
+        <span class="stars small">★★★★★</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCIENCE -->
+<section class="science" id="ciencia">
+  <div class="container science-grid">
+    <div class="science-text">
+      <p class="section-kicker">La ciencia detrás de Pro 20+</p>
+      <h2>El eje Intestino–Piel–Cerebro</h2>
+      <p>3 sistemas. 1 vía biológica. Cuando el intestino se desregula, la inflamación que genera no se queda local: viaja.</p>
+      <ul class="science-list">
+        <li><strong>Intestino</strong><span>Una barrera intestinal comprometida permite que entren endotoxinas bacterianas al torrente sanguíneo, generando inflamación sistémica.</span></li>
+        <li><strong>Piel</strong><span>La inflamación derivada del intestino compromete la barrera de la piel, impulsando condiciones crónicas desde adentro.</span></li>
+        <li><strong>Cerebro</strong><span>Las bacterias intestinales producen el 90% de la serotonina del cuerpo. El desequilibrio afecta directamente el ánimo, el foco y el sueño.</span></li>
+      </ul>
+    </div>
+    <div class="science-visual">
+      <img class="axis-image" src="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/brain-skin-gut-axis.png" alt="El eje intestino-piel-cerebro">
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENCE BAND -->
+<section class="difference-band">
+  <div class="container">
+    <p class="section-kicker center light">No hay nada igual</p>
+    <h2 class="center light">La diferencia Pro 20+</h2>
+    <div class="difference-grid">
+      <div class="difference-card">
+        <img class="difference-icon-img" src="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/icon-molecule-real.png" alt="">
+        <h3>Cepas clínicamente estudiadas</h3>
+      </div>
+      <div class="difference-card">
+        <img class="difference-icon-img" src="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/icon-dropper-real.png" alt="">
+        <h3>1 ml en tu lengua</h3>
+      </div>
+      <div class="difference-card">
+        <img class="difference-icon-img" src="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/icon-pomegranate-real.png" alt="">
+        <h3>Nada artificial</h3>
+      </div>
+      <div class="difference-card">
+        <img class="difference-icon-img" src="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/icon-microscope-real.png" alt="">
+        <h3>Formulado por microbiólogos</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO USE -->
+<section class="how-to">
+  <div class="container">
+    <p class="section-kicker center">El ritual</p>
+    <h2 class="center">Una gota al día es todo lo que necesitas</h2>
+    <div class="how-to-grid">
+      <div class="how-to-card">
+        <span class="step-badge">1</span>
+        <div class="how-to-image how-to-photo"><img src="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/hero-bottle-hand.png" alt="Frasco de NaturCalm Pro 20+ en mano"></div>
+        <h3>Sirve tu gota diaria</h3>
+        <p>Usa el gotero incluido para medir tu dosis por la mañana.</p>
+      </div>
+      <div class="how-to-card">
+        <span class="step-badge">2</span>
+        <div class="how-to-image how-to-photo"><img src="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/step2-dropper-mouth.png" alt="Aplicando la gota en la lengua"></div>
+        <h3>Mezcla y disfruta</h3>
+        <p>Toma directo o mézclalo con agua, batido o infusión.</p>
+      </div>
+    </div>
+    <p class="how-to-caption">La constancia es la clave — 1 gota, cada día.</p>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="container">
+    <p class="section-kicker center">Nuestro método</p>
+    <h2 class="center">El proceso Fruit Fed Flora</h2>
+    <p class="center process-subtitle">3 etapas que convierten superalimentos enteros y cultivos vivos en un complejo pre, pro y posbiótico completo. <strong>Nada más en el mercado hace esto.</strong></p>
+    <img class="process-icons-row" src="https://raw.githubusercontent.com/urichsan1-star/claude-1/main/images/real/process-icons-row.png" alt="Proceso: fruta, fermentación y gota">
+    <div class="process-grid">
+      <div class="process-text">
+        <span class="process-eyebrow">El alimento</span>
+        <h3>Prime</h3>
+        <p>10 superfrutas ricas en polifenoles, listas para fermentar.</p>
+        <span class="process-tag">10 superalimentos → Fibra prebiótica</span>
+      </div>
+      <div class="process-text">
+        <span class="process-eyebrow">La transformación</span>
+        <h3>Prevent</h3>
+        <p>Los cultivos vivos fermentan la fruta en potentes compuestos posbióticos.</p>
+        <span class="process-tag">Cultivos vivos → Posbióticos</span>
+      </div>
+      <div class="process-text">
+        <span class="process-eyebrow">La captura</span>
+        <h3>Prime</h3>
+        <p>Todo el resultado de la fermentación, estabilizado en una sola gota diaria.</p>
+        <span class="process-tag">Matriz viva → 1 gota diaria</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRAINS -->
+<section class="strains">
+  <div class="container">
+    <p class="section-kicker center">Clínicamente estudiadas</p>
+    <h2 class="center">Las 4 cepas probióticas</h2>
+    <p class="strains-intro"><strong>Tu intestino alberga billones de microorganismos.</strong> Cuando el equilibrio entre bacterias buenas y malas se altera, los efectos se notan en tu piel, tu ánimo y tu energía. Pro 20+ aporta 4 cepas probióticas clínicamente estudiadas, cada una con un rol biológico distinto, para restaurar el equilibrio microbiano y reducir la inflamación sistémica. <strong>Esto es lo que significa el 20+.</strong></p>
+    <div class="strains-list">
+      <div class="strain-row">
+        <span class="strain-icon">🧬</span>
+        <div>
+          <div class="strain-head"><strong>Lacticaseibacillus rhamnosus</strong><span class="strain-count">5 mil millones</span></div>
+          <div class="strain-tags"><span>Eje intestino-piel</span><span>Barrera intestinal</span></div>
+        </div>
+      </div>
+      <div class="strain-row">
+        <span class="strain-icon">🧬</span>
+        <div>
+          <div class="strain-head"><strong>Lactiplantibacillus plantarum</strong><span class="strain-count">5 mil millones</span></div>
+          <div class="strain-tags"><span>Salud inmune</span><span>Antimicrobiana</span></div>
+        </div>
+      </div>
+      <div class="strain-row">
+        <span class="strain-icon">🧬</span>
+        <div>
+          <div class="strain-head"><strong>Lacticaseibacillus paracasei</strong><span class="strain-count">5 mil millones</span></div>
+          <div class="strain-tags"><span>Antioxidante</span><span>Estrés oxidativo</span></div>
+        </div>
+      </div>
+      <div class="strain-row">
+        <span class="strain-icon">🧬</span>
+        <div>
+          <div class="strain-head"><strong>Bifidobacterium longum</strong><span class="strain-count">5 mil millones</span></div>
+          <div class="strain-tags"><span>Eje intestino-cerebro</span><span>Psicobiótica</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="strains-total">TOTAL POR DOSIS <strong>20+ mil millones de células vivas</strong></p>
+  </div>
+</section>
+
+<!-- SUPERFOODS -->
+<section class="superfoods">
+  <div class="container superfoods-grid">
+    <div>
+      <p class="section-kicker">Fruit Fed Flora</p>
+      <h2>10 superalimentos. 1 proceso de fermentación.</h2>
+      <p>10 superalimentos ricos en polifenoles, fermentados juntos — liberando compuestos muchísimo más biodisponibles que comer la fruta sola.</p>
+      <ol class="superfoods-list">
+        <li><span class="sf-name">Aronia</span><span class="sf-tag">Antocianinas</span></li>
+        <li><span class="sf-name">Ciruela Kakadu</span><span class="sf-tag">Vitamina C</span></li>
+        <li><span class="sf-name">Saúco</span><span class="sf-tag">Flavonoides</span></li>
+        <li><span class="sf-name">Arándano</span><span class="sf-tag">Antocianinas</span></li>
+        <li><span class="sf-name">Granada</span><span class="sf-tag">Punicalaginas</span></li>
+        <li><span class="sf-name">Arándano rojo</span><span class="sf-tag">Proantocianidinas</span></li>
+        <li><span class="sf-name">Uva blanca con semilla</span><span class="sf-tag">OPCs</span></li>
+        <li><span class="sf-name">Manzana</span><span class="sf-tag">Pectina</span></li>
+        <li><span class="sf-name">Cacao</span><span class="sf-tag">Flavanoles</span></li>
+        <li><span class="sf-name">Cúrcuma</span><span class="sf-tag">Curcumina</span></li>
+      </ol>
+    </div>
+    <div class="superfoods-visual">🍇🍓🍒🍎🫐</div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="comparison">
+  <div class="container">
+    <p class="section-kicker center light">El estándar cambió</p>
+    <h2 class="center light">No todos los probióticos son iguales</h2>
+    <div class="comparison-table">
+      <div class="comparison-row comparison-head">
+        <span>Característica</span>
+        <span class="col-us">Pro 20+</span>
+        <span class="col-them">Cápsula</span>
+        <span class="col-them">Polvo</span>
+      </div>
+      <div class="comparison-row"><span>Tipo de biótico</span><span class="col-us">Pre, pro y posbiótico</span><span class="col-them">Solo probiótico</span><span class="col-them">Pre + algo de probiótico</span></div>
+      <div class="comparison-row"><span>Cantidad de UFC</span><span class="col-us">20+ mil millones garantizados</span><span class="col-them">A menudo sin verificar</span><span class="col-them">Dosis al azar</span></div>
+      <div class="comparison-row"><span>Hecho a partir de</span><span class="col-us">10 superalimentos fermentados</span><span class="col-them">Base de azúcar o almidón</span><span class="col-them">Fibra vegetal genérica</span></div>
+      <div class="comparison-row"><span>Facilidad de uso</span><span class="col-us">1 ml en la lengua</span><span class="col-them">Cápsula grande de tragar</span><span class="col-them">No se disuelve del todo</span></div>
+      <div class="comparison-row"><span>Sabor</span><span class="col-us">Dulce y suave, natural</span><span class="col-them">Con gusto a tiza o sin sabor</span><span class="col-them">Sabor amargo</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline" id="beneficios">
+  <div class="container">
+    <p class="section-kicker center">El recorrido</p>
+    <h2 class="center">Beneficios que se construyen con el tiempo</h2>
+    <div class="timeline-list">
+      <div class="timeline-row">
+        <span class="timeline-marker">Semanas 1-2</span>
+        <div>
+          <h3>Digestión mejorada</h3>
+          <ul>
+            <li>Alivia la hinchazón y el malestar después de comer</li>
+            <li>Los niveles de energía empiezan a subir</li>
+            <li>La barrera intestinal comienza a fortalecerse</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <span class="timeline-marker">Semanas 3-4</span>
+        <div>
+          <h3>Piel más clara y calmada</h3>
+          <ul>
+            <li>La inflamación sistémica empieza a disminuir</li>
+            <li>Se reduce la sensibilidad de la piel</li>
+            <li>La tez comienza a calmarse y aclararse</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <span class="timeline-marker">Semanas 6-8</span>
+        <div>
+          <h3>Cambios biológicos más profundos</h3>
+          <ul>
+            <li>Mejoran el ánimo, el foco y la calidad del sueño</li>
+            <li>La función de barrera de la piel se fortalece visiblemente</li>
+            <li>La señalización intestino-cerebro sostiene un ánimo más estable</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <span class="timeline-marker">Semana 8+</span>
+        <div>
+          <h3>Un intestino más fuerte y resiliente</h3>
+          <ul>
+            <li>Claridad de piel sostenida y menor sensibilidad</li>
+            <li>El microbioma alcanza un nuevo equilibrio, más estable</li>
+            <li>Ánimo y energía consistentemente mejorados</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <p class="section-kicker center">Preguntas frecuentes</p>
+    <h2 class="center">Todo lo que podrías preguntar</h2>
+    <div class="faq-list">
+      <details><summary>¿Qué es Pro 20+?</summary><p>Es un probiótico en gotas prebiótico + probiótico + posbiótico, fermentado a partir de 10 superalimentos, con 20 mil millones de células vivas por dosis.</p></details>
+      <details><summary>¿Qué lo hace diferente de un probiótico estándar?</summary><p>La mayoría de los probióticos son solo cápsulas de cepas vivas. Pro 20+ combina cepas clínicamente estudiadas con fibra prebiótica y compuestos posbióticos, todo en una gota líquida de fácil absorción.</p></details>
+      <details><summary>¿Por qué 20+ mil millones de células y no 50 o 60 mil millones como otras marcas?</summary><p>Lo que importa no es solo la cantidad, sino que las cepas lleguen vivas y sean efectivas. Priorizamos cepas clínicamente respaldadas por sobre números inflados sin evidencia.</p></details>
+      <details><summary>¿Cómo lo tomo?</summary><p>1 gotero (1 ml) al día, directamente en la lengua o mezclado con agua. Preferentemente por la mañana.</p></details>
+      <details><summary>¿Cuánto tardo en ver resultados?</summary><p>La digestión suele mejorar en la semana 1-2. Los cambios en la piel y el ánimo se notan a partir de la semana 3-4, y se profundizan hacia la semana 8.</p></details>
+      <details><summary>¿A qué sabe?</summary><p>Tiene un sabor natural, dulce y suave gracias a la fermentación de frutas — no es amargo ni con gusto a tiza como otros probióticos.</p></details>
+      <details><summary>¿Se recomienda para niños?</summary><p>Está formulado para adultos. Para niños, consultá con un profesional de la salud antes de administrarlo.</p></details>
+      <details><summary>¿Necesita refrigeración?</summary><p>No, el envase de vidrio ámbar protege las cepas vivas a temperatura ambiente.</p></details>
+      <details><summary>¿Es libre de gluten y vegano?</summary><p>Sí, la fórmula es 100% vegana, sin gluten y sin azúcares añadidos.</p></details>
+      <details><summary>¿Puedo tomarlo si estoy embarazada o amamantando?</summary><p>Consultá siempre con tu profesional de salud antes de iniciar cualquier suplemento durante el embarazo o la lactancia.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CROSS SELL -->
+<section class="cross-sell">
+  <div class="container">
+    <p class="section-kicker center">Completa tu rutina</p>
+    <h2 class="center">Trata desde adentro hacia afuera</h2>
+    <div class="product-grid" id="crossSellGrid"></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reseñas">
+  <div class="container">
+    <h2 class="center">Valoraciones y reseñas</h2>
+    <div class="reviews-summary">
+      <div class="reviews-score">
+        <span class="score-number">5.0</span>
+        <span class="stars">★★★★★</span>
+        <span>Basado en 5 reseñas</span>
+      </div>
+      <div class="reviews-bars">
+        <div class="bar-row"><span>5★</span><div class="bar"><i style="width:100%"></i></div></div>
+        <div class="bar-row"><span>4★</span><div class="bar"><i style="width:0%"></i></div></div>
+        <div class="bar-row"><span>3★</span><div class="bar"><i style="width:0%"></i></div></div>
+        <div class="bar-row"><span>2★</span><div class="bar"><i style="width:0%"></i></div></div>
+        <div class="bar-row"><span>1★</span><div class="bar"><i style="width:0%"></i></div></div>
+      </div>
+    </div>
+    <div class="review-cards">
+      <div class="review-card">
+        <span class="stars small">★★★★★</span>
+        <p>"Producto fabuloso, ya lo volví a comprar 👍"</p>
+        <strong>Sol R. <span class="verified">Compra verificada</span></strong>
+      </div>
+      <div class="review-card">
+        <span class="stars small">★★★★★</span>
+        <p>"¡Delicioso! Recién llegó mi pedido y lo probé — las gotas son ricas."</p>
+        <strong>Karina L. <span class="verified">Compra verificada</span></strong>
+      </div>
+      <div class="review-card">
+        <span class="stars small">★★★★★</span>
+        <p>"La energía que tengo ahora es la mejor en años. No sabía cuánto controlaba todo el intestino hasta que lo probé — lo empecé a notar como a las 3 semanas."</p>
+        <strong>Mía M. <span class="verified">Compra verificada</span></strong>
+      </div>
+      <div class="review-card">
+        <span class="stars small">★★★★★</span>
+        <p>"Hace apenas 2 semanas que lo tomo y ya noto la diferencia. La hinchazón y la digestión incómoda mejoraron muchísimo."</p>
+        <strong>Isabela W. <span class="verified">Compra verificada</span></strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <a href="#" class="logo">NATUR<span>CALM</span></a>
+      <p>Bienestar desde adentro, respaldado por la ciencia.</p>
+      <div class="social-icons">
+        <span>📘</span><span>📷</span><span>🐦</span><span>▶️</span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Tienda</h4>
+      <a href="#producto">Pro 20+</a>
+      <a href="#beneficios">Beneficios</a>
+    </div>
+    <div class="footer-col">
+      <h4>Ayuda</h4>
+      <a href="#faq">Preguntas frecuentes</a>
+      <a href="#">Envíos</a>
+      <a href="#">Devoluciones</a>
+    </div>
+    <div class="footer-col newsletter-col">
+      <h4>Newsletter</h4>
+      <form id="newsletterForm" class="newsletter-form">
+        <input type="email" id="newsletterEmail" placeholder="tu@email.com" required>
+        <button type="submit" class="btn btn-primary">Unirme</button>
+      </form>
+      <p class="form-msg" id="formMsg"></p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; 2026 NaturCalm Argentina. Todos los derechos reservados.</p>
+    <p class="payments">💳 Visa · Mastercard · Mercado Pago · Hasta 6 cuotas sin interés</p>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>Tu carrito</h3>
+    <button id="cartClose" aria-label="Cerrar carrito">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">$0</span>
+    </div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">Finalizar compra</button>
+  </div>
+</aside>
+<script>
+const MAIN_PRODUCT = { id: "pro20", name: "Pro 20+" };
+
+const VARIANT_LABELS = {
+  "1": "1 Unidad",
+  "2+1": "2+1 (3 unidades)",
+  "3+2": "3+2 (5 unidades)",
+};
+
+const CROSS_SELL = [
+  { id: "cs1", name: "Colágeno Marino", price: 38000, emoji: "✨" },
+  { id: "cs2", name: "Magnesio Nocturno", price: 27000, emoji: "🌙" },
+  { id: "cs3", name: "Vitamina D3+K2", price: 22000, emoji: "☀️" },
+  { id: "cs4", name: "Omega-3 Algas", price: 33000, emoji: "🐟" },
+];
+
+const CART_KEY = "naturcalm_ar_cart";
+let selectedVariant = "2+1";
+let selectedPrice = 54900;
+
+function loadCart() {
+  try {
+    return JSON.parse(localStorage.getItem(CART_KEY)) || {};
+  } catch {
+    return {};
+  }
+}
+
+function saveCart(cart) {
+  localStorage.setItem(CART_KEY, JSON.stringify(cart));
+}
+
+function formatPrice(value) {
+  return "$" + Math.round(value).toLocaleString("es-AR");
+}
+
+/* Gallery */
+function setupGallery() {
+  const main = document.getElementById("galleryMain");
+  const thumbs = Array.from(document.querySelectorAll(".thumb"));
+
+  function activateThumb(thumb) {
+    thumbs.forEach((t) => t.classList.remove("active"));
+    thumb.classList.add("active");
+    const badge = main.querySelector(".gallery-badge");
+    const prev = main.querySelector(".gallery-arrow-prev");
+    const next = main.querySelector(".gallery-arrow-next");
+    main.innerHTML = "";
+    if (badge) main.appendChild(badge);
+    const img = document.createElement("img");
+    img.src = thumb.dataset.img;
+    img.alt = "Pro 20+";
+    main.appendChild(img);
+    if (prev) main.appendChild(prev);
+    if (next) main.appendChild(next);
+  }
+
+  thumbs.forEach((thumb) => {
+    thumb.addEventListener("click", () => activateThumb(thumb));
+  });
+
+  function shiftActive(delta) {
+    const currentIndex = thumbs.findIndex((t) => t.classList.contains("active"));
+    const nextIndex = (currentIndex + delta + thumbs.length) % thumbs.length;
+    activateThumb(thumbs[nextIndex]);
+  }
+
+  document.getElementById("galleryPrev")?.addEventListener("click", () => shiftActive(-1));
+  document.getElementById("galleryNext")?.addEventListener("click", () => shiftActive(1));
+}
+
+/* Variant selector */
+function setupVariants() {
+  const cards = document.querySelectorAll(".variant-card");
+  cards.forEach((card) => {
+    if (card.dataset.variant === selectedVariant) card.classList.add("selected");
+    card.addEventListener("click", () => {
+      cards.forEach((c) => {
+        c.classList.remove("selected");
+        c.querySelector(".variant-radio")?.classList.remove("checked");
+      });
+      card.classList.add("selected");
+      card.querySelector(".variant-radio")?.classList.add("checked");
+      selectedVariant = card.dataset.variant;
+      selectedPrice = parseFloat(card.dataset.price);
+      updateAddToCartPrice();
+    });
+  });
+}
+
+function updateAddToCartPrice() {
+  document.getElementById("addToCartPrice").textContent = formatPrice(selectedPrice);
+}
+
+/* Add to cart (main product) */
+function setupAddToCart() {
+  document.getElementById("addToCartBtn").addEventListener("click", () => {
+    const cart = loadCart();
+    const key = `${MAIN_PRODUCT.id}-${selectedVariant}`;
+    cart[key] = (cart[key] || 0) + 1;
+    saveCart(cart);
+    renderCart();
+    const btn = document.getElementById("addToCartBtn");
+    const original = btn.innerHTML;
+    btn.textContent = "Añadido al carrito ✓";
+    setTimeout(() => { btn.innerHTML = original; }, 1400);
+  });
+}
+
+/* Cross-sell grid */
+function renderCrossSell() {
+  const grid = document.getElementById("crossSellGrid");
+  grid.innerHTML = CROSS_SELL.map((p) => `
+    <div class="product-card">
+      <div class="product-image">${p.emoji}</div>
+      <div class="product-info-card">
+        <h3>${p.name}</h3>
+        <div class="product-price">${formatPrice(p.price)}</div>
+        <button class="add-to-cart" data-id="${p.id}">Añadir al carrito</button>
+      </div>
+    </div>
+  `).join("");
+
+  grid.querySelectorAll(".add-to-cart").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const cart = loadCart();
+      cart[btn.dataset.id] = (cart[btn.dataset.id] || 0) + 1;
+      saveCart(cart);
+      renderCart();
+      btn.textContent = "Añadido ✓";
+      btn.classList.add("added");
+      setTimeout(() => {
+        btn.textContent = "Añadir al carrito";
+        btn.classList.remove("added");
+      }, 1200);
+    });
+  });
+}
+
+function resolveCartLine(key) {
+  if (key.startsWith(`${MAIN_PRODUCT.id}-`)) {
+    const variant = key.split("-")[1];
+    return {
+      name: `${MAIN_PRODUCT.name} (${VARIANT_LABELS[variant] || variant})`,
+      price: parseFloat(document.querySelector(`.variant-card[data-variant="${variant}"]`)?.dataset.price || 0),
+      emoji: "🧪",
+    };
+  }
+  const product = CROSS_SELL.find((p) => p.id === key);
+  return product ? { name: product.name, price: product.price, emoji: product.emoji } : null;
+}
+
+function removeFromCart(key) {
+  const cart = loadCart();
+  delete cart[key];
+  saveCart(cart);
+  renderCart();
+}
+
+function renderCart() {
+  const cart = loadCart();
+  const items = Object.entries(cart);
+  const cartItems = document.getElementById("cartItems");
+  const cartCount = document.getElementById("cartCount");
+  const cartTotal = document.getElementById("cartTotal");
+
+  const totalQty = items.reduce((sum, [, qty]) => sum + qty, 0);
+  cartCount.textContent = totalQty;
+
+  if (items.length === 0) {
+    cartItems.innerHTML = '<p class="cart-empty">Tu carrito está vacío</p>';
+    cartTotal.textContent = formatPrice(0);
+    return;
+  }
+
+  let total = 0;
+  cartItems.innerHTML = items.map(([key, qty]) => {
+    const line = resolveCartLine(key);
+    if (!line) return "";
+    total += line.price * qty;
+    return `
+      <div class="cart-item">
+        <span class="cart-item-name">${line.emoji} ${line.name}</span>
+        <span class="cart-item-qty">x${qty}</span>
+        <button class="cart-item-remove" data-key="${key}">Quitar</button>
+      </div>
+    `;
+  }).join("");
+
+  cartTotal.textContent = formatPrice(total);
+
+  cartItems.querySelectorAll(".cart-item-remove").forEach((btn) => {
+    btn.addEventListener("click", () => removeFromCart(btn.dataset.key));
+  });
+}
+
+function setupCartDrawer() {
+  const drawer = document.getElementById("cartDrawer");
+  const overlay = document.getElementById("cartOverlay");
+  const openCart = () => { drawer.classList.add("open"); overlay.classList.add("open"); };
+  const closeCart = () => { drawer.classList.remove("open"); overlay.classList.remove("open"); };
+
+  document.getElementById("cartToggle").addEventListener("click", openCart);
+  document.getElementById("cartClose").addEventListener("click", closeCart);
+  overlay.addEventListener("click", closeCart);
+
+  document.getElementById("checkoutBtn").addEventListener("click", () => {
+    const cart = loadCart();
+    if (Object.keys(cart).length === 0) {
+      alert("Tu carrito está vacío.");
+      return;
+    }
+    alert("Esta es una demo — no hay proceso de pago real conectado.");
+  });
+}
+
+function setupNewsletterForm() {
+  const form = document.getElementById("newsletterForm");
+  const msg = document.getElementById("formMsg");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = document.getElementById("newsletterEmail").value;
+    msg.textContent = `¡Gracias! Te hemos suscrito con ${email}.`;
+    form.reset();
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setupGallery();
+  setupVariants();
+  setupAddToCart();
+  renderCrossSell();
+  renderCart();
+  setupCartDrawer();
+  setupNewsletterForm();
+});
+
+</script>
