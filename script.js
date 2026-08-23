@@ -13,7 +13,7 @@ const CROSS_SELL = [
   { id: "cs4", name: "Omega-3 Algas", price: 24.00, emoji: "🐟" },
 ];
 
-const CART_KEY = "verdura_cart";
+const CART_KEY = "grahams_cart";
 let selectedVariant = "1";
 let selectedPrice = 39.00;
 let quantity = 1;
