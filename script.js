@@ -14,9 +14,8 @@ const CROSS_SELL = [
 ];
 
 const CART_KEY = "naturcalm_ar_cart";
-let selectedVariant = "1";
-let selectedPrice = 34900;
-let quantity = 1;
+let selectedVariant = "2+1";
+let selectedPrice = 54900;
 
 function loadCart() {
   try {
@@ -37,17 +36,36 @@ function formatPrice(value) {
 /* Gallery */
 function setupGallery() {
   const main = document.getElementById("galleryMain");
-  document.querySelectorAll(".thumb").forEach((thumb) => {
-    thumb.addEventListener("click", () => {
-      document.querySelectorAll(".thumb").forEach((t) => t.classList.remove("active"));
-      thumb.classList.add("active");
-      if (thumb.dataset.type === "img") {
-        main.innerHTML = `<img src="${thumb.dataset.img}" alt="Pro 20+">`;
-      } else {
-        main.textContent = thumb.dataset.img;
-      }
-    });
+  const thumbs = Array.from(document.querySelectorAll(".thumb"));
+
+  function activateThumb(thumb) {
+    thumbs.forEach((t) => t.classList.remove("active"));
+    thumb.classList.add("active");
+    const badge = main.querySelector(".gallery-badge");
+    const prev = main.querySelector(".gallery-arrow-prev");
+    const next = main.querySelector(".gallery-arrow-next");
+    main.innerHTML = "";
+    if (badge) main.appendChild(badge);
+    const img = document.createElement("img");
+    img.src = thumb.dataset.img;
+    img.alt = "Pro 20+";
+    main.appendChild(img);
+    if (prev) main.appendChild(prev);
+    if (next) main.appendChild(next);
+  }
+
+  thumbs.forEach((thumb) => {
+    thumb.addEventListener("click", () => activateThumb(thumb));
   });
+
+  function shiftActive(delta) {
+    const currentIndex = thumbs.findIndex((t) => t.classList.contains("active"));
+    const nextIndex = (currentIndex + delta + thumbs.length) % thumbs.length;
+    activateThumb(thumbs[nextIndex]);
+  }
+
+  document.getElementById("galleryPrev")?.addEventListener("click", () => shiftActive(-1));
+  document.getElementById("galleryNext")?.addEventListener("click", () => shiftActive(1));
 }
 
 /* Variant selector */
@@ -56,8 +74,12 @@ function setupVariants() {
   cards.forEach((card) => {
     if (card.dataset.variant === selectedVariant) card.classList.add("selected");
     card.addEventListener("click", () => {
-      cards.forEach((c) => c.classList.remove("selected"));
+      cards.forEach((c) => {
+        c.classList.remove("selected");
+        c.querySelector(".variant-radio")?.classList.remove("checked");
+      });
       card.classList.add("selected");
+      card.querySelector(".variant-radio")?.classList.add("checked");
       selectedVariant = card.dataset.variant;
       selectedPrice = parseFloat(card.dataset.price);
       updateAddToCartPrice();
@@ -66,22 +88,7 @@ function setupVariants() {
 }
 
 function updateAddToCartPrice() {
-  document.getElementById("addToCartPrice").textContent = formatPrice(selectedPrice * quantity);
-}
-
-/* Quantity stepper */
-function setupQuantity() {
-  const qtyValue = document.getElementById("qtyValue");
-  document.getElementById("qtyMinus").addEventListener("click", () => {
-    if (quantity > 1) quantity--;
-    qtyValue.textContent = quantity;
-    updateAddToCartPrice();
-  });
-  document.getElementById("qtyPlus").addEventListener("click", () => {
-    quantity++;
-    qtyValue.textContent = quantity;
-    updateAddToCartPrice();
-  });
+  document.getElementById("addToCartPrice").textContent = formatPrice(selectedPrice);
 }
 
 /* Add to cart (main product) */
@@ -89,7 +96,7 @@ function setupAddToCart() {
   document.getElementById("addToCartBtn").addEventListener("click", () => {
     const cart = loadCart();
     const key = `${MAIN_PRODUCT.id}-${selectedVariant}`;
-    cart[key] = (cart[key] || 0) + quantity;
+    cart[key] = (cart[key] || 0) + 1;
     saveCart(cart);
     renderCart();
     const btn = document.getElementById("addToCartBtn");
@@ -220,7 +227,6 @@ function setupNewsletterForm() {
 document.addEventListener("DOMContentLoaded", () => {
   setupGallery();
   setupVariants();
-  setupQuantity();
   setupAddToCart();
   renderCrossSell();
   renderCart();

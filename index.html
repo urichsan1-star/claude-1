@@ -34,60 +34,77 @@
 <section class="product-hero" id="producto">
   <div class="container product-hero-grid">
     <div class="gallery">
-      <div class="gallery-main" id="galleryMain"><img src="images/real/hero-bottle-hand.png" alt="Frasco de NaturCalm Pro 20+ en mano"></div>
+      <div class="gallery-main" id="galleryMain">
+        <span class="gallery-badge">BIÓTICO 3 EN 1</span>
+        <img src="images/real/product-bottle-box.png" alt="Frasco y caja de NaturCalm Pro 20+">
+        <button class="gallery-arrow gallery-arrow-prev" id="galleryPrev" aria-label="Imagen anterior">←</button>
+        <button class="gallery-arrow gallery-arrow-next" id="galleryNext" aria-label="Imagen siguiente">→</button>
+      </div>
       <div class="gallery-thumbs" id="galleryThumbs">
-        <button class="thumb active" data-type="img" data-img="images/real/hero-bottle-hand.png"><img src="images/real/hero-bottle-hand.png" alt="Frasco en mano"></button>
-        <button class="thumb" data-type="img" data-img="images/real/card-gut-talks-natcalm.png"><img src="images/real/card-gut-talks-natcalm.png" alt="Tu intestino habla de todo"></button>
+        <button class="thumb active" data-type="img" data-img="images/real/product-bottle-box.png"><img src="images/real/product-bottle-box.png" alt="Frasco y caja"></button>
+        <button class="thumb" data-type="img" data-img="images/real/step2-dropper-mouth.png"><img src="images/real/step2-dropper-mouth.png" alt="Aplicando la gota"></button>
         <button class="thumb" data-type="img" data-img="images/real/card-strains-complex-natcalm.png"><img src="images/real/card-strains-complex-natcalm.png" alt="4 complejos y sinergia probiótica"></button>
+        <button class="thumb" data-type="img" data-img="images/real/card-gut-talks-natcalm.png"><img src="images/real/card-gut-talks-natcalm.png" alt="Tu intestino habla de todo"></button>
         <button class="thumb" data-type="img" data-img="images/real/card-features-natcalm.png"><img src="images/real/card-features-natcalm.png" alt="Salud intestinal, piel radiante, sistema inmune"></button>
-        <button class="thumb" data-type="img" data-img="images/product-hero.svg"><img src="images/product-hero.svg" alt="Frasco y caja"></button>
       </div>
     </div>
 
     <div class="product-info">
-      <p class="eyebrow">Más vendido</p>
-      <h1>Pro 20+</h1>
-      <p class="hero-tagline">Bienestar completo, simplificado.</p>
-      <p class="hero-sub">Prebiótico + probiótico + posbiótico en una sola gota diaria. 20 mil millones de UFC. 50 ml.</p>
-
       <div class="stars-row">
         <span class="stars">★★★★★</span>
-        <a href="#reseñas">5.0 · 5 reseñas</a>
+        <a href="#reseñas">5 reseñas</a>
       </div>
+      <h1>Pro 20+</h1>
+      <h2 class="hero-subhead">Tratá la fuente, no solo la superficie</h2>
+      <p class="hero-sub">Tu intestino define mucho más que la digestión — moldea tu piel, tu ánimo y tu energía. Pro 20+ aporta 20+ mil millones de cultivos vivos en una sola gota diaria de 1 ml, actuando sobre el eje intestino-piel-cerebro para calmar la inflamación en su origen, antes de que llegue a la superficie.</p>
+      <ul class="hero-bullets">
+        <li>Calma la inflamación en su origen</li>
+        <li>La primera gota pre, pro y posbiótica del mercado</li>
+        <li>20+ mil millones de UFC, 4 cepas clínicamente estudiadas</li>
+        <li>Actúa sobre el eje intestino-piel-cerebro</li>
+      </ul>
 
+      <p class="hero-price">$34.900</p>
+
+      <p class="save-more-label">Sé constante. Ahorrá más</p>
       <div class="variant-select" id="variantSelect">
         <button class="variant-card" data-variant="1" data-price="34900">
+          <span class="variant-badge">Precio completo</span>
+          <span class="variant-radio"></span>
           <span class="variant-title">1 Unidad</span>
-          <span class="variant-note">Dura 1 mes</span>
+          <span class="variant-note">30 días · $1.163/día</span>
           <span class="variant-price">$34.900</span>
         </button>
         <button class="variant-card best" data-variant="2+1" data-price="54900">
-          <span class="variant-badge">Más popular</span>
+          <span class="variant-badge">Llevás 3, pagás 2</span>
+          <span class="variant-radio checked"></span>
           <span class="variant-title">2+1</span>
-          <span class="variant-note">Dura 3 meses</span>
-          <span class="variant-price">$54.900</span>
+          <span class="variant-note">90 días · $610/día</span>
+          <span class="variant-price">$18.300<small>/unidad</small></span>
+          <span class="variant-old-price">$34.900</span>
         </button>
         <button class="variant-card" data-variant="3+2" data-price="78900">
-          <span class="variant-badge">Mejor precio</span>
+          <span class="variant-badge">Llevás 5, pagás 3</span>
+          <span class="variant-radio"></span>
           <span class="variant-title">3+2</span>
-          <span class="variant-note">Dura 5 meses</span>
-          <span class="variant-price">$78.900</span>
+          <span class="variant-note">150 días · $526/día</span>
+          <span class="variant-price">$15.780<small>/unidad</small></span>
+          <span class="variant-old-price">$34.900</span>
         </button>
       </div>
 
-      <div class="qty-add-row">
-        <div class="qty-stepper">
-          <button id="qtyMinus" aria-label="Reducir cantidad">−</button>
-          <span id="qtyValue">1</span>
-          <button id="qtyPlus" aria-label="Aumentar cantidad">+</button>
-        </div>
-        <button class="btn btn-primary btn-add" id="addToCartBtn">Añadir al carrito — <span id="addToCartPrice">$34.900</span></button>
-      </div>
+      <p class="free-shipping-note">Envío gratis en compras de 2 o más unidades</p>
+
+      <button class="btn btn-primary btn-buy" id="addToCartBtn">Comprar ahora — <span id="addToCartPrice">$54.900</span> ↗</button>
 
       <div class="trust-row">
-        <div><span>🔒</span>Pago seguro con Mercado Pago</div>
-        <div><span>🚚</span>Envío gratis +$50.000</div>
-        <div><span>↩️</span>Garantía 60 días</div>
+        <div><span>📦</span>60 días de devolución fácil</div>
+        <div><span>💳</span>Hasta 6 cuotas sin interés</div>
+      </div>
+
+      <div class="science-quote">
+        <span class="science-quote-icon">⚛️</span>
+        <p>"La disregulación del eje intestino-piel está cada vez más asociada a brotes crónicos, por eso tratar el microbioma y la barrera de la piel en conjunto tiene sentido biológico."</p>
       </div>
 
       <div class="accordion">
