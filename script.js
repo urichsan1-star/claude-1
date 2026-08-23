@@ -1,13 +1,22 @@
-const PRODUCTS = [
-  { id: "p1", name: "Taza de cerámica", price: 18.00, emoji: "☕" },
-  { id: "p2", name: "Vela de soja", price: 14.50, emoji: "🕯️" },
-  { id: "p3", name: "Bolsa de lino", price: 22.00, emoji: "👜" },
-  { id: "p4", name: "Cuaderno artesanal", price: 12.00, emoji: "📓" },
-  { id: "p5", name: "Manta de lana", price: 45.00, emoji: "🧶" },
-  { id: "p6", name: "Set de té", price: 32.00, emoji: "🍵" },
+const MAIN_PRODUCT = { id: "floraglow", name: "FloraGlow 20+" };
+
+const VARIANT_LABELS = {
+  "1": "1 Frasco",
+  "3": "3 Frascos",
+  "6": "6 Frascos",
+};
+
+const CROSS_SELL = [
+  { id: "cs1", name: "Colágeno Marino", price: 28.00, emoji: "✨" },
+  { id: "cs2", name: "Magnesio Nocturno", price: 19.50, emoji: "🌙" },
+  { id: "cs3", name: "Vitamina D3+K2", price: 16.00, emoji: "☀️" },
+  { id: "cs4", name: "Omega-3 Algas", price: 24.00, emoji: "🐟" },
 ];
 
-const CART_KEY = "aurora_cart";
+const CART_KEY = "verdura_cart";
+let selectedVariant = "1";
+let selectedPrice = 39.00;
+let quantity = 1;
 
 function loadCart() {
   try {
@@ -25,12 +34,74 @@ function formatPrice(value) {
   return value.toFixed(2).replace(".", ",") + " €";
 }
 
-function renderProducts() {
-  const grid = document.getElementById("productGrid");
-  grid.innerHTML = PRODUCTS.map((p) => `
+/* Gallery */
+function setupGallery() {
+  const main = document.getElementById("galleryMain");
+  document.querySelectorAll(".thumb").forEach((thumb) => {
+    thumb.addEventListener("click", () => {
+      document.querySelectorAll(".thumb").forEach((t) => t.classList.remove("active"));
+      thumb.classList.add("active");
+      main.textContent = thumb.dataset.img;
+    });
+  });
+}
+
+/* Variant selector */
+function setupVariants() {
+  const cards = document.querySelectorAll(".variant-card");
+  cards.forEach((card) => {
+    if (card.dataset.variant === selectedVariant) card.classList.add("selected");
+    card.addEventListener("click", () => {
+      cards.forEach((c) => c.classList.remove("selected"));
+      card.classList.add("selected");
+      selectedVariant = card.dataset.variant;
+      selectedPrice = parseFloat(card.dataset.price);
+      updateAddToCartPrice();
+    });
+  });
+}
+
+function updateAddToCartPrice() {
+  document.getElementById("addToCartPrice").textContent = formatPrice(selectedPrice * quantity);
+}
+
+/* Quantity stepper */
+function setupQuantity() {
+  const qtyValue = document.getElementById("qtyValue");
+  document.getElementById("qtyMinus").addEventListener("click", () => {
+    if (quantity > 1) quantity--;
+    qtyValue.textContent = quantity;
+    updateAddToCartPrice();
+  });
+  document.getElementById("qtyPlus").addEventListener("click", () => {
+    quantity++;
+    qtyValue.textContent = quantity;
+    updateAddToCartPrice();
+  });
+}
+
+/* Add to cart (main product) */
+function setupAddToCart() {
+  document.getElementById("addToCartBtn").addEventListener("click", () => {
+    const cart = loadCart();
+    const key = `${MAIN_PRODUCT.id}-${selectedVariant}`;
+    cart[key] = (cart[key] || 0) + quantity;
+    saveCart(cart);
+    renderCart();
+    const btn = document.getElementById("addToCartBtn");
+    const original = btn.innerHTML;
+    btn.textContent = "Añadido al carrito ✓";
+    setTimeout(() => { btn.innerHTML = original; }, 1400);
+  });
+}
+
+/* Cross-sell grid */
+function renderCrossSell() {
+  const grid = document.getElementById("crossSellGrid");
+  grid.innerHTML = CROSS_SELL.map((p) => `
     <div class="product-card">
       <div class="product-image">${p.emoji}</div>
-      <div class="product-info">
+      <div class="product-info-card">
         <h3>${p.name}</h3>
         <div class="product-price">${formatPrice(p.price)}</div>
         <button class="add-to-cart" data-id="${p.id}">Añadir al carrito</button>
@@ -40,7 +111,10 @@ function renderProducts() {
 
   grid.querySelectorAll(".add-to-cart").forEach((btn) => {
     btn.addEventListener("click", () => {
-      addToCart(btn.dataset.id);
+      const cart = loadCart();
+      cart[btn.dataset.id] = (cart[btn.dataset.id] || 0) + 1;
+      saveCart(cart);
+      renderCart();
       btn.textContent = "Añadido ✓";
       btn.classList.add("added");
       setTimeout(() => {
@@ -51,16 +125,22 @@ function renderProducts() {
   });
 }
 
-function addToCart(id) {
-  const cart = loadCart();
-  cart[id] = (cart[id] || 0) + 1;
-  saveCart(cart);
-  renderCart();
+function resolveCartLine(key) {
+  if (key.startsWith(`${MAIN_PRODUCT.id}-`)) {
+    const variant = key.split("-")[1];
+    return {
+      name: `${MAIN_PRODUCT.name} (${VARIANT_LABELS[variant] || variant})`,
+      price: parseFloat(document.querySelector(`.variant-card[data-variant="${variant}"]`)?.dataset.price || 0),
+      emoji: "🧪",
+    };
+  }
+  const product = CROSS_SELL.find((p) => p.id === key);
+  return product ? { name: product.name, price: product.price, emoji: product.emoji } : null;
 }
 
-function removeFromCart(id) {
+function removeFromCart(key) {
   const cart = loadCart();
-  delete cart[id];
+  delete cart[key];
   saveCart(cart);
   renderCart();
 }
@@ -82,15 +162,15 @@ function renderCart() {
   }
 
   let total = 0;
-  cartItems.innerHTML = items.map(([id, qty]) => {
-    const product = PRODUCTS.find((p) => p.id === id);
-    if (!product) return "";
-    total += product.price * qty;
+  cartItems.innerHTML = items.map(([key, qty]) => {
+    const line = resolveCartLine(key);
+    if (!line) return "";
+    total += line.price * qty;
     return `
       <div class="cart-item">
-        <span class="cart-item-name">${product.emoji} ${product.name}</span>
+        <span class="cart-item-name">${line.emoji} ${line.name}</span>
         <span class="cart-item-qty">x${qty}</span>
-        <button class="cart-item-remove" data-id="${id}">Quitar</button>
+        <button class="cart-item-remove" data-key="${key}">Quitar</button>
       </div>
     `;
   }).join("");
@@ -98,7 +178,7 @@ function renderCart() {
   cartTotal.textContent = formatPrice(total);
 
   cartItems.querySelectorAll(".cart-item-remove").forEach((btn) => {
-    btn.addEventListener("click", () => removeFromCart(btn.dataset.id));
+    btn.addEventListener("click", () => removeFromCart(btn.dataset.key));
   });
 }
 
@@ -134,7 +214,11 @@ function setupNewsletterForm() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  renderProducts();
+  setupGallery();
+  setupVariants();
+  setupQuantity();
+  setupAddToCart();
+  renderCrossSell();
   renderCart();
   setupCartDrawer();
   setupNewsletterForm();

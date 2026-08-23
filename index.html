@@ -3,107 +3,423 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aurora Studio — Tienda</title>
+<title>FloraGlow 20+ — Verdura Labs</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<div class="topbar">Envío gratis en pedidos +50€ &nbsp;·&nbsp; Garantía de devolución de 60 días &nbsp;·&nbsp; Suscríbete y ahorra 20%</div>
+
 <header class="site-header">
   <div class="container header-inner">
-    <a href="#" class="logo">Aurora Studio</a>
+    <a href="#" class="logo">VERDURA<span>LABS</span></a>
     <nav class="main-nav">
-      <a href="#productos">Productos</a>
-      <a href="#coleccion">Colección</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#producto">Producto</a>
+      <a href="#ciencia">Ciencia</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#faq">FAQ</a>
+      <a href="#reseñas">Reseñas</a>
     </nav>
-    <button class="cart-btn" id="cartToggle" aria-label="Abrir carrito">
-      🛍️ <span class="cart-count" id="cartCount">0</span>
-    </button>
+    <div class="header-icons">
+      <button class="icon-btn" aria-label="Buscar">🔍</button>
+      <button class="icon-btn" aria-label="Cuenta">👤</button>
+      <button class="cart-btn" id="cartToggle" aria-label="Abrir carrito">
+        🛍️ <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
   </div>
 </header>
 
-<section class="hero">
-  <div class="container hero-inner">
-    <p class="eyebrow">Nueva colección</p>
-    <h1>Diseño simple.<br>Calidad que se nota.</h1>
-    <p class="hero-sub">Piezas hechas a mano, pensadas para durar. Envío gratis en pedidos superiores a 50€.</p>
-    <a href="#productos" class="btn btn-primary">Ver productos</a>
+<!-- HERO / PRODUCT -->
+<section class="product-hero" id="producto">
+  <div class="container product-hero-grid">
+    <div class="gallery">
+      <div class="gallery-main" id="galleryMain">🧪</div>
+      <div class="gallery-thumbs" id="galleryThumbs">
+        <button class="thumb active" data-img="🧪">🧪</button>
+        <button class="thumb" data-img="💧">💧</button>
+        <button class="thumb" data-img="🌿">🌿</button>
+        <button class="thumb" data-img="📦">📦</button>
+      </div>
+    </div>
+
+    <div class="product-info">
+      <p class="eyebrow">Más vendido</p>
+      <h1>FloraGlow 20+</h1>
+      <p class="hero-sub">Probiótico diario en gotas para piel, digestión y equilibrio interior. 20 mil millones de UFC por dosis.</p>
+
+      <div class="stars-row">
+        <span class="stars">★★★★★</span>
+        <a href="#reseñas">4.8 · 2,340 reseñas</a>
+      </div>
+
+      <div class="variant-select" id="variantSelect">
+        <button class="variant-card" data-variant="1" data-price="39.00">
+          <span class="variant-title">1 Frasco</span>
+          <span class="variant-note">Suministro 30 días</span>
+          <span class="variant-price">39,00 €</span>
+        </button>
+        <button class="variant-card best" data-variant="3" data-price="99.00">
+          <span class="variant-badge">Más popular</span>
+          <span class="variant-title">3 Frascos</span>
+          <span class="variant-note">Ahorra 15%</span>
+          <span class="variant-price">99,00 €</span>
+        </button>
+        <button class="variant-card" data-variant="6" data-price="179.00">
+          <span class="variant-badge">Mejor precio</span>
+          <span class="variant-title">6 Frascos</span>
+          <span class="variant-note">Ahorra 30%</span>
+          <span class="variant-price">179,00 €</span>
+        </button>
+      </div>
+
+      <div class="qty-add-row">
+        <div class="qty-stepper">
+          <button id="qtyMinus" aria-label="Reducir cantidad">−</button>
+          <span id="qtyValue">1</span>
+          <button id="qtyPlus" aria-label="Aumentar cantidad">+</button>
+        </div>
+        <button class="btn btn-primary btn-add" id="addToCartBtn">Añadir al carrito — <span id="addToCartPrice">39,00 €</span></button>
+      </div>
+
+      <div class="trust-row">
+        <div><span>🔒</span>Pago 100% seguro</div>
+        <div><span>🚚</span>Envío gratis +50€</div>
+        <div><span>↩️</span>Garantía 60 días</div>
+      </div>
+
+      <div class="accordion">
+        <details open>
+          <summary>Ingredientes</summary>
+          <p>Mezcla de 4 cepas probióticas vivas, fermentado con 10 superalimentos, sin azúcares añadidos, sin gluten, apto vegano.</p>
+        </details>
+        <details>
+          <summary>Modo de uso</summary>
+          <p>1 gotero al día, directamente en la boca o mezclado con agua. Preferiblemente por la mañana en ayunas.</p>
+        </details>
+        <details>
+          <summary>Envío y devoluciones</summary>
+          <p>Envío en 24-48h. Si no estás satisfecho, te devolvemos el dinero dentro de los primeros 60 días.</p>
+        </details>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="products" id="productos">
+<!-- RESULTS STRIP -->
+<section class="results-strip">
   <div class="container">
-    <div class="section-head">
-      <h2>Más vendidos</h2>
-      <p>Selección de nuestros clientes</p>
-    </div>
-    <div class="product-grid" id="productGrid"></div>
-  </div>
-</section>
-
-<section class="banner" id="coleccion">
-  <div class="container banner-inner">
-    <div class="banner-text">
-      <h2>Colección Otoño</h2>
-      <p>Tonos cálidos, materiales naturales y acabados artesanales para esta temporada.</p>
-      <a href="#productos" class="btn btn-outline">Explorar colección</a>
-    </div>
-  </div>
-</section>
-
-<section class="perks">
-  <div class="container perks-grid">
-    <div class="perk">
-      <span class="perk-icon">🚚</span>
-      <h3>Envío gratis</h3>
-      <p>En pedidos superiores a 50€</p>
-    </div>
-    <div class="perk">
-      <span class="perk-icon">↩️</span>
-      <h3>Devoluciones fáciles</h3>
-      <p>30 días para cambios y devoluciones</p>
-    </div>
-    <div class="perk">
-      <span class="perk-icon">🔒</span>
-      <h3>Pago seguro</h3>
-      <p>Tus datos siempre protegidos</p>
+    <p class="section-kicker center">La marca</p>
+    <h2 class="center">Más de 25 años de resultados</h2>
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="result-photo">🧑</div>
+        <p class="result-age">25 años</p>
+        <span class="stars small">★★★★★</span>
+      </div>
+      <div class="result-card">
+        <div class="result-photo">👩</div>
+        <p class="result-age">34 años</p>
+        <span class="stars small">★★★★★</span>
+      </div>
+      <div class="result-card">
+        <div class="result-photo">🧔</div>
+        <p class="result-age">41 años</p>
+        <span class="stars small">★★★★★</span>
+      </div>
+      <div class="result-card">
+        <div class="result-photo">👵</div>
+        <p class="result-age">58 años</p>
+        <span class="stars small">★★★★★</span>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="newsletter" id="nosotros">
-  <div class="container newsletter-inner">
-    <h2>Únete a nuestra lista</h2>
-    <p>Recibe novedades, descuentos y lanzamientos exclusivos.</p>
-    <form id="newsletterForm" class="newsletter-form">
-      <input type="email" id="newsletterEmail" placeholder="tu@email.com" required>
-      <button type="submit" class="btn btn-primary">Suscribirme</button>
-    </form>
-    <p class="form-msg" id="formMsg"></p>
+<!-- SCIENCE -->
+<section class="science" id="ciencia">
+  <div class="container science-grid">
+    <div class="science-text">
+      <p class="section-kicker">La ciencia detrás</p>
+      <h2>El eje Intestino–Piel–Cerebro</h2>
+      <p>3 sistemas biológicos conectados: cuando el intestino se desequilibra, la inflamación se propaga — y no se queda solo ahí.</p>
+      <ul class="science-list">
+        <li><strong>Piel</strong><span>La inflamación intestinal se asocia con brotes, rojeces y envejecimiento prematuro.</span></li>
+        <li><strong>Cerebro</strong><span>El intestino produce gran parte de la serotonina del cuerpo, ligada al ánimo y al sueño.</span></li>
+        <li><strong>Energía</strong><span>Una flora equilibrada mejora la absorción de nutrientes y la energía diaria.</span></li>
+      </ul>
+    </div>
+    <div class="science-visual">
+      <div class="axis-graphic">
+        <div class="axis-ring ring-1"></div>
+        <div class="axis-ring ring-2"></div>
+        <div class="axis-ring ring-3"></div>
+        <span class="axis-label">EJE<br>INTESTINO–PIEL<br>CEREBRO</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<footer class="site-footer" id="contacto">
+<!-- DIFFERENCE BAND -->
+<section class="difference-band">
+  <div class="container">
+    <p class="section-kicker center light">La diferencia</p>
+    <h2 class="center light">Por qué FloraGlow es distinto</h2>
+    <div class="difference-grid">
+      <div class="difference-card">
+        <span class="difference-icon">🌱</span>
+        <h3>Cepas clínicamente probadas</h3>
+        <p>4 cepas seleccionadas por su evidencia científica.</p>
+      </div>
+      <div class="difference-card">
+        <span class="difference-icon">🧫</span>
+        <h3>Fermentación viva</h3>
+        <p>Sin pasteurizar, para mantener cultivos activos.</p>
+      </div>
+      <div class="difference-card">
+        <span class="difference-icon">🚫</span>
+        <h3>Sin rellenos</h3>
+        <p>Cero azúcares añadidos ni ingredientes de relleno.</p>
+      </div>
+      <div class="difference-card">
+        <span class="difference-icon">🛡️</span>
+        <h3>Protección microencapsulada</h3>
+        <p>Sobrevive al ácido estomacal hasta llegar al intestino.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO USE -->
+<section class="how-to">
+  <div class="container">
+    <p class="section-kicker center">El ritual</p>
+    <h2 class="center">Una gota al día es todo lo que necesitas</h2>
+    <div class="how-to-grid">
+      <div class="how-to-card">
+        <span class="step-badge">1</span>
+        <div class="how-to-image">💧</div>
+        <h3>Sirve tu gota diaria</h3>
+        <p>Usa el gotero incluido para medir tu dosis por la mañana.</p>
+      </div>
+      <div class="how-to-card">
+        <span class="step-badge">2</span>
+        <div class="how-to-image">🥤</div>
+        <h3>Mezcla y disfruta</h3>
+        <p>Toma directo o mézclalo con agua, batido o infusión.</p>
+      </div>
+    </div>
+    <p class="how-to-caption">La constancia es la clave — 1 gota, cada día.</p>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="container">
+    <p class="section-kicker center">Cómo funciona</p>
+    <h2 class="center">El proceso de fermentación viva</h2>
+    <div class="process-grid">
+      <div class="process-circle c1">
+        <h3>Preparar</h3>
+        <p>10 superalimentos enteros comienzan la fermentación natural.</p>
+      </div>
+      <div class="process-arrow">→</div>
+      <div class="process-circle c2">
+        <h3>Proteger</h3>
+        <p>Las cepas vivas se microencapsulan para resistir el ácido.</p>
+      </div>
+      <div class="process-arrow">→</div>
+      <div class="process-circle c3">
+        <h3>Restaurar</h3>
+        <p>Los probióticos llegan activos hasta tu intestino.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRAINS -->
+<section class="strains">
+  <div class="container">
+    <p class="section-kicker center">Cada gota cuenta</p>
+    <h2 class="center">Las 4 cepas probióticas</h2>
+    <div class="strains-list">
+      <div class="strain-row">
+        <span class="strain-icon">🧬</span>
+        <div><strong>Lactobacillus rhamnosus</strong><p>Apoya la barrera intestinal y la respuesta inmune.</p></div>
+      </div>
+      <div class="strain-row">
+        <span class="strain-icon">🧬</span>
+        <div><strong>Bifidobacterium lactis</strong><p>Favorece la regularidad digestiva.</p></div>
+      </div>
+      <div class="strain-row">
+        <span class="strain-icon">🧬</span>
+        <div><strong>Lactobacillus plantarum</strong><p>Ayuda a reducir la inflamación de bajo grado.</p></div>
+      </div>
+      <div class="strain-row">
+        <span class="strain-icon">🧬</span>
+        <div><strong>Bifidobacterium longum</strong><p>Vinculada al eje intestino-cerebro y al ánimo.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUPERFOODS -->
+<section class="superfoods">
+  <div class="container superfoods-grid">
+    <div>
+      <p class="section-kicker">Fruit Fed Flora</p>
+      <h2>10 superalimentos. Un proceso de fermentación.</h2>
+      <p>Ingredientes enteros fermentados durante semanas para maximizar biodisponibilidad.</p>
+      <ul class="superfoods-list">
+        <li>Mora negra</li><li>Arándano</li><li>Granada</li><li>Manzana</li><li>Frambuesa</li>
+        <li>Ciruela</li><li>Uva roja</li><li>Cereza</li><li>Grosella</li><li>Higo</li>
+      </ul>
+    </div>
+    <div class="superfoods-visual">🍇🍓🍒🍎🫐</div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="comparison">
+  <div class="container">
+    <p class="section-kicker center light">Comparativa</p>
+    <h2 class="center light">No todos los probióticos son iguales</h2>
+    <div class="comparison-table">
+      <div class="comparison-row comparison-head">
+        <span>Característica</span>
+        <span class="col-us">FloraGlow</span>
+        <span class="col-them">Otros probióticos</span>
+      </div>
+      <div class="comparison-row"><span>Cepas vivas garantizadas</span><span class="col-us">✔</span><span class="col-them">✘</span></div>
+      <div class="comparison-row"><span>Sin azúcares añadidos</span><span class="col-us">✔</span><span class="col-them">A veces</span></div>
+      <div class="comparison-row"><span>Fermentación natural</span><span class="col-us">✔</span><span class="col-them">✘</span></div>
+      <div class="comparison-row"><span>Empaque opaco anti-luz</span><span class="col-us">✔</span><span class="col-them">✘</span></div>
+      <div class="comparison-row"><span>Garantía 60 días</span><span class="col-us">✔</span><span class="col-them">✘</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline" id="beneficios">
+  <div class="container">
+    <p class="section-kicker center">El viaje</p>
+    <h2 class="center">Beneficios que se construyen con el tiempo</h2>
+    <div class="timeline-list">
+      <div class="timeline-row">
+        <span class="timeline-marker">Semana 1</span>
+        <div><h3>Digestión más ligera</h3><p>Menos hinchazón y molestias después de comer.</p></div>
+      </div>
+      <div class="timeline-row">
+        <span class="timeline-marker">Semana 4</span>
+        <div><h3>Energía más estable</h3><p>Mejor absorción de nutrientes durante el día.</p></div>
+      </div>
+      <div class="timeline-row">
+        <span class="timeline-marker">Semana 8</span>
+        <div><h3>Piel más equilibrada</h3><p>Menos rojeces visibles y mayor luminosidad.</p></div>
+      </div>
+      <div class="timeline-row">
+        <span class="timeline-marker">Semana 12</span>
+        <div><h3>Equilibrio general</h3><p>Digestión, piel y ánimo trabajando en conjunto.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <p class="section-kicker center">Dudas</p>
+    <h2 class="center">Todo lo que podrías preguntar</h2>
+    <div class="faq-list">
+      <details><summary>¿Cuánto tarda en hacer efecto?</summary><p>La mayoría de personas nota cambios digestivos en 1-2 semanas y cambios en la piel a partir de la semana 8.</p></details>
+      <details><summary>¿Es seguro tomarlo todos los días?</summary><p>Sí, está formulado para uso diario continuo.</p></details>
+      <details><summary>¿Puedo tomarlo si soy vegano/a?</summary><p>Sí, la fórmula es 100% vegana y sin gluten.</p></details>
+      <details><summary>¿Necesito refrigerarlo?</summary><p>No, el envase opaco protege las cepas vivas a temperatura ambiente.</p></details>
+      <details><summary>¿Puedo cancelar mi suscripción?</summary><p>Sí, puedes pausar o cancelar cuando quieras desde tu cuenta.</p></details>
+      <details><summary>¿Es seguro durante el embarazo?</summary><p>Consulta siempre con tu profesional de salud antes de iniciar cualquier suplemento durante el embarazo o lactancia.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CROSS SELL -->
+<section class="cross-sell">
+  <div class="container">
+    <p class="section-kicker center">Completa tu rutina</p>
+    <h2 class="center">Trata desde adentro hacia afuera</h2>
+    <div class="product-grid" id="crossSellGrid"></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reseñas">
+  <div class="container">
+    <h2 class="center">Valoraciones y reseñas</h2>
+    <div class="reviews-summary">
+      <div class="reviews-score">
+        <span class="score-number">4.8</span>
+        <span class="stars">★★★★★</span>
+        <span>2,340 reseñas</span>
+      </div>
+      <div class="reviews-bars">
+        <div class="bar-row"><span>5★</span><div class="bar"><i style="width:82%"></i></div></div>
+        <div class="bar-row"><span>4★</span><div class="bar"><i style="width:12%"></i></div></div>
+        <div class="bar-row"><span>3★</span><div class="bar"><i style="width:4%"></i></div></div>
+        <div class="bar-row"><span>2★</span><div class="bar"><i style="width:1%"></i></div></div>
+        <div class="bar-row"><span>1★</span><div class="bar"><i style="width:1%"></i></div></div>
+      </div>
+    </div>
+    <div class="review-cards">
+      <div class="review-card">
+        <span class="stars small">★★★★★</span>
+        <p>"Noté la diferencia en mi digestión desde la segunda semana."</p>
+        <strong>María G. <span class="verified">Compra verificada</span></strong>
+      </div>
+      <div class="review-card">
+        <span class="stars small">★★★★★</span>
+        <p>"Mi piel se ve mucho más uniforme después de 2 meses."</p>
+        <strong>Laura P. <span class="verified">Compra verificada</span></strong>
+      </div>
+      <div class="review-card">
+        <span class="stars small">★★★★☆</span>
+        <p>"Fácil de tomar y sin sabor raro. Repetiré."</p>
+        <strong>Carlos R. <span class="verified">Compra verificada</span></strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
   <div class="container footer-inner">
     <div>
-      <a href="#" class="logo">Aurora Studio</a>
-      <p>Diseño y artesanía desde 2020.</p>
+      <a href="#" class="logo">VERDURA<span>LABS</span></a>
+      <p>Bienestar desde adentro, respaldado por la ciencia.</p>
+      <div class="social-icons">
+        <span>📘</span><span>📷</span><span>🐦</span><span>▶️</span>
+      </div>
     </div>
     <div class="footer-col">
       <h4>Tienda</h4>
-      <a href="#productos">Productos</a>
-      <a href="#coleccion">Colección</a>
+      <a href="#producto">FloraGlow 20+</a>
+      <a href="#beneficios">Beneficios</a>
     </div>
     <div class="footer-col">
       <h4>Ayuda</h4>
+      <a href="#faq">Preguntas frecuentes</a>
       <a href="#">Envíos</a>
       <a href="#">Devoluciones</a>
-      <a href="#">Contacto</a>
+    </div>
+    <div class="footer-col newsletter-col">
+      <h4>Newsletter</h4>
+      <form id="newsletterForm" class="newsletter-form">
+        <input type="email" id="newsletterEmail" placeholder="tu@email.com" required>
+        <button type="submit" class="btn btn-primary">Unirme</button>
+      </form>
+      <p class="form-msg" id="formMsg"></p>
     </div>
   </div>
   <div class="container footer-bottom">
-    <p>&copy; 2026 Aurora Studio. Todos los derechos reservados.</p>
+    <p>&copy; 2026 Verdura Labs. Todos los derechos reservados.</p>
+    <p class="payments">💳 Visa · Mastercard · Amex · PayPal</p>
   </div>
 </footer>
 
