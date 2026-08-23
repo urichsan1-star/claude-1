@@ -1,4 +1,4 @@
-const MAIN_PRODUCT = { id: "floraglow", name: "FloraGlow 20+" };
+const MAIN_PRODUCT = { id: "pro20", name: "Pro 20+" };
 
 const VARIANT_LABELS = {
   "1": "1 Frasco",
@@ -41,7 +41,11 @@ function setupGallery() {
     thumb.addEventListener("click", () => {
       document.querySelectorAll(".thumb").forEach((t) => t.classList.remove("active"));
       thumb.classList.add("active");
-      main.textContent = thumb.dataset.img;
+      if (thumb.dataset.type === "img") {
+        main.innerHTML = `<img src="${thumb.dataset.img}" alt="Pro 20+">`;
+      } else {
+        main.textContent = thumb.dataset.img;
+      }
     });
   });
 }
