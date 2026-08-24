@@ -1,0 +1,77 @@
+{%- comment -%}
+  NATURCALM · Cómo usarlo (ritual en 3 pasos)
+  Función CRO: eliminar la fricción "¿cómo se toma? ¿es complicado?" y proyectar
+  el uso en la rutina real de la clienta.
+{%- endcomment -%}
+{{ 'naturcalm.css' | asset_url | stylesheet_tag }}
+
+<div class="nc nc-sec nc-ritual"
+     style="--nc-pt:{{ section.settings.padding_top_mobile }}px;--nc-pb:{{ section.settings.padding_bottom_mobile }}px;--nc-pt-d:{{ section.settings.padding_top }}px;--nc-pb-d:{{ section.settings.padding_bottom }}px;--nc-bg:{{ section.settings.bg_color }};">
+  <div class="nc-wrap">
+    <div class="nc-head">
+      {%- if section.settings.eyebrow != blank -%}<span class="nc-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+      <h2 class="nc-h2">{{ section.settings.heading }}</h2>
+      {%- if section.settings.subheading != blank -%}<div class="nc-lead">{{ section.settings.subheading }}</div>{%- endif -%}
+    </div>
+
+    <div class="nc-steps">
+      {%- for block in section.blocks -%}
+        <div class="nc-step" {{ block.shopify_attributes }}>
+          {%- if block.settings.image != blank -%}
+            <div class="nc-media nc-media--square nc-step__media">
+              {{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy', sizes: '(min-width: 750px) 33vw, 100vw', widths: '300,500,800', alt: block.settings.title }}
+            </div>
+          {%- endif -%}
+          <span class="nc-step__badge">{{ forloop.index }}</span>
+          <h3 class="nc-h3">{{ block.settings.title }}</h3>
+          <p class="nc-p">{{ block.settings.text }}</p>
+        </div>
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.note != blank -%}
+      <p class="nc-stats__foot" style="margin-top:30px;">{{ section.settings.note }}</p>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "🌿 NC · Cómo usarlo",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Antetítulo", "default": "El ritual" },
+    { "type": "text", "id": "heading", "label": "Título", "default": "Un gesto simple, todos los días" },
+    { "type": "richtext", "id": "subheading", "label": "Bajada", "default": "<p>Sin licuados, sin polvos, sin cambiar tu rutina. La constancia es lo que hace la diferencia.</p>" },
+    { "type": "text", "id": "note", "label": "Nota al pie", "default": "Modo de uso sugerido. Consultá con tu profesional de salud antes de incorporar cualquier suplemento, especialmente si tomás medicación o estás en tratamiento." },
+    { "type": "color", "id": "bg_color", "label": "Fondo", "default": "#FBF7F0" },
+    { "type": "header", "content": "Espaciado" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Superior (desktop)", "default": 90 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Inferior (desktop)", "default": 90 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Superior (mobile)", "default": 56 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Inferior (mobile)", "default": 56 }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Paso",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Imagen" },
+        { "type": "text", "id": "title", "label": "Título", "default": "Tomá tu dosis diaria" },
+        { "type": "textarea", "id": "text", "label": "Texto", "default": "Describí el paso en una o dos líneas." }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "🌿 NC · Cómo usarlo",
+      "blocks": [
+        { "type": "step", "settings": { "title": "Tomalo con el desayuno", "text": "[Cantidad de cápsulas — completar según ficha técnica] con un vaso de agua, junto a la primera comida del día." } },
+        { "type": "step", "settings": { "title": "Sostenelo cuatro semanas", "text": "Los botánicos trabajan por acumulación. Dale al menos un ciclo completo antes de sacar conclusiones." } },
+        { "type": "step", "settings": { "title": "Registrá cómo te sentís", "text": "Anotá sueño, energía y sofocos una vez por semana. Es la mejor forma de ver el cambio real, más allá de la sensación del día." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

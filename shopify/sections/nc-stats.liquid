@@ -1,0 +1,74 @@
+{%- comment -%}
+  NATURCALM · Banda de evidencia / cifras
+  Función CRO: dar respaldo racional después del bloque emocional de problema.
+  IMPORTANTE: las cifras vienen como PLACEHOLDERS. No publiques números sin
+  respaldo real. Editá cada bloque y activá "Es un placeholder" solo mientras
+  no tengas el dato verificado.
+{%- endcomment -%}
+{{ 'naturcalm.css' | asset_url | stylesheet_tag }}
+
+<div class="nc nc-sec nc-stats"
+     style="--nc-pt:{{ section.settings.padding_top_mobile }}px;--nc-pb:{{ section.settings.padding_bottom_mobile }}px;--nc-pt-d:{{ section.settings.padding_top }}px;--nc-pb-d:{{ section.settings.padding_bottom }}px;--nc-bg:{{ section.settings.bg_color }};">
+  <div class="nc-wrap">
+    <div class="nc-head">
+      {%- if section.settings.eyebrow != blank -%}<span class="nc-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+      <h2 class="nc-h2">{{ section.settings.heading }}</h2>
+      {%- if section.settings.subheading != blank -%}<div class="nc-lead">{{ section.settings.subheading }}</div>{%- endif -%}
+    </div>
+
+    <div class="nc-stats__grid">
+      {%- for block in section.blocks -%}
+        <div class="nc-stat" {{ block.shopify_attributes }}>
+          <span class="nc-stat__num">{% if block.settings.is_placeholder %}<span class="nc-ph">{{ block.settings.value }}</span>{% else %}{{ block.settings.value }}{% endif %}</span>
+          <span class="nc-stat__label">{{ block.settings.label }}</span>
+        </div>
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.footnote != blank -%}
+      <p class="nc-stats__foot">{{ section.settings.footnote }}</p>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "🌿 NC · Cifras",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Antetítulo", "default": "Formulación con criterio" },
+    { "type": "text", "id": "heading", "label": "Título", "default": "Cada decisión de la fórmula tiene un porqué" },
+    { "type": "richtext", "id": "subheading", "label": "Bajada", "default": "<p>Elegimos los botánicos, las dosis y las combinaciones a partir de la literatura disponible sobre bienestar hormonal femenino, no de modas.</p>" },
+    { "type": "text", "id": "footnote", "label": "Nota al pie", "default": "Cifras pendientes de verificación — reemplazar por datos propios o referencias publicadas antes de publicar." },
+    { "type": "color", "id": "bg_color", "label": "Fondo", "default": "#F5EFE4" },
+    { "type": "header", "content": "Espaciado" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Superior (desktop)", "default": 90 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Inferior (desktop)", "default": 90 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Superior (mobile)", "default": 56 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Inferior (mobile)", "default": 56 }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Cifra",
+      "settings": [
+        { "type": "text", "id": "value", "label": "Número", "default": "[00%]" },
+        { "type": "text", "id": "label", "label": "Descripción", "default": "Describí qué mide este número" },
+        { "type": "checkbox", "id": "is_placeholder", "label": "Es un placeholder (se resalta en la página)", "default": true }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "🌿 NC · Cifras",
+      "blocks": [
+        { "type": "stat", "settings": { "value": "[00%]", "label": "de las usuarias reportó menos sofocos — completar con dato propio", "is_placeholder": true } },
+        { "type": "stat", "settings": { "value": "[00%]", "label": "notó un descanso nocturno más continuo — completar con dato propio", "is_placeholder": true } },
+        { "type": "stat", "settings": { "value": "[00]", "label": "días promedio hasta percibir los primeros cambios — completar", "is_placeholder": true } },
+        { "type": "stat", "settings": { "value": "[000+]", "label": "estudios revisados durante el desarrollo — completar", "is_placeholder": true } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,535 @@
+/* ==========================================================================
+   NATURCALM — Design System (PDP)
+   Marca: NaturCalm · Producto: Apoyo para la Menopausia
+   Paleta: crema, blanco cálido, verde oliva/salvia, beige, tonos naturales
+   Uso: cargado por cada seccion nc-* con {{ 'naturcalm.css' | asset_url | stylesheet_tag }}
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+.nc {
+  /* --- Color tokens --- */
+  --nc-cream:      #FBF7F0;
+  --nc-cream-2:    #F5EFE4;
+  --nc-sand:       #EDE4D5;
+  --nc-linen:      #FFFDF9;
+  --nc-olive:      #6E7C55;
+  --nc-olive-deep: #46512F;
+  --nc-olive-soft: #8B9A72;
+  --nc-sage:       #B7C3A8;
+  --nc-sage-pale:  #E4EADC;
+  --nc-clay:       #C6A084;
+  --nc-rose:       #C2867E;
+  --nc-rose-pale:  #F6E9E5;
+  --nc-ink:        #2C2A25;
+  --nc-ink-soft:   #56524A;
+  --nc-muted:      #7A7469;
+  --nc-line:       #E4DACA;
+  --nc-line-soft:  #EFE8DC;
+  --nc-white:      #FFFFFF;
+
+  /* --- Type --- */
+  --nc-serif: 'Cormorant Garamond', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --nc-sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+
+  /* --- Layout --- */
+  --nc-max: 1180px;
+  --nc-gutter: 20px;
+  --nc-radius: 18px;
+  --nc-radius-sm: 12px;
+  --nc-radius-pill: 999px;
+  --nc-shadow: 0 2px 6px rgba(44, 42, 37, .04), 0 14px 34px rgba(44, 42, 37, .06);
+  --nc-shadow-sm: 0 1px 3px rgba(44, 42, 37, .05), 0 6px 16px rgba(44, 42, 37, .05);
+
+  /* --- Per-section overridables --- */
+  --nc-bg: var(--nc-cream);
+  --nc-fg: var(--nc-ink);
+  --nc-accent: var(--nc-olive);
+
+  font-family: var(--nc-sans);
+  color: var(--nc-fg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.nc *, .nc *::before, .nc *::after { box-sizing: border-box; }
+
+/* --------------------------------------------------------------------------
+   Section shell
+   -------------------------------------------------------------------------- */
+.nc-sec {
+  background: var(--nc-bg);
+  padding-top: var(--nc-pt, 64px);
+  padding-bottom: var(--nc-pb, 64px);
+  overflow: hidden;
+  position: relative;
+}
+.nc-wrap {
+  width: 100%;
+  max-width: var(--nc-max);
+  margin: 0 auto;
+  padding-left: var(--nc-gutter);
+  padding-right: var(--nc-gutter);
+}
+.nc-wrap--narrow { max-width: 860px; }
+
+/* --------------------------------------------------------------------------
+   Typography
+   -------------------------------------------------------------------------- */
+.nc-eyebrow {
+  font-family: var(--nc-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--nc-accent);
+  margin: 0 0 14px;
+  display: block;
+}
+.nc-h2 {
+  font-family: var(--nc-serif);
+  font-weight: 500;
+  font-size: clamp(28px, 5.2vw, 46px);
+  line-height: 1.12;
+  letter-spacing: -.01em;
+  margin: 0 0 16px;
+  color: var(--nc-fg);
+}
+.nc-h2 em { font-style: italic; color: var(--nc-accent); }
+.nc-h3 {
+  font-family: var(--nc-serif);
+  font-weight: 600;
+  font-size: clamp(20px, 3vw, 25px);
+  line-height: 1.22;
+  margin: 0 0 8px;
+  color: var(--nc-fg);
+}
+.nc-h4 {
+  font-family: var(--nc-sans);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: .01em;
+  margin: 0 0 6px;
+  color: var(--nc-fg);
+}
+.nc-lead {
+  font-size: clamp(15px, 1.9vw, 17px);
+  line-height: 1.7;
+  color: var(--nc-ink-soft);
+  margin: 0 auto 8px;
+  font-weight: 300;
+}
+.nc-p { font-size: 15px; line-height: 1.72; color: var(--nc-ink-soft); margin: 0 0 12px; font-weight: 300; }
+.nc-p:last-child { margin-bottom: 0; }
+.nc-small { font-size: 12.5px; line-height: 1.6; color: var(--nc-muted); }
+.nc-center { text-align: center; }
+.nc-head { max-width: 720px; margin: 0 auto 44px; text-align: center; }
+.nc-head .nc-lead { max-width: 620px; }
+
+/* Placeholder marker — reemplazar por datos reales */
+.nc-ph {
+  background: var(--nc-rose-pale);
+  color: #9A5A50;
+  border-radius: 4px;
+  padding: 0 5px;
+  font-size: .92em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+.nc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--nc-sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 17px 40px;
+  border-radius: var(--nc-radius-pill);
+  border: 1px solid transparent;
+  background: var(--nc-olive-deep);
+  color: var(--nc-linen);
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+  box-shadow: 0 6px 18px rgba(70, 81, 47, .18);
+  line-height: 1;
+  text-align: center;
+}
+.nc-btn:hover { background: #38411f; transform: translateY(-1px); box-shadow: 0 10px 24px rgba(70, 81, 47, .24); color: var(--nc-linen); }
+.nc-btn:focus-visible { outline: 2px solid var(--nc-olive); outline-offset: 3px; }
+.nc-btn--ghost {
+  background: transparent;
+  color: var(--nc-olive-deep);
+  border-color: var(--nc-olive-deep);
+  box-shadow: none;
+}
+.nc-btn--ghost:hover { background: var(--nc-olive-deep); color: var(--nc-linen); }
+.nc-btn--light { background: var(--nc-linen); color: var(--nc-olive-deep); }
+.nc-btn--light:hover { background: #fff; color: var(--nc-olive-deep); }
+.nc-btn--block { display: flex; width: 100%; }
+.nc-btn__note { display: block; margin-top: 12px; font-size: 12px; color: var(--nc-muted); letter-spacing: 0; text-transform: none; }
+
+.nc-cta-group { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 34px; }
+
+/* --------------------------------------------------------------------------
+   Generic pieces
+   -------------------------------------------------------------------------- */
+.nc-tag {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: var(--nc-radius-pill);
+  background: var(--nc-sage-pale);
+  color: var(--nc-olive-deep);
+}
+.nc-tag--clay { background: #F4E7DA; color: #8A6244; }
+.nc-tag--rose { background: var(--nc-rose-pale); color: #9A5A50; }
+
+.nc-card {
+  background: var(--nc-linen);
+  border: 1px solid var(--nc-line-soft);
+  border-radius: var(--nc-radius);
+  padding: 26px;
+}
+.nc-rule { height: 1px; background: var(--nc-line); border: 0; margin: 0; }
+
+.nc-leaf {
+  width: 26px; height: 26px; flex: 0 0 26px;
+  border-radius: 50%;
+  background: var(--nc-sage-pale);
+  color: var(--nc-olive-deep);
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.nc-leaf svg { width: 14px; height: 14px; }
+
+/* --------------------------------------------------------------------------
+   Media
+   -------------------------------------------------------------------------- */
+.nc-media {
+  position: relative;
+  border-radius: var(--nc-radius);
+  overflow: hidden;
+  background: var(--nc-sand);
+}
+.nc-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.nc-media--square { aspect-ratio: 1 / 1; }
+.nc-media--portrait { aspect-ratio: 4 / 5; }
+.nc-media--wide { aspect-ratio: 3 / 2; }
+.nc-media__ph {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 20px;
+  font-size: 12px; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--nc-muted);
+  background: repeating-linear-gradient(45deg, var(--nc-sand), var(--nc-sand) 12px, var(--nc-cream-2) 12px, var(--nc-cream-2) 24px);
+}
+
+/* ==========================================================================
+   1 · Press / aval bar
+   ========================================================================== */
+.nc-press { border-top: 1px solid var(--nc-line); border-bottom: 1px solid var(--nc-line); }
+.nc-press__title {
+  text-align: center; font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--nc-muted); margin: 0 0 22px;
+}
+.nc-press__row {
+  display: flex; align-items: center; justify-content: center;
+  gap: clamp(22px, 5vw, 64px); flex-wrap: wrap;
+}
+.nc-press__item {
+  font-family: var(--nc-serif);
+  font-size: clamp(15px, 2.4vw, 21px);
+  font-weight: 600; letter-spacing: .04em;
+  color: var(--nc-ink); opacity: .55;
+  display: flex; align-items: center;
+}
+.nc-press__item img { max-height: 30px; width: auto; opacity: .6; }
+
+/* ==========================================================================
+   2 · Problema / calificación
+   ========================================================================== */
+.nc-problem__grid {
+  display: grid; grid-template-columns: 1fr; gap: 34px; align-items: center;
+}
+.nc-checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.nc-checklist li {
+  display: flex; align-items: flex-start; gap: 14px;
+  background: var(--nc-linen);
+  border: 1px solid var(--nc-line-soft);
+  border-radius: var(--nc-radius-sm);
+  padding: 16px 18px;
+  font-size: 15px; line-height: 1.55; color: var(--nc-ink);
+  font-weight: 400;
+}
+.nc-checklist li .nc-leaf { margin-top: 1px; }
+
+/* ==========================================================================
+   3 · Banda de evidencia / stats
+   ========================================================================== */
+.nc-stats__grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 1px; background: var(--nc-line);
+  border: 1px solid var(--nc-line); border-radius: var(--nc-radius); overflow: hidden;
+}
+.nc-stat { background: var(--nc-linen); padding: 30px 18px; text-align: center; }
+.nc-stat__num {
+  font-family: var(--nc-serif); font-weight: 600;
+  font-size: clamp(34px, 7vw, 52px); line-height: 1;
+  color: var(--nc-olive); display: block; margin-bottom: 10px;
+}
+.nc-stat__label { font-size: 13px; line-height: 1.5; color: var(--nc-ink-soft); font-weight: 300; }
+.nc-stats__foot { text-align: center; margin-top: 18px; font-size: 12px; color: var(--nc-muted); }
+
+/* ==========================================================================
+   4 · Ingredientes
+   ========================================================================== */
+.nc-ing__grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.nc-ing__card {
+  background: var(--nc-linen);
+  border: 1px solid var(--nc-line-soft);
+  border-radius: var(--nc-radius);
+  overflow: hidden;
+  display: flex; flex-direction: column;
+}
+.nc-ing__media { aspect-ratio: 16 / 10; position: relative; background: var(--nc-sand); }
+.nc-ing__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.nc-ing__body { padding: 22px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.nc-ing__tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.nc-ing__latin { font-size: 12px; font-style: italic; color: var(--nc-muted); margin: -4px 0 0; }
+.nc-ing__note {
+  margin-top: auto; padding-top: 14px; border-top: 1px solid var(--nc-line-soft);
+  font-size: 12.5px; color: var(--nc-muted); display: flex; gap: 8px; align-items: center;
+}
+
+/* ==========================================================================
+   5 · Propósito de marca (split)
+   ========================================================================== */
+.nc-split { display: grid; grid-template-columns: 1fr; gap: 30px; align-items: center; }
+.nc-split__text { max-width: 520px; }
+.nc-quote {
+  font-family: var(--nc-serif); font-style: italic;
+  font-size: clamp(20px, 3.4vw, 27px); line-height: 1.4;
+  color: var(--nc-fg); margin: 0 0 16px;
+}
+.nc-signature { font-family: var(--nc-serif); font-size: 17px; color: var(--nc-accent); }
+
+/* ==========================================================================
+   6 · Cómo funciona (banda oscura)
+   ========================================================================== */
+.nc-mech { --nc-bg: var(--nc-olive-deep); --nc-fg: #F6F2E9; --nc-accent: var(--nc-sage); }
+.nc-mech .nc-p, .nc-mech .nc-lead { color: rgba(246, 242, 233, .78); }
+.nc-mech__grid { display: grid; grid-template-columns: 1fr; gap: 26px; align-items: center; }
+.nc-mech__steps { display: grid; gap: 14px; }
+.nc-mech__step {
+  border: 1px solid rgba(246, 242, 233, .18);
+  border-radius: var(--nc-radius-sm);
+  padding: 20px;
+  background: rgba(246, 242, 233, .05);
+}
+.nc-mech__step .nc-h4 { color: #F6F2E9; }
+.nc-mech__step .nc-p { margin: 0; color: rgba(246, 242, 233, .72); font-size: 14px; }
+.nc-mech__n {
+  font-family: var(--nc-serif); font-size: 13px; font-weight: 600;
+  letter-spacing: .1em; color: var(--nc-sage); display: block; margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   7 · Expertas / aval
+   ========================================================================== */
+.nc-experts__grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.nc-expert {
+  background: var(--nc-linen); border: 1px solid var(--nc-line-soft);
+  border-radius: var(--nc-radius); padding: 24px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.nc-expert__top { display: flex; gap: 14px; align-items: center; }
+.nc-expert__avatar {
+  width: 62px; height: 62px; flex: 0 0 62px; border-radius: 50%;
+  overflow: hidden; background: var(--nc-sand);
+}
+.nc-expert__avatar img { width: 100%; height: 100%; object-fit: cover; }
+.nc-expert__role { font-size: 12.5px; color: var(--nc-muted); }
+
+/* ==========================================================================
+   8 · Comparación
+   ========================================================================== */
+.nc-cmp {
+  border: 1px solid var(--nc-line); border-radius: var(--nc-radius);
+  overflow: hidden; background: var(--nc-linen);
+}
+.nc-cmp__head {
+  display: grid; grid-template-columns: 1fr 84px 84px;
+  align-items: center; background: var(--nc-cream-2);
+  border-bottom: 1px solid var(--nc-line);
+}
+.nc-cmp__brand, .nc-cmp__other {
+  text-align: center; padding: 16px 6px;
+  font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+}
+.nc-cmp__brand { color: var(--nc-olive-deep); background: var(--nc-sage-pale); }
+.nc-cmp__other { color: var(--nc-muted); }
+.nc-cmp__spacer { padding: 16px; }
+.nc-cmp__row {
+  display: grid; grid-template-columns: 1fr 84px 84px;
+  align-items: center; border-bottom: 1px solid var(--nc-line-soft);
+}
+.nc-cmp__row:last-child { border-bottom: 0; }
+.nc-cmp__label { padding: 16px 18px; font-size: 14px; line-height: 1.45; color: var(--nc-ink); }
+.nc-cmp__cell { text-align: center; padding: 16px 6px; }
+.nc-cmp__cell--brand { background: rgba(228, 234, 220, .45); height: 100%; display: flex; align-items: center; justify-content: center; }
+.nc-cmp__yes { color: var(--nc-olive); }
+.nc-cmp__no { color: #C9BFAE; }
+.nc-cmp__yes svg, .nc-cmp__no svg { width: 20px; height: 20px; display: block; }
+
+/* ==========================================================================
+   9 · Ritual / cómo usarlo
+   ========================================================================== */
+.nc-steps { display: grid; grid-template-columns: 1fr; gap: 20px; counter-reset: ncstep; }
+.nc-step { text-align: center; }
+.nc-step__badge {
+  width: 46px; height: 46px; margin: 0 auto 16px;
+  border-radius: 50%; background: var(--nc-sage-pale); color: var(--nc-olive-deep);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--nc-serif); font-size: 20px; font-weight: 600;
+}
+.nc-step__media { margin-bottom: 16px; }
+
+/* ==========================================================================
+   10 · FAQ
+   ========================================================================== */
+.nc-faq__grid { display: grid; grid-template-columns: 1fr; gap: 30px; align-items: start; }
+.nc-faq__list { border-top: 1px solid var(--nc-line); }
+.nc-faq__item { border-bottom: 1px solid var(--nc-line); }
+.nc-faq__item > summary {
+  list-style: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between; gap: 18px;
+  padding: 20px 2px;
+  font-family: var(--nc-sans); font-size: 15px; font-weight: 500; line-height: 1.45;
+  color: var(--nc-ink);
+}
+.nc-faq__item > summary::-webkit-details-marker { display: none; }
+.nc-faq__item > summary:focus-visible { outline: 2px solid var(--nc-olive); outline-offset: 2px; }
+.nc-faq__icon {
+  flex: 0 0 22px; width: 22px; height: 22px; position: relative;
+  border-radius: 50%; border: 1px solid var(--nc-line); transition: background .2s ease, border-color .2s ease;
+}
+.nc-faq__icon::before, .nc-faq__icon::after {
+  content: ''; position: absolute; background: var(--nc-olive-deep);
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  transition: opacity .2s ease, transform .2s ease;
+}
+.nc-faq__icon::before { width: 9px; height: 1.5px; }
+.nc-faq__icon::after  { width: 1.5px; height: 9px; }
+.nc-faq__item[open] .nc-faq__icon { background: var(--nc-sage-pale); border-color: var(--nc-sage-pale); }
+.nc-faq__item[open] .nc-faq__icon::after { opacity: 0; transform: translate(-50%, -50%) rotate(90deg); }
+.nc-faq__answer { padding: 0 40px 22px 2px; }
+.nc-faq__answer .nc-p { font-size: 14.5px; }
+.nc-faq__contact { margin-top: 22px; font-size: 13.5px; color: var(--nc-muted); }
+.nc-faq__contact a { color: var(--nc-olive-deep); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ==========================================================================
+   11 · CTA final
+   ========================================================================== */
+.nc-cta { text-align: center; }
+.nc-cta__inner {
+  border-radius: var(--nc-radius);
+  padding: clamp(38px, 7vw, 68px) clamp(20px, 5vw, 60px);
+  background: var(--nc-cta-bg, var(--nc-sage-pale));
+  position: relative; overflow: hidden;
+}
+.nc-cta__badges {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 10px 22px; margin-top: 26px;
+  font-size: 12px; letter-spacing: .04em; color: var(--nc-ink-soft);
+}
+.nc-cta__badges span { display: inline-flex; align-items: center; gap: 7px; }
+.nc-cta__badges svg { width: 14px; height: 14px; color: var(--nc-olive); }
+
+/* ==========================================================================
+   12 · Reviews
+   ========================================================================== */
+.nc-rv__summary {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  margin-bottom: 34px; text-align: center;
+}
+.nc-stars { color: #C9A227; font-size: 17px; letter-spacing: 3px; line-height: 1; }
+.nc-rv__grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+.nc-rv__card {
+  background: var(--nc-linen); border: 1px solid var(--nc-line-soft);
+  border-radius: var(--nc-radius); padding: 24px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.nc-rv__who { display: flex; align-items: center; gap: 12px; margin-top: auto; padding-top: 6px; }
+.nc-rv__avatar {
+  width: 40px; height: 40px; flex: 0 0 40px; border-radius: 50%;
+  background: var(--nc-sage-pale); color: var(--nc-olive-deep);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--nc-serif); font-size: 17px; font-weight: 600;
+  overflow: hidden;
+}
+.nc-rv__avatar img { width: 100%; height: 100%; object-fit: cover; }
+.nc-rv__name { font-size: 13.5px; font-weight: 600; color: var(--nc-ink); }
+.nc-rv__meta { font-size: 11.5px; color: var(--nc-muted); display: flex; align-items: center; gap: 5px; }
+.nc-rv__meta svg { width: 12px; height: 12px; color: var(--nc-olive); }
+.nc-rv__text { font-size: 14.5px; line-height: 1.65; color: var(--nc-ink-soft); font-weight: 300; }
+.nc-rv__title { font-size: 14.5px; font-weight: 600; color: var(--nc-ink); }
+
+/* ==========================================================================
+   13 · Disclaimer / referencias
+   ========================================================================== */
+.nc-disc { --nc-bg: var(--nc-cream-2); }
+.nc-disc__title {
+  font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--nc-muted); margin: 0 0 12px; text-align: center;
+}
+.nc-disc__body { font-size: 12.5px; line-height: 1.7; color: var(--nc-muted); text-align: center; max-width: 800px; margin: 0 auto; }
+.nc-disc__refs { margin-top: 26px; }
+.nc-disc__refs summary {
+  cursor: pointer; list-style: none; text-align: center;
+  font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--nc-olive-deep);
+}
+.nc-disc__refs summary::-webkit-details-marker { display: none; }
+.nc-disc__refs .nc-disc__body { margin-top: 16px; text-align: left; }
+
+/* ==========================================================================
+   Responsive — desktop upgrades (mobile-first base arriba)
+   ========================================================================== */
+@media (min-width: 750px) {
+  .nc-sec { padding-top: var(--nc-pt-d, 90px); padding-bottom: var(--nc-pb-d, 90px); }
+  .nc-wrap { padding-left: 32px; padding-right: 32px; }
+  .nc-stats__grid { grid-template-columns: repeat(4, 1fr); }
+  .nc-ing__grid { grid-template-columns: repeat(2, 1fr); }
+  .nc-experts__grid { grid-template-columns: repeat(2, 1fr); }
+  .nc-steps { grid-template-columns: repeat(3, 1fr); }
+  .nc-rv__grid { grid-template-columns: repeat(2, 1fr); }
+  .nc-cmp__head, .nc-cmp__row { grid-template-columns: 1fr 150px 150px; }
+  .nc-checklist { gap: 14px; }
+}
+
+@media (min-width: 990px) {
+  .nc-problem__grid { grid-template-columns: 1.05fr .95fr; gap: 60px; }
+  .nc-problem__grid--flip .nc-problem__media { order: -1; }
+  .nc-split { grid-template-columns: 1fr 1fr; gap: 60px; }
+  .nc-split--flip .nc-split__media { order: -1; }
+  .nc-mech__grid { grid-template-columns: .95fr 1.05fr; gap: 56px; }
+  .nc-mech__grid--flip .nc-mech__media { order: -1; }
+  .nc-ing__grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .nc-faq__grid { grid-template-columns: 1.15fr .85fr; gap: 60px; }
+  .nc-rv__grid { grid-template-columns: repeat(3, 1fr); }
+  .nc-experts__grid { gap: 24px; }
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .nc *, .nc *::before, .nc *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}

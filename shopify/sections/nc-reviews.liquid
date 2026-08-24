@@ -1,0 +1,107 @@
+{%- comment -%}
+  NATURCALM · Muro de reseñas
+  Función CRO: prueba social en el cierre, con cara y nombre.
+  IMPORTANTE: los bloques vienen VACÍOS a propósito. No publiques testimonios
+  que no sean de clientas reales — conectá tu app de reseñas o cargá los tuyos.
+{%- endcomment -%}
+{{ 'naturcalm.css' | asset_url | stylesheet_tag }}
+
+<div class="nc nc-sec nc-rv"
+     style="--nc-pt:{{ section.settings.padding_top_mobile }}px;--nc-pb:{{ section.settings.padding_bottom_mobile }}px;--nc-pt-d:{{ section.settings.padding_top }}px;--nc-pb-d:{{ section.settings.padding_bottom }}px;--nc-bg:{{ section.settings.bg_color }};">
+  <div class="nc-wrap">
+    <div class="nc-head" style="margin-bottom:24px;">
+      {%- if section.settings.eyebrow != blank -%}<span class="nc-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+      <h2 class="nc-h2">{{ section.settings.heading }}</h2>
+    </div>
+
+    <div class="nc-rv__summary">
+      <span class="nc-stars" aria-hidden="true">★★★★★</span>
+      <p class="nc-h3" style="margin:0;">{{ section.settings.score }}</p>
+      <p class="nc-small">{{ section.settings.count_label }}</p>
+    </div>
+
+    <div class="nc-rv__grid">
+      {%- for block in section.blocks -%}
+        <article class="nc-rv__card" {{ block.shopify_attributes }}>
+          <span class="nc-stars" aria-hidden="true">★★★★★</span>
+          {%- if block.settings.title != blank -%}<p class="nc-rv__title">{{ block.settings.title }}</p>{%- endif -%}
+          <p class="nc-rv__text">{{ block.settings.text }}</p>
+          <div class="nc-rv__who">
+            <div class="nc-rv__avatar">
+              {%- if block.settings.image != blank -%}
+                {{ block.settings.image | image_url: width: 120 | image_tag: loading: 'lazy', widths: '80,120', alt: block.settings.name }}
+              {%- else -%}
+                {{ block.settings.name | slice: 0 }}
+              {%- endif -%}
+            </div>
+            <div>
+              <p class="nc-rv__name">{{ block.settings.name }}</p>
+              {%- if block.settings.meta != blank -%}
+                <p class="nc-rv__meta">
+                  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>
+                  {{ block.settings.meta }}
+                </p>
+              {%- endif -%}
+            </div>
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.note != blank -%}
+      <p class="nc-stats__foot" style="margin-top:28px;">{{ section.settings.note }}</p>
+    {%- endif -%}
+
+    {%- if section.settings.button_label != blank -%}
+      <div class="nc-cta-group">
+        <a class="nc-btn nc-btn--ghost" href="{{ section.settings.button_link | default: '#' }}">{{ section.settings.button_label }}</a>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "🌿 NC · Reseñas",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Antetítulo", "default": "Prueba social" },
+    { "type": "text", "id": "heading", "label": "Título", "default": "Mujeres reales, opiniones reales" },
+    { "type": "text", "id": "score", "label": "Puntaje", "default": "[0,0] de 5" },
+    { "type": "text", "id": "count_label", "label": "Cantidad", "default": "Basado en [N] reseñas verificadas" },
+    { "type": "text", "id": "note", "label": "Nota al pie", "default": "Bloques de ejemplo. Cargá reseñas reales de clientas o conectá tu app de reseñas antes de publicar." },
+    { "type": "text", "id": "button_label", "label": "Texto del botón", "default": "Ver todas las reseñas" },
+    { "type": "url", "id": "button_link", "label": "Link del botón" },
+    { "type": "color", "id": "bg_color", "label": "Fondo", "default": "#F5EFE4" },
+    { "type": "header", "content": "Espaciado" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Superior (desktop)", "default": 90 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Inferior (desktop)", "default": 90 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Superior (mobile)", "default": 56 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Inferior (mobile)", "default": 56 }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Reseña",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Foto" },
+        { "type": "text", "id": "title", "label": "Titular", "default": "[Titular de la reseña]" },
+        { "type": "textarea", "id": "text", "label": "Texto", "default": "[Texto de una reseña real de una clienta. No publicar testimonios inventados.]" },
+        { "type": "text", "id": "name", "label": "Nombre", "default": "[Nombre]" },
+        { "type": "text", "id": "meta", "label": "Etiqueta", "default": "Compra verificada" }
+      ]
+    }
+  ],
+  "max_blocks": 9,
+  "presets": [
+    {
+      "name": "🌿 NC · Reseñas",
+      "blocks": [
+        { "type": "review", "settings": {} },
+        { "type": "review", "settings": {} },
+        { "type": "review", "settings": {} }
+      ]
+    }
+  ]
+}
+{% endschema %}

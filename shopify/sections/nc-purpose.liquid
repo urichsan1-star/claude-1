@@ -1,0 +1,58 @@
+{%- comment -%}
+  NATURCALM · Propósito de marca (split imagen + cita)
+  Función CRO: construir confianza afectiva ("por qué hacemos lo que hacemos").
+  Espeja el bloque de marca de la referencia, sin métricas inventadas.
+{%- endcomment -%}
+{{ 'naturcalm.css' | asset_url | stylesheet_tag }}
+
+<div class="nc nc-sec nc-purpose"
+     style="--nc-pt:{{ section.settings.padding_top_mobile }}px;--nc-pb:{{ section.settings.padding_bottom_mobile }}px;--nc-pt-d:{{ section.settings.padding_top }}px;--nc-pb-d:{{ section.settings.padding_bottom }}px;--nc-bg:{{ section.settings.bg_color }};">
+  <div class="nc-wrap">
+    <div class="nc-split{% if section.settings.media_position == 'right' %} nc-split--flip{% endif %}">
+
+      <div class="nc-split__media">
+        <div class="nc-media nc-media--wide">
+          {%- if section.settings.image != blank -%}
+            {{ section.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 50vw, 100vw', widths: '500,800,1100,1400', alt: section.settings.image.alt | default: section.settings.heading }}
+          {%- else -%}
+            <div class="nc-media__ph">[Imagen de marca · manos, plantas, textura natural]</div>
+          {%- endif -%}
+        </div>
+      </div>
+
+      <div class="nc-split__text">
+        {%- if section.settings.eyebrow != blank -%}<span class="nc-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+        <h2 class="nc-h2">{{ section.settings.heading }}</h2>
+        {%- if section.settings.quote != blank -%}<p class="nc-quote">{{ section.settings.quote }}</p>{%- endif -%}
+        <div class="nc-p">{{ section.settings.text }}</div>
+        {%- if section.settings.signature != blank -%}
+          <p class="nc-signature">{{ section.settings.signature }}</p>
+        {%- endif -%}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "🌿 NC · Propósito",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Antetítulo", "default": "Por qué existe NaturCalm" },
+    { "type": "text", "id": "heading", "label": "Título", "default": "Una etapa que merece acompañamiento, no silencio" },
+    { "type": "text", "id": "quote", "label": "Frase destacada", "default": "“Durante años la menopausia se contó como un problema a esconder. Nosotras preferimos contarla como una etapa a acompañar.”" },
+    { "type": "richtext", "id": "text", "label": "Texto", "default": "<p>NaturCalm nació de una idea simple: que una mujer atravesando este cambio pueda encontrar un producto claro, honesto y bien formulado, sin promesas exageradas ni letra chica.</p><p>Por eso publicamos qué lleva la fórmula, por qué elegimos cada botánico y qué podés esperar de forma realista. Preferimos decir menos y sostener todo lo que decimos.</p>" },
+    { "type": "text", "id": "signature", "label": "Firma", "default": "— El equipo de NaturCalm" },
+    { "type": "image_picker", "id": "image", "label": "Imagen" },
+    { "type": "select", "id": "media_position", "label": "Posición de la imagen (desktop)", "options": [ { "value": "left", "label": "Izquierda" }, { "value": "right", "label": "Derecha" } ], "default": "left" },
+    { "type": "color", "id": "bg_color", "label": "Fondo", "default": "#EDE4D5" },
+    { "type": "header", "content": "Espaciado" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Superior (desktop)", "default": 90 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Inferior (desktop)", "default": 90 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Superior (mobile)", "default": 56 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Inferior (mobile)", "default": 56 }
+  ],
+  "presets": [ { "name": "🌿 NC · Propósito" } ]
+}
+{% endschema %}

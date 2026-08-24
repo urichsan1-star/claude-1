@@ -1,0 +1,64 @@
+{%- comment -%}
+  NATURCALM · Barra de prensa / aval
+  Función CRO: prueba social institucional inmediatamente debajo del buy box.
+  Reemplazá los textos por logos reales cuando los tengas (image_picker por bloque).
+{%- endcomment -%}
+{{ 'naturcalm.css' | asset_url | stylesheet_tag }}
+
+<div class="nc nc-sec nc-press"
+     style="--nc-pt:{{ section.settings.padding_top_mobile }}px;--nc-pb:{{ section.settings.padding_bottom_mobile }}px;--nc-pt-d:{{ section.settings.padding_top }}px;--nc-pb-d:{{ section.settings.padding_bottom }}px;--nc-bg:{{ section.settings.bg_color }};">
+  <div class="nc-wrap">
+    {%- if section.settings.title != blank -%}
+      <p class="nc-press__title">{{ section.settings.title }}</p>
+    {%- endif -%}
+    <div class="nc-press__row">
+      {%- for block in section.blocks -%}
+        <div class="nc-press__item" {{ block.shopify_attributes }}>
+          {%- if block.settings.logo != blank -%}
+            {{ block.settings.logo | image_url: width: 320 | image_tag: loading: 'lazy', alt: block.settings.name }}
+          {%- else -%}
+            {{ block.settings.name }}
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "🌿 NC · Prensa",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Título pequeño", "default": "Recomendado y mencionado en" },
+    { "type": "color", "id": "bg_color", "label": "Fondo", "default": "#FBF7F0" },
+    { "type": "header", "content": "Espaciado" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Superior (desktop)", "default": 40 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Inferior (desktop)", "default": 40 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Superior (mobile)", "default": 28 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Inferior (mobile)", "default": 28 }
+  ],
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Medio / aval",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Nombre (si no hay logo)", "default": "[MEDIO]" },
+        { "type": "image_picker", "id": "logo", "label": "Logo" }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "🌿 NC · Prensa",
+      "blocks": [
+        { "type": "logo", "settings": { "name": "[MEDIO 1]" } },
+        { "type": "logo", "settings": { "name": "[MEDIO 2]" } },
+        { "type": "logo", "settings": { "name": "[MEDIO 3]" } },
+        { "type": "logo", "settings": { "name": "[MEDIO 4]" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

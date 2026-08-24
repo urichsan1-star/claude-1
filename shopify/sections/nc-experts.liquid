@@ -1,0 +1,82 @@
+{%- comment -%}
+  NATURCALM · Aval de especialistas
+  Función CRO: autoridad. Espeja "Con la confianza de expertos en salud femenina".
+  IMPORTANTE: los datos vienen como placeholders. No publiques nombres, títulos
+  ni matrículas sin autorización escrita de la profesional.
+{%- endcomment -%}
+{{ 'naturcalm.css' | asset_url | stylesheet_tag }}
+
+<div class="nc nc-sec nc-experts"
+     style="--nc-pt:{{ section.settings.padding_top_mobile }}px;--nc-pb:{{ section.settings.padding_bottom_mobile }}px;--nc-pt-d:{{ section.settings.padding_top }}px;--nc-pb-d:{{ section.settings.padding_bottom }}px;--nc-bg:{{ section.settings.bg_color }};">
+  <div class="nc-wrap">
+    <div class="nc-head">
+      {%- if section.settings.eyebrow != blank -%}<span class="nc-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+      <h2 class="nc-h2">{{ section.settings.heading }}</h2>
+      {%- if section.settings.subheading != blank -%}<div class="nc-lead">{{ section.settings.subheading }}</div>{%- endif -%}
+    </div>
+
+    <div class="nc-experts__grid">
+      {%- for block in section.blocks -%}
+        <article class="nc-expert" {{ block.shopify_attributes }}>
+          <div class="nc-expert__top">
+            <div class="nc-expert__avatar">
+              {%- if block.settings.image != blank -%}
+                {{ block.settings.image | image_url: width: 200 | image_tag: loading: 'lazy', widths: '124,200', alt: block.settings.name }}
+              {%- endif -%}
+            </div>
+            <div>
+              <p class="nc-h4" style="margin-bottom:2px;">{{ block.settings.name }}</p>
+              <p class="nc-expert__role">{{ block.settings.role }}</p>
+            </div>
+          </div>
+          <p class="nc-p" style="margin:0;">{{ block.settings.text }}</p>
+        </article>
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.note != blank -%}
+      <p class="nc-stats__foot" style="margin-top:24px;">{{ section.settings.note }}</p>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "🌿 NC · Especialistas",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Antetítulo", "default": "Revisión profesional" },
+    { "type": "text", "id": "heading", "label": "Título", "default": "Formulado y revisado con especialistas en salud femenina" },
+    { "type": "richtext", "id": "subheading", "label": "Bajada", "default": "<p>Antes de salir al mercado, la fórmula se revisa con profesionales del área para que cada decisión tenga fundamento.</p>" },
+    { "type": "text", "id": "note", "label": "Nota al pie", "default": "Perfiles de ejemplo. Reemplazar por profesionales reales con su autorización antes de publicar." },
+    { "type": "color", "id": "bg_color", "label": "Fondo", "default": "#FBF7F0" },
+    { "type": "header", "content": "Espaciado" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Superior (desktop)", "default": 90 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Inferior (desktop)", "default": 90 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Superior (mobile)", "default": 56 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Inferior (mobile)", "default": 56 }
+  ],
+  "blocks": [
+    {
+      "type": "expert",
+      "name": "Especialista",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Foto" },
+        { "type": "text", "id": "name", "label": "Nombre", "default": "[Nombre de la profesional]" },
+        { "type": "text", "id": "role", "label": "Rol / especialidad", "default": "[Especialidad · Matrícula]" },
+        { "type": "textarea", "id": "text", "label": "Comentario", "default": "[Cita de la profesional sobre el enfoque de la fórmula — completar con texto autorizado.]" }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "🌿 NC · Especialistas",
+      "blocks": [
+        { "type": "expert", "settings": {} },
+        { "type": "expert", "settings": {} }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,1025 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "text_size": "h1",
+            "title_alignment": "left",
+            "uppercase_title": false,
+            "margin_top": 0,
+            "margin_bottom": 4
+          }
+        },
+        "nc_stars": {
+          "type": "rating_stars",
+          "settings": {
+            "rating": 5,
+            "star_color": "#C9A227",
+            "bg_stars_style": "full",
+            "bg_star_color": "#EDE4D5",
+            "label": "[N] RESEÑAS VERIFICADAS — COMPLETAR",
+            "size": 15,
+            "alignment": "flex-start",
+            "scroll_id": "",
+            "margin_top": 0,
+            "margin_bottom": 14
+          }
+        },
+        "nc_bullets": {
+          "type": "text",
+          "settings": {
+            "mobile_text_size": 13,
+            "desktop_text_size": 14,
+            "alignment": "left",
+            "text_color": "#2C2A25",
+            "text_1": "<strong>Fórmula 100% botánica, sin hormonas</strong>",
+            "text_2": "<strong>Pensada para el confort térmico y el descanso</strong>",
+            "text_3": "<strong>Un gesto diario, sin cambiar tu rutina</strong>",
+            "icon_scale": 110,
+            "icon_color": "#6E7C55",
+            "icon_1": "check_circle",
+            "filled_icon_1": false,
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "icon_3": "check_circle",
+            "filled_icon_3": false,
+            "width": "100%",
+            "direction": "vertical",
+            "column_gap": 8,
+            "enable_bg": true,
+            "bg_color": "#F5EFE4",
+            "corner_radius": 14,
+            "padding": 16,
+            "border_size": 0,
+            "border_color": "#E4DACA",
+            "margin_top": 10,
+            "margin_bottom": 18
+          }
+        },
+        "nc_offers": {
+          "type": "quantity_selector",
+          "settings": {
+            "full_width_classic": false,
+            "atc_append": "left",
+            "atc_append_heights": "shrink-atc",
+            "enable_quantity_discounts": true,
+            "style": "normal",
+            "headline": "ELEGÍ TU PLAN",
+            "preselected": "option_2",
+            "display_selected_indicator": true,
+            "border_radius": 14,
+            "border_width": 2,
+            "color_scheme": "accent-1",
+            "enable_variant_selectors": false,
+            "enable_variant_selectors_on_quantity_of_1": false,
+            "update_prices": false,
+            "skip_unavailable": false,
+            "full_width_pickers": false,
+            "hide_pickers_overlay": true,
+            "pickers_label": "",
+            "image_width": 90,
+            "space_images": true,
+            "vertical_images_position": "top",
+            "vertical_prices_layout": "vertical",
+            "option_1_quantity": 1,
+            "option_1_badge": "",
+            "option_1_badge_style": "1",
+            "option_1_badge_color": "accent-1",
+            "option_1_label": "1 frasco · para probar",
+            "option_1_benefit": "",
+            "option_1_benefit_position": "top",
+            "option_1_benefit_style": "outlined",
+            "option_1_benefit_color": "accent-1",
+            "option_1_caption": "[X] días de tratamiento",
+            "option_1_percentage_off_text": "0",
+            "option_1_fixed_amount_off": "0",
+            "option_1_price_text": "[price]",
+            "option_1_compare_price": "compare_price",
+            "option_1_compare_price_text": "[compare_price]",
+            "option_2_quantity": 2,
+            "option_2_badge": "EL MÁS ELEGIDO",
+            "option_2_badge_style": "1",
+            "option_2_badge_color": "accent-1",
+            "option_2_label": "2 frascos · el ciclo completo",
+            "option_2_benefit": "",
+            "option_2_benefit_position": "top",
+            "option_2_benefit_style": "outlined",
+            "option_2_benefit_color": "accent-1",
+            "option_2_caption": "El tiempo mínimo recomendado para evaluar resultados",
+            "option_2_percentage_off_text": "0",
+            "option_2_fixed_amount_off": "0",
+            "option_2_price_text": "[price]",
+            "option_2_compare_price": "compare_price",
+            "option_2_compare_price_text": "[compare_price]",
+            "option_3_quantity": 3,
+            "option_3_badge": "MEJOR VALOR",
+            "option_3_badge_style": "1",
+            "option_3_badge_color": "accent-1",
+            "option_3_label": "3 frascos · la rutina sostenida",
+            "option_3_benefit": "",
+            "option_3_benefit_position": "top",
+            "option_3_benefit_style": "outlined",
+            "option_3_benefit_color": "accent-1",
+            "option_3_caption": "Para quienes ya decidieron acompañar toda la etapa",
+            "option_3_percentage_off_text": "0",
+            "option_3_fixed_amount_off": "0",
+            "option_3_price_text": "[price]",
+            "option_3_compare_price": "compare_price",
+            "option_3_compare_price_text": "[compare_price]",
+            "option_4_quantity": 0,
+            "option_4_badge": "",
+            "option_4_badge_style": "1",
+            "option_4_badge_color": "accent-1",
+            "option_4_label": "",
+            "option_4_benefit": "",
+            "option_4_benefit_position": "top",
+            "option_4_benefit_style": "outlined",
+            "option_4_benefit_color": "accent-1",
+            "option_4_caption": "",
+            "option_4_percentage_off_text": "0",
+            "option_4_fixed_amount_off": "0",
+            "option_4_price_text": "[price]",
+            "option_4_compare_price": "compare_price",
+            "option_4_compare_price_text": "[compare_price]",
+            "margin_top": 8,
+            "margin_bottom": 16
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "skip_cart": false,
+            "uppercase_text": true,
+            "icon_scale": 110,
+            "icon_spacing": 10,
+            "display_price": false,
+            "enable_custom_color": true,
+            "custom_color": "#46512F",
+            "enable_secondary_btn": false,
+            "secondary_btn_label": "",
+            "secondary_btn_enable_custom_color": false,
+            "secondary_btn_custom_color": "#6E7C55",
+            "margin_top": 8,
+            "margin_bottom": 16
+          }
+        },
+        "nc_shipping": {
+          "type": "shipping_checkpoints",
+          "settings": {
+            "icon_1": "add_shopping_cart",
+            "filled_icon_1": false,
+            "top_text_1": "<strong>[start_date]</strong>",
+            "bottom_text_1": "TU PEDIDO",
+            "min_days_1": 0,
+            "max_days_1": 0,
+            "icon_2": "local_shipping",
+            "filled_icon_2": false,
+            "top_text_2": "<strong>[start_date] - [end_date]</strong>",
+            "bottom_text_2": "DESPACHO",
+            "min_days_2": 1,
+            "max_days_2": 2,
+            "icon_3": "redeem",
+            "filled_icon_3": false,
+            "top_text_3": "<strong>[start_date] - [end_date]</strong>",
+            "bottom_text_3": "EN TU CASA",
+            "min_days_3": 3,
+            "max_days_3": 7,
+            "icon_4": "",
+            "filled_icon_4": false,
+            "top_text_4": "",
+            "bottom_text_4": "",
+            "date_format": "mm_dd",
+            "days_labels": "Lun, Mar, Mié, Jue, Vie, Sáb, Dom",
+            "months_labels": "Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic",
+            "color_scheme": "background-2",
+            "margin_top": 8,
+            "margin_bottom": 20
+          }
+        },
+        "nc_sticky": {
+          "type": "sticky_atc",
+          "settings": {
+            "function": "add_to_cart",
+            "display_when": "after_scroll",
+            "button_label": "AGREGAR AL CARRITO",
+            "enable_custom_btn_color": true,
+            "custom_btn_color": "#46512F",
+            "color_scheme": "background-1",
+            "star_color": "#C9A227",
+            "stars_label": "",
+            "picker_type": "combined",
+            "desktop_show_image": true,
+            "desktop_show_title": true,
+            "desktop_rating_stars": false,
+            "desktop_show_price": true,
+            "desktop_show_sale_badge": false,
+            "desktop_variant_picker": false,
+            "desktop_full_button_width": false,
+            "desktop_show_price_in_button": false,
+            "desktop_transparent_bg": false,
+            "mobile_show_image": true,
+            "mobile_show_title": false,
+            "mobile_rating_stars": false,
+            "mobile_show_price": true,
+            "mobile_show_sale_badge": false,
+            "mobile_variant_picker": false,
+            "mobile_full_button_width": true,
+            "mobile_show_price_in_button": false,
+            "mobile_transparent_bg": false
+          }
+        },
+        "nc_tab_1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Modo de uso sugerido",
+            "heading_size": "medium",
+            "icon": "check_box",
+            "filled_icon": false,
+            "collapse_icon": "carret",
+            "display_top_border": true,
+            "open": false,
+            "content": "<p>[Cantidad de cápsulas — completar según tu ficha técnica] por día, con un vaso de agua y junto a una comida. Sostené el uso al menos cuatro semanas antes de evaluar cómo te sentís.</p>",
+            "page": "",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "nc_tab_2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Composición",
+            "heading_size": "medium",
+            "icon": "check_box",
+            "filled_icon": false,
+            "collapse_icon": "carret",
+            "display_top_border": true,
+            "open": false,
+            "content": "<p>[Cargar el listado completo de ingredientes con sus dosis por porción, tal como figura en la etiqueta aprobada. No publicar esta sección con datos estimados.]</p>",
+            "page": "",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "nc_tab_3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Sin hormonas, sin sorpresas",
+            "heading_size": "medium",
+            "icon": "check_box",
+            "filled_icon": false,
+            "collapse_icon": "carret",
+            "display_top_border": true,
+            "open": false,
+            "content": "<p>La fórmula es 100% botánica y no incorpora hormonas de ningún tipo. Publicábamos la composición completa porque creémos que tenés derecho a saber exactamente qué estás tomando.</p>",
+            "page": "",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "nc_tab_4": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Envíos, cambios y devoluciones",
+            "heading_size": "medium",
+            "icon": "check_box",
+            "filled_icon": false,
+            "collapse_icon": "carret",
+            "display_top_border": true,
+            "open": false,
+            "content": "<p>[Completar con tus plazos de envío reales, zonas de cobertura, costos y política de cambios y devoluciones.]</p>",
+            "page": "",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "nc_stars",
+        "nc_bullets",
+        "nc_offers",
+        "buy_buttons",
+        "nc_shipping",
+        "nc_sticky",
+        "nc_tab_1",
+        "nc_tab_2",
+        "nc_tab_3",
+        "nc_tab_4"
+      ],
+      "custom_css": [],
+      "settings": {
+        "display_id": false,
+        "enable_sticky_info": true,
+        "display_variant_image_first": false,
+        "disable_prepend": true,
+        "hide_variants": true,
+        "variant_image_filtering": "none",
+        "image_zoom": "none",
+        "arrows_color_scheme": "inverse",
+        "transparent_arrows": false,
+        "dots_color_scheme": "inverse",
+        "video_player": "play_btn",
+        "enable_video_looping": false,
+        "autoplay_videos_pause_btn": false,
+        "video_sound_btn": false,
+        "video_timeline": false,
+        "play_btn_color_scheme": "accent-1",
+        "sound_btn_color_scheme": "inverse",
+        "timeline_color": "accent-1",
+        "media_size": "medium",
+        "media_position": "left",
+        "gallery_layout": "thumbnail_slider",
+        "desktop_thumbnails_count": 4,
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "desktop_arrows_position": "hidden",
+        "mobile_media_corner_radius": 16,
+        "mobile_spacing_pixels": 0,
+        "mobile_arrows_position": "sides",
+        "mobile_pagination": "dots_overlay",
+        "mobile_thumbnails": "hide",
+        "mobile_thumbnails_count": 4,
+        "mobile_scroll_padding_percentage": 0,
+        "mobile_scroll_padding_pixels": 14,
+        "enable_mobile_outher_spacing": false,
+        "mobile_slides_container_width": 100,
+        "mobile_slides_inner_width": 100,
+        "trust_badge_position": "top-right",
+        "trust_badge_size": "medium",
+        "mobile_padding_top": 8,
+        "mobile_padding_bottom": 24,
+        "desktop_padding_top": 44,
+        "desktop_padding_bottom": 56
+      }
+    },
+    "nc_press": {
+      "type": "nc-press-bar",
+      "blocks": {
+        "logo_1": {
+          "type": "logo",
+          "settings": {
+            "name": "[MEDIO 1]"
+          }
+        },
+        "logo_2": {
+          "type": "logo",
+          "settings": {
+            "name": "[MEDIO 2]"
+          }
+        },
+        "logo_3": {
+          "type": "logo",
+          "settings": {
+            "name": "[MEDIO 3]"
+          }
+        },
+        "logo_4": {
+          "type": "logo",
+          "settings": {
+            "name": "[MEDIO 4]"
+          }
+        }
+      },
+      "block_order": [
+        "logo_1",
+        "logo_2",
+        "logo_3",
+        "logo_4"
+      ],
+      "settings": {
+        "title": "Recomendado y mencionado en",
+        "bg_color": "#FBF7F0",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
+    },
+    "nc_problem": {
+      "type": "nc-problem",
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "text": "Sofocos y sudores nocturnos que aparecen sin aviso"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "text": "Noches partidas: te despertás a las 3 y ya no volvés a dormir"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "text": "Cambios de humor e irritabilidad que no reconocés como tuyos"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "text": "Cansancio de fondo y niebla mental durante el día"
+          }
+        },
+        "item_5": {
+          "type": "item",
+          "settings": {
+            "text": "Un peso que se instaló y no responde como antes"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5"
+      ],
+      "settings": {
+        "eyebrow": "Para vos, en esta etapa",
+        "heading": "Para mujeres que no piensan poner la vida en pausa",
+        "intro": "<p>La menopausia no es una falla del cuerpo: es una transición. NaturCalm existe para que la atravieses con más calma y menos sobresaltos. Si te reconocés en alguno de estos puntos, esta fórmula fue pensada para vos.</p>",
+        "media_position": "right",
+        "button_label": "Quiero sentirme yo otra vez",
+        "button_link": "",
+        "bg_color": "#FBF7F0",
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56
+      }
+    },
+    "nc_stats": {
+      "type": "nc-stats",
+      "blocks": {
+        "stat_1": {
+          "type": "stat",
+          "settings": {
+            "value": "[00%]",
+            "label": "de las usuarias reportó menos sofocos — completar con dato propio",
+            "is_placeholder": true
+          }
+        },
+        "stat_2": {
+          "type": "stat",
+          "settings": {
+            "value": "[00%]",
+            "label": "notó un descanso nocturno más continuo — completar con dato propio",
+            "is_placeholder": true
+          }
+        },
+        "stat_3": {
+          "type": "stat",
+          "settings": {
+            "value": "[00]",
+            "label": "días promedio hasta percibir los primeros cambios — completar",
+            "is_placeholder": true
+          }
+        },
+        "stat_4": {
+          "type": "stat",
+          "settings": {
+            "value": "[000+]",
+            "label": "estudios revisados durante el desarrollo — completar",
+            "is_placeholder": true
+          }
+        }
+      },
+      "block_order": [
+        "stat_1",
+        "stat_2",
+        "stat_3",
+        "stat_4"
+      ],
+      "settings": {
+        "eyebrow": "Formulación con criterio",
+        "heading": "Cada decisión de la fórmula tiene un porqué",
+        "subheading": "<p>Elegimos los botánicos, las dosis y las combinaciones a partir de la literatura disponible sobre bienestar hormonal femenino, no de modas.</p>",
+        "footnote": "⚠︎ Cifras de ejemplo. Reemplazalas por datos propios verificables (o eliminá la sección) antes de publicar.",
+        "bg_color": "#F5EFE4",
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56
+      }
+    },
+    "nc_ingredients": {
+      "type": "nc-ingredients",
+      "blocks": {
+        "ing_1": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Ashwagandha",
+            "latin": "Withania somnifera",
+            "tags": "Calma, Descanso",
+            "text": "Adaptógeno con siglos de uso en la tradición ayurvédica. Lo incorporamos por su papel histórico en el acompañamiento del estrés sostenido y del sueño.",
+            "dose": "[Dosis por porción — completar]"
+          }
+        },
+        "ing_2": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Salvia",
+            "latin": "Salvia officinalis",
+            "tags": "Termorregulación",
+            "text": "Una clásica de la herboristería europea, asociada tradicionalmente al confort térmico durante la transición menopáusica.",
+            "dose": "[Dosis por porción — completar]"
+          }
+        },
+        "ing_3": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Trébol rojo",
+            "latin": "Trifolium pratense",
+            "tags": "Equilibrio",
+            "text": "Fuente vegetal de isoflavonas, incluida por su vínculo tradicional con el equilibrio femenino en esta etapa de la vida.",
+            "dose": "[Dosis por porción — completar]"
+          }
+        },
+        "ing_4": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Shatavari",
+            "latin": "Asparagus racemosus",
+            "tags": "Vitalidad femenina",
+            "text": "Raíz de uso ancestral, elegida por su asociación histórica con el bienestar femenino a lo largo de todo el ciclo.",
+            "dose": "[Dosis por porción — completar]"
+          }
+        },
+        "ing_5": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Melisa",
+            "latin": "Melissa officinalis",
+            "tags": "Ánimo, Noche",
+            "text": "Hoja de aroma suave, tradicionalmente usada al final del día para acompañar la calma y preparar el descanso.",
+            "dose": "[Dosis por porción — completar]"
+          }
+        },
+        "ing_6": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Magnesio",
+            "latin": "Bisglicinato de magnesio",
+            "tags": "Energía, Músculo",
+            "text": "Forma de magnesio de alta tolerancia digestiva, que contribuye al funcionamiento normal del sistema nervioso y muscular.",
+            "dose": "[Dosis por porción — completar]"
+          }
+        }
+      },
+      "block_order": [
+        "ing_1",
+        "ing_2",
+        "ing_3",
+        "ing_4",
+        "ing_5",
+        "ing_6"
+      ],
+      "settings": {
+        "eyebrow": "Composición",
+        "heading": "Botánicos elegidos uno por uno",
+        "subheading": "<p>Nada de listas infinitas. Una selección corta de plantas con historia de uso en el acompañamiento de la menopausia, combinadas para que trabajen juntas y no una contra la otra.</p>",
+        "note": "⚠︎ Cargá las dosis exactas desde la ficha técnica del laboratorio antes de publicar.",
+        "button_label": "Ver la fórmula completa",
+        "button_link": "",
+        "bg_color": "#FBF7F0",
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56
+      }
+    },
+    "nc_purpose": {
+      "type": "nc-purpose",
+      "settings": {
+        "eyebrow": "Por qué existe NaturCalm",
+        "heading": "Una etapa que merece acompañamiento, no silencio",
+        "quote": "“Durante años la menopausia se contó como un problema a esconder. Nosotras preferimos contarla como una etapa a acompañar.”",
+        "text": "<p>NaturCalm nació de una idea simple: que una mujer atravesando este cambio pueda encontrar un producto claro, honesto y bien formulado, sin promesas exageradas ni letra chica.</p><p>Por eso publicamos qué lleva la fórmula, por qué elegimos cada botánico y qué podés esperar de forma realista. Preferimos decir menos y sostener todo lo que decimos.</p>",
+        "signature": "— El equipo de NaturCalm",
+        "media_position": "left",
+        "bg_color": "#EDE4D5",
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56
+      }
+    },
+    "nc_mechanism": {
+      "type": "nc-mechanism",
+      "blocks": {
+        "mech_1": {
+          "type": "step",
+          "settings": {
+            "title": "Confort térmico",
+            "text": "Plantas de uso tradicional frente a las sensaciones de calor repentino y los sudores nocturnos, para que el día y la noche vuelvan a ser previsibles."
+          }
+        },
+        "mech_2": {
+          "type": "step",
+          "settings": {
+            "title": "Calma y descanso",
+            "text": "Adaptógenos y botánicos de la tradición herbolaria que acompañan el estrés sostenido y ayudan a preparar el cuerpo para dormir."
+          }
+        },
+        "mech_3": {
+          "type": "step",
+          "settings": {
+            "title": "Energía sostenida",
+            "text": "Magnesio y cofactores que contribuyen al funcionamiento normal del sistema nervioso, para sostener la energía sin recurrir a estimulantes."
+          }
+        }
+      },
+      "block_order": [
+        "mech_1",
+        "mech_2",
+        "mech_3"
+      ],
+      "settings": {
+        "eyebrow": "Cómo está pensada la fórmula",
+        "heading": "Tres frentes, una sola cápsula",
+        "intro": "<p>No alcanza con una planta suelta. NaturCalm combina botánicos que trabajan sobre frentes distintos de la misma etapa, para que el efecto sea de conjunto y no de parche.</p>",
+        "media_position": "left",
+        "button_label": "Empezar con NaturCalm",
+        "button_link": "",
+        "bg_color": "#46512F",
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56
+      }
+    },
+    "nc_experts": {
+      "type": "nc-experts",
+      "blocks": {
+        "exp_1": {
+          "type": "expert",
+          "settings": {
+            "name": "[Nombre de la profesional]",
+            "role": "[Ginecología · Matrícula 00000]",
+            "text": "[Cita autorizada sobre el enfoque de la fórmula. No publicar sin permiso escrito de la profesional.]"
+          }
+        },
+        "exp_2": {
+          "type": "expert",
+          "settings": {
+            "name": "[Nombre de la profesional]",
+            "role": "[Nutrición · Matrícula 00000]",
+            "text": "[Cita autorizada sobre la selección de ingredientes. No publicar sin permiso escrito de la profesional.]"
+          }
+        }
+      },
+      "block_order": [
+        "exp_1",
+        "exp_2"
+      ],
+      "settings": {
+        "eyebrow": "Revisión profesional",
+        "heading": "Formulado y revisado con especialistas en salud femenina",
+        "subheading": "<p>Antes de salir al mercado, la fórmula se revisa con profesionales del área para que cada decisión tenga fundamento y no sólo buen marketing.</p>",
+        "note": "⚠︎ Perfiles de ejemplo. Reemplazalos por profesionales reales con su autorización escrita, o eliminá la sección.",
+        "bg_color": "#FBF7F0",
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56
+      }
+    },
+    "nc_comparison": {
+      "type": "nc-comparison",
+      "blocks": {
+        "cmp_1": {
+          "type": "row",
+          "settings": {
+            "label": "Fórmula sin hormonas",
+            "brand_has": true,
+            "other_has": false
+          }
+        },
+        "cmp_2": {
+          "type": "row",
+          "settings": {
+            "label": "Pensada específicamente para la transición menopáusica",
+            "brand_has": true,
+            "other_has": false
+          }
+        },
+        "cmp_3": {
+          "type": "row",
+          "settings": {
+            "label": "Composición completa publicada en la página",
+            "brand_has": true,
+            "other_has": false
+          }
+        },
+        "cmp_4": {
+          "type": "row",
+          "settings": {
+            "label": "Dosis por porción visibles, sin mezclas ocultas",
+            "brand_has": true,
+            "other_has": false
+          }
+        },
+        "cmp_5": {
+          "type": "row",
+          "settings": {
+            "label": "Revisada por especialistas en salud femenina",
+            "brand_has": true,
+            "other_has": false
+          }
+        },
+        "cmp_6": {
+          "type": "row",
+          "settings": {
+            "label": "Sin promesas de resultados que no podemos sostener",
+            "brand_has": true,
+            "other_has": false
+          }
+        }
+      },
+      "block_order": [
+        "cmp_1",
+        "cmp_2",
+        "cmp_3",
+        "cmp_4",
+        "cmp_5",
+        "cmp_6"
+      ],
+      "settings": {
+        "eyebrow": "La diferencia",
+        "heading": "Qué nos separa de un suplemento cualquiera",
+        "subheading": "<p>Una comparación honesta, sobre criterios que podés verificar vos misma leyendo la etiqueta.</p>",
+        "brand_label": "NaturCalm",
+        "other_label": "Otros",
+        "button_label": "Empezar con NaturCalm",
+        "button_link": "",
+        "button_note": "Pago seguro · [Completar: plazos de envío y política de devolución]",
+        "bg_color": "#F5EFE4",
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56
+      }
+    },
+    "nc_ritual": {
+      "type": "nc-ritual",
+      "blocks": {
+        "rit_1": {
+          "type": "step",
+          "settings": {
+            "title": "Tomalo con el desayuno",
+            "text": "[Cantidad de cápsulas — completar según ficha técnica] con un vaso de agua, junto a la primera comida del día."
+          }
+        },
+        "rit_2": {
+          "type": "step",
+          "settings": {
+            "title": "Sostenelo cuatro semanas",
+            "text": "Los botánicos trabajan por acumulación. Dale al menos un ciclo completo antes de sacar conclusiones."
+          }
+        },
+        "rit_3": {
+          "type": "step",
+          "settings": {
+            "title": "Registrá cómo te sentís",
+            "text": "Anotá sueño, energía y sofocos una vez por semana. Es la mejor forma de ver el cambio real, más allá de la sensación de un día suelto."
+          }
+        }
+      },
+      "block_order": [
+        "rit_1",
+        "rit_2",
+        "rit_3"
+      ],
+      "settings": {
+        "eyebrow": "El ritual",
+        "heading": "Un gesto simple, todos los días",
+        "subheading": "<p>Sin licuados, sin polvos, sin cambiar tu rutina. La constancia es lo que hace la diferencia.</p>",
+        "note": "Modo de uso sugerido. Consultá con tu profesional de salud antes de incorporar cualquier suplemento, especialmente si tomás medicación o estás en tratamiento.",
+        "bg_color": "#FBF7F0",
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56
+      }
+    },
+    "nc_faq": {
+      "type": "nc-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "¿NaturCalm contiene hormonas?",
+            "answer": "<p>No. La fórmula es 100% botánica y no incorpora hormonas de ningún tipo. Si estás bajo terapia hormonal, consultá igualmente con tu profesional antes de sumar cualquier suplemento.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "¿En cuánto tiempo voy a notar algo?",
+            "answer": "<p>Los botánicos trabajan por acumulación, no de un día para el otro. Recomendamos sostener el uso al menos cuatro semanas antes de evaluar. La respuesta varía de persona a persona y no podemos garantizar un resultado.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Qué lleva exactamente la fórmula?",
+            "answer": "<p>La composición completa está publicada más arriba en esta misma página y en la etiqueta del envase. [Cargar acá el listado con las dosis exactas de tu ficha técnica.]</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Puedo tomarlo si estoy con medicación?",
+            "answer": "<p>Consultá siempre con tu médica o médico antes de incorporarlo, especialmente si tomás medicación, tenés una condición diagnosticada o estás en tratamiento oncológico.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Tiene efectos adversos?",
+            "answer": "<p>Es un suplemento dietario con ingredientes de uso tradicional. Como con cualquier producto, puede haber sensibilidad individual. Ante cualquier reacción, suspendé el uso y consultá a un profesional.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Sirve si todavía estoy en perimenopausia?",
+            "answer": "<p>La fórmula está pensada para acompañar toda la transición, desde los primeros cambios del ciclo. Si tenés dudas sobre en qué etapa estás, tu ginecóloga es la mejor referencia.</p>"
+          }
+        },
+        "faq_7": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Por cuánto tiempo puedo tomarlo?",
+            "answer": "<p>[Completar con la recomendación de uso continuado que figure en tu ficha técnica y en la etiqueta aprobada.]</p>"
+          }
+        },
+        "faq_8": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Cómo son los envíos y las devoluciones?",
+            "answer": "<p>[Completar con tus plazos, zonas de cobertura, costos y política de cambios y devoluciones reales.]</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7",
+        "faq_8"
+      ],
+      "settings": {
+        "eyebrow": "Antes de decidir",
+        "heading": "Todo lo que solés preguntarte",
+        "subheading": "<p>Si queda algo sin responder, escribinos: te contesta una persona de verdad.</p>",
+        "open_first": true,
+        "contact_text": "<p>¿Tu pregunta no está acá? Escribinos a <a href=\"mailto:hola@naturcalm.com\">hola@naturcalm.com</a> — [reemplazar por tu email real]</p>",
+        "bg_color": "#FBF7F0",
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56
+      }
+    },
+    "nc_cta": {
+      "type": "nc-cta-band",
+      "blocks": {
+        "badge_1": {
+          "type": "badge",
+          "settings": {
+            "text": "Fórmula sin hormonas"
+          }
+        },
+        "badge_2": {
+          "type": "badge",
+          "settings": {
+            "text": "Composición publicada"
+          }
+        },
+        "badge_3": {
+          "type": "badge",
+          "settings": {
+            "text": "Envío a todo el país"
+          }
+        },
+        "badge_4": {
+          "type": "badge",
+          "settings": {
+            "text": "Atención por email real"
+          }
+        }
+      },
+      "block_order": [
+        "badge_1",
+        "badge_2",
+        "badge_3",
+        "badge_4"
+      ],
+      "settings": {
+        "eyebrow": "Empezá hoy",
+        "heading": "Tu transición, acompañada",
+        "text": "<p>Un frasco, un gesto diario y cuatro semanas de constancia. Ese es todo el compromiso que te pedimos.</p>",
+        "button_label": "Quiero mi NaturCalm",
+        "button_link": "",
+        "button_note": "Pago seguro · [Completar: plazos de envío y política de devolución]",
+        "bg_color": "#FBF7F0",
+        "card_color": "#E4EADC",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "padding_top_mobile": 44,
+        "padding_bottom_mobile": 44
+      }
+    },
+    "nc_reviews": {
+      "type": "nc-reviews",
+      "blocks": {
+        "rv_1": {
+          "type": "review",
+          "settings": {
+            "title": "[Titular de la reseña]",
+            "text": "[Texto de una reseña real de una clienta. No publicar testimonios inventados.]",
+            "name": "[Nombre]",
+            "meta": "Compra verificada"
+          }
+        },
+        "rv_2": {
+          "type": "review",
+          "settings": {
+            "title": "[Titular de la reseña]",
+            "text": "[Texto de una reseña real de una clienta. No publicar testimonios inventados.]",
+            "name": "[Nombre]",
+            "meta": "Compra verificada"
+          }
+        },
+        "rv_3": {
+          "type": "review",
+          "settings": {
+            "title": "[Titular de la reseña]",
+            "text": "[Texto de una reseña real de una clienta. No publicar testimonios inventados.]",
+            "name": "[Nombre]",
+            "meta": "Compra verificada"
+          }
+        }
+      },
+      "block_order": [
+        "rv_1",
+        "rv_2",
+        "rv_3"
+      ],
+      "settings": {
+        "eyebrow": "Prueba social",
+        "heading": "Mujeres reales, opiniones reales",
+        "score": "[0,0] de 5",
+        "count_label": "Basado en [N] reseñas verificadas",
+        "note": "⚠︎ Bloques de ejemplo. Cargá reseñas reales o conectá tu app de reseñas (Judge.me, Loox, Shopify Reviews) antes de publicar.",
+        "button_label": "",
+        "button_link": "",
+        "bg_color": "#F5EFE4",
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56
+      }
+    },
+    "nc_disclaimer": {
+      "type": "nc-disclaimer",
+      "settings": {
+        "title": "Información importante",
+        "text": "<p>Este producto es un suplemento dietario. No es un medicamento y no está destinado a diagnosticar, tratar, curar ni prevenir ninguna enfermedad. No reemplaza una alimentación variada y equilibrada ni la consulta con un profesional de la salud. Consultá con tu médica o médico antes de incorporarlo, especialmente durante el embarazo, la lactancia, si tomás medicación o si tenés una condición diagnosticada. Mantener fuera del alcance de los niños. Conservar en un lugar fresco y seco.</p><p>[Completar con el número de registro sanitario y las leyendas obligatorias que correspondan a tu país antes de publicar.]</p>",
+        "refs_label": "Referencias bibliográficas",
+        "refs": "<p>[Cargá acá la bibliografía real que respalda cada ingrediente de la fórmula. No incluir referencias que no hayas verificado.]</p>",
+        "bg_color": "#F5EFE4",
+        "padding_top": 56,
+        "padding_bottom": 56,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "nc_press",
+    "nc_problem",
+    "nc_stats",
+    "nc_ingredients",
+    "nc_purpose",
+    "nc_mechanism",
+    "nc_experts",
+    "nc_comparison",
+    "nc_ritual",
+    "nc_faq",
+    "nc_cta",
+    "nc_reviews",
+    "nc_disclaimer"
+  ]
+}

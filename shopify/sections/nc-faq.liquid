@@ -1,0 +1,98 @@
+{%- comment -%}
+  NATURCALM · Preguntas frecuentes
+  Función CRO: barrido final de objeciones antes del CTA de cierre.
+  Usa <details>/<summary> nativo: cero JS, accesible y rápido en mobile.
+{%- endcomment -%}
+{{ 'naturcalm.css' | asset_url | stylesheet_tag }}
+
+<div class="nc nc-sec nc-faq"
+     style="--nc-pt:{{ section.settings.padding_top_mobile }}px;--nc-pb:{{ section.settings.padding_bottom_mobile }}px;--nc-pt-d:{{ section.settings.padding_top }}px;--nc-pb-d:{{ section.settings.padding_bottom }}px;--nc-bg:{{ section.settings.bg_color }};">
+  <div class="nc-wrap">
+    <div class="nc-faq__grid">
+
+      <div>
+        {%- if section.settings.eyebrow != blank -%}<span class="nc-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+        <h2 class="nc-h2">{{ section.settings.heading }}</h2>
+        {%- if section.settings.subheading != blank -%}
+          <div class="nc-lead" style="margin-bottom:26px;">{{ section.settings.subheading }}</div>
+        {%- endif -%}
+
+        <div class="nc-faq__list">
+          {%- for block in section.blocks -%}
+            <details class="nc-faq__item"{% if forloop.first and section.settings.open_first %} open{% endif %} {{ block.shopify_attributes }}>
+              <summary>
+                <span>{{ block.settings.question }}</span>
+                <span class="nc-faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="nc-faq__answer">
+                <div class="nc-p">{{ block.settings.answer }}</div>
+              </div>
+            </details>
+          {%- endfor -%}
+        </div>
+
+        {%- if section.settings.contact_text != blank -%}
+          <p class="nc-faq__contact">{{ section.settings.contact_text }}</p>
+        {%- endif -%}
+      </div>
+
+      <div class="nc-faq__media">
+        <div class="nc-media nc-media--portrait">
+          {%- if section.settings.image != blank -%}
+            {{ section.settings.image | image_url: width: 1000 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 40vw, 100vw', widths: '400,600,1000', alt: section.settings.image.alt | default: section.settings.heading }}
+          {%- else -%}
+            <div class="nc-media__ph">[Imagen · retrato cálido o bodegón de producto]</div>
+          {%- endif -%}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "🌿 NC · FAQ",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Antetítulo", "default": "Antes de decidir" },
+    { "type": "text", "id": "heading", "label": "Título", "default": "Todo lo que solés preguntarte" },
+    { "type": "richtext", "id": "subheading", "label": "Bajada", "default": "<p>Si queda algo sin responder, escribinos y te contestamos una persona de verdad.</p>" },
+    { "type": "checkbox", "id": "open_first", "label": "Abrir la primera pregunta", "default": true },
+    { "type": "richtext", "id": "contact_text", "label": "Texto de contacto", "default": "<p>¿Tu pregunta no está acá? Escribinos a <a href=\"mailto:hola@naturcalm.com\">hola@naturcalm.com</a> · [reemplazar por tu email real]</p>" },
+    { "type": "image_picker", "id": "image", "label": "Imagen" },
+    { "type": "color", "id": "bg_color", "label": "Fondo", "default": "#FBF7F0" },
+    { "type": "header", "content": "Espaciado" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Superior (desktop)", "default": 90 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 160, "step": 4, "unit": "px", "label": "Inferior (desktop)", "default": 90 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Superior (mobile)", "default": 56 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Inferior (mobile)", "default": 56 }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "Pregunta",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Pregunta", "default": "¿Cómo se toma?" },
+        { "type": "richtext", "id": "answer", "label": "Respuesta", "default": "<p>Escribí acá la respuesta.</p>" }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "🌿 NC · FAQ",
+      "blocks": [
+        { "type": "faq", "settings": { "question": "¿NaturCalm contiene hormonas?", "answer": "<p>No. La fórmula es 100% botánica y no incorpora hormonas de ningún tipo. Si estás bajo tratamiento hormonal, consultá igualmente con tu profesional antes de sumar cualquier suplemento.</p>" } },
+        { "type": "faq", "settings": { "question": "¿En cuánto tiempo voy a notar algo?", "answer": "<p>Los botánicos trabajan por acumulación, no de un día para el otro. Recomendamos sostener el uso al menos cuatro semanas antes de evaluar. La respuesta varía de persona a persona y no podemos garantizar un resultado.</p>" } },
+        { "type": "faq", "settings": { "question": "¿Qué lleva exactamente la fórmula?", "answer": "<p>La composición completa está publicada más arriba en esta misma página y en la etiqueta del envase. [Cargar acá el listado con dosis exactas de la ficha técnica.]</p>" } },
+        { "type": "faq", "settings": { "question": "¿Puedo tomarlo si estoy con medicación?", "answer": "<p>Consultá siempre con tu médica o médico antes de incorporarlo, especialmente si tomás medicación, tenés una condición diagnosticada o estás en tratamiento oncológico.</p>" } },
+        { "type": "faq", "settings": { "question": "¿Tiene efectos adversos?", "answer": "<p>Se trata de un suplemento dietario con ingredientes de uso tradicional. Como con cualquier producto, puede haber sensibilidad individual. Ante cualquier reacción, suspendé el uso y consultá a un profesional.</p>" } },
+        { "type": "faq", "settings": { "question": "¿Por cuánto tiempo puedo tomarlo?", "answer": "<p>[Completar con la recomendación de uso continuado que figure en tu ficha técnica y en la etiqueta aprobada.]</p>" } },
+        { "type": "faq", "settings": { "question": "¿Cómo son los envíos?", "answer": "<p>[Completar con tus plazos, zonas de cobertura y costo de envío reales.]</p>" } },
+        { "type": "faq", "settings": { "question": "¿Y si no es para mí?", "answer": "<p>[Completar con tu política de cambios y devoluciones tal como figura en las políticas de la tienda.]</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
