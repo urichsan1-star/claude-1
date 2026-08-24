@@ -13,7 +13,8 @@
       <div class="nc-split__media">
         <div class="nc-media nc-media--wide">
           {%- if section.settings.image != blank -%}
-            {{ section.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 50vw, 100vw', widths: '500,800,1100,1400', alt: section.settings.image.alt | default: section.settings.heading }}
+            {%- assign nc_alt = section.settings.image.alt | default: section.settings.heading -%}
+            {{ section.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 50vw, 100vw', widths: '500,800,1100,1400', alt: nc_alt }}
           {%- else -%}
             <div class="nc-media__ph">[Imagen de marca · manos, plantas, textura natural]</div>
           {%- endif -%}
