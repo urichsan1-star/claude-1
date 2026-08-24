@@ -1,5 +1,9 @@
 # NaturCalm — Página de producto (Shopify)
 
+> **¿Retomando el proyecto?** Empezá por **[`HANDOFF.md`](./HANDOFF.md)** — tiene el
+> contexto completo, los IDs de tienda/theme/producto, el arranque con Shopify CLI en
+> local, los hallazgos técnicos y el checklist de verificación visual pendiente.
+
 Implementación de la PDP de **NaturCalm · Apoyo para la Menopausia**, construida
 tomando como blueprint la arquitectura de conversión de la referencia
 (oshwellness.com/es/products/menopause-support) y reconstruida por completo con
