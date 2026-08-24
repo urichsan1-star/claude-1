@@ -31,7 +31,7 @@
               <div class="nc-ing__tags">
                 {%- assign tag_list = block.settings.tags | split: ',' -%}
                 {%- for t in tag_list -%}
-                  <span class="nc-tag{% cycle '', ' nc-tag--clay', ' nc-tag--rose' %}">{{ t | strip }}</span>
+                  <span class="nc-tag{% cycle '', ' nc-tag--sand', ' nc-tag--deep' %}">{{ t | strip }}</span>
                 {%- endfor -%}
               </div>
             {%- endif -%}
@@ -72,7 +72,7 @@
     { "type": "text", "id": "note", "label": "Nota al pie", "default": "Composición y dosis exactas: completar con la ficha técnica del laboratorio antes de publicar." },
     { "type": "text", "id": "button_label", "label": "Texto del botón", "default": "Ver la fórmula completa" },
     { "type": "url", "id": "button_link", "label": "Link del botón" },
-    { "type": "color", "id": "bg_color", "label": "Fondo", "default": "#FBF7F0" },
+    { "type": "color", "id": "bg_color", "label": "Fondo", "default": "#FDF9F7" },
     { "type": "header", "content": "Espaciado" },
     { "type": "range", "id": "padding_top", "min": 0, "max": 160, "step": 2, "unit": "px", "label": "Superior (desktop)", "default": 90 },
     { "type": "range", "id": "padding_bottom", "min": 0, "max": 160, "step": 2, "unit": "px", "label": "Inferior (desktop)", "default": 90 },
