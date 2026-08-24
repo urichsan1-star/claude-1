@@ -1,0 +1,517 @@
+{
+  "sections": {
+    "nc_brand": {
+      "type": "nc-brandbar",
+      "settings": {
+        "wordmark": "NATURCALM",
+        "tagline": "Bienestar femenino",
+        "show_mark": true,
+        "link": "",
+        "bg_color": "#FDF9F7",
+        "padding_top": 26,
+        "padding_bottom": 20,
+        "padding_top_mobile": 18,
+        "padding_bottom_mobile": 14
+      }
+    },
+    "nc_hero": {
+      "type": "nc-hero",
+      "blocks": {
+        "pt_1": {
+          "type": "point",
+          "settings": {
+            "text": "Fórmula sin hormonas"
+          }
+        },
+        "pt_2": {
+          "type": "point",
+          "settings": {
+            "text": "Composición publicada"
+          }
+        },
+        "pt_3": {
+          "type": "point",
+          "settings": {
+            "text": "Botánicos de uso tradicional"
+          }
+        }
+      },
+      "block_order": [
+        "pt_1",
+        "pt_2",
+        "pt_3"
+      ],
+      "settings": {
+        "eyebrow": "Suplemento botánico · Sin hormonas",
+        "heading": "La menopausia no se aguanta. Se acompaña.",
+        "text": "<p>Una fórmula botánica pensada para los sofocos, el descanso y la calma, con la composición publicada y sin promesas que no podamos sostener.</p>",
+        "button_label": "Conocer NaturCalm",
+        "button_link": "shopify://products/apoyo-para-la-menopausia",
+        "button_note": "Envío a todo el país · [Completar plazos]",
+        "media_position": "right",
+        "bg_color": "#FBEEEF",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "padding_top_mobile": 44,
+        "padding_bottom_mobile": 44
+      }
+    },
+    "nc_press": {
+      "type": "nc-press-bar",
+      "blocks": {
+        "logo_1": {
+          "type": "logo",
+          "settings": {
+            "name": "[MEDIO 1]"
+          }
+        },
+        "logo_2": {
+          "type": "logo",
+          "settings": {
+            "name": "[MEDIO 2]"
+          }
+        },
+        "logo_3": {
+          "type": "logo",
+          "settings": {
+            "name": "[MEDIO 3]"
+          }
+        },
+        "logo_4": {
+          "type": "logo",
+          "settings": {
+            "name": "[MEDIO 4]"
+          }
+        }
+      },
+      "block_order": [
+        "logo_1",
+        "logo_2",
+        "logo_3",
+        "logo_4"
+      ],
+      "settings": {
+        "title": "Recomendado y mencionado en",
+        "bg_color": "#FDF9F7",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
+    },
+    "nc_problem": {
+      "type": "nc-problem",
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "text": "Sofocos y sudores nocturnos que aparecen sin aviso"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "text": "Noches partidas: te despertás a las 3 y ya no volvés a dormir"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "text": "Cambios de humor e irritabilidad que no reconocés como tuyos"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "text": "Cansancio de fondo y niebla mental durante el día"
+          }
+        },
+        "item_5": {
+          "type": "item",
+          "settings": {
+            "text": "Un peso que se instaló y no responde como antes"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5"
+      ],
+      "settings": {
+        "eyebrow": "¿Te reconocés?",
+        "heading": "Si alguno de estos puntos te suena, estás en el lugar correcto",
+        "intro": "<p>No es tu imaginación ni falta de voluntad: es una transición hormonal real. NaturCalm existe para acompañarla, no para taparla.</p>",
+        "media_position": "right",
+        "button_label": "Ver la fórmula",
+        "button_link": "shopify://products/apoyo-para-la-menopausia",
+        "bg_color": "#FDF9F7",
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56
+      }
+    },
+    "nc_ingredients": {
+      "type": "nc-ingredients",
+      "blocks": {
+        "ing_1": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Ashwagandha",
+            "latin": "Withania somnifera",
+            "tags": "Calma, Descanso",
+            "text": "Adaptógeno con siglos de uso en la tradición ayurvédica, incorporado por su papel histórico frente al estrés sostenido.",
+            "dose": "[Dosis por porción — completar]"
+          }
+        },
+        "ing_2": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Salvia",
+            "latin": "Salvia officinalis",
+            "tags": "Termorregulación",
+            "text": "Clásica de la herboristería europea, asociada tradicionalmente al confort térmico durante la menopausia.",
+            "dose": "[Dosis por porción — completar]"
+          }
+        },
+        "ing_3": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Trébol rojo",
+            "latin": "Trifolium pratense",
+            "tags": "Equilibrio",
+            "text": "Fuente vegetal de isoflavonas, con vínculo tradicional con el equilibrio femenino en esta etapa.",
+            "dose": "[Dosis por porción — completar]"
+          }
+        }
+      },
+      "block_order": [
+        "ing_1",
+        "ing_2",
+        "ing_3"
+      ],
+      "settings": {
+        "eyebrow": "Qué lleva",
+        "heading": "Botánicos elegidos uno por uno",
+        "subheading": "<p>Una selección corta, con nombre y apellido. La fórmula completa y las dosis están publicadas en la página del producto.</p>",
+        "note": "⚠︎ Cargá las dosis exactas desde la ficha técnica antes de publicar.",
+        "button_label": "Ver la fórmula completa",
+        "button_link": "shopify://products/apoyo-para-la-menopausia",
+        "bg_color": "#FDF9F7",
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56
+      }
+    },
+    "nc_mechanism": {
+      "type": "nc-mechanism",
+      "blocks": {
+        "mech_1": {
+          "type": "step",
+          "settings": {
+            "title": "Confort térmico",
+            "text": "Plantas de uso tradicional frente a las sensaciones de calor repentino y los sudores nocturnos."
+          }
+        },
+        "mech_2": {
+          "type": "step",
+          "settings": {
+            "title": "Calma y descanso",
+            "text": "Adaptógenos que acompañan el estrés sostenido y ayudan a preparar el cuerpo para dormir."
+          }
+        },
+        "mech_3": {
+          "type": "step",
+          "settings": {
+            "title": "Energía sostenida",
+            "text": "Magnesio y cofactores que contribuyen al funcionamiento normal del sistema nervioso, sin estimulantes."
+          }
+        }
+      },
+      "block_order": [
+        "mech_1",
+        "mech_2",
+        "mech_3"
+      ],
+      "settings": {
+        "eyebrow": "Cómo funciona",
+        "heading": "Tres frentes, una sola cápsula",
+        "intro": "<p>No alcanza con una planta suelta. NaturCalm combina botánicos que trabajan sobre frentes distintos de la misma etapa.</p>",
+        "media_position": "left",
+        "button_label": "Quiero probarlo",
+        "button_link": "shopify://products/apoyo-para-la-menopausia",
+        "bg_color": "#8E4E58",
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56
+      }
+    },
+    "nc_purpose": {
+      "type": "nc-purpose",
+      "settings": {
+        "eyebrow": "Por qué existe NaturCalm",
+        "heading": "Una etapa que merece acompañamiento, no silencio",
+        "quote": "“Durante años la menopausia se contó como un problema a esconder. Nosotras preferimos contarla como una etapa a acompañar.”",
+        "text": "<p>Publicamos qué lleva la fórmula, por qué elegimos cada botánico y qué podés esperar de forma realista.</p><p>Preferimos decir menos y sostener todo lo que decimos.</p>",
+        "signature": "— El equipo de NaturCalm",
+        "media_position": "left",
+        "bg_color": "#F0DEDC",
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56
+      }
+    },
+    "nc_comparison": {
+      "type": "nc-comparison",
+      "blocks": {
+        "cmp_1": {
+          "type": "row",
+          "settings": {
+            "label": "Fórmula sin hormonas",
+            "brand_has": true,
+            "other_has": false
+          }
+        },
+        "cmp_2": {
+          "type": "row",
+          "settings": {
+            "label": "Pensada específicamente para la transición menopáusica",
+            "brand_has": true,
+            "other_has": false
+          }
+        },
+        "cmp_3": {
+          "type": "row",
+          "settings": {
+            "label": "Composición completa publicada en la página",
+            "brand_has": true,
+            "other_has": false
+          }
+        },
+        "cmp_4": {
+          "type": "row",
+          "settings": {
+            "label": "Dosis por porción visibles, sin mezclas ocultas",
+            "brand_has": true,
+            "other_has": false
+          }
+        },
+        "cmp_5": {
+          "type": "row",
+          "settings": {
+            "label": "Sin promesas de resultados que no podemos sostener",
+            "brand_has": true,
+            "other_has": false
+          }
+        }
+      },
+      "block_order": [
+        "cmp_1",
+        "cmp_2",
+        "cmp_3",
+        "cmp_4",
+        "cmp_5"
+      ],
+      "settings": {
+        "eyebrow": "La diferencia",
+        "heading": "Qué nos separa de un suplemento cualquiera",
+        "subheading": "<p>Criterios que podés verificar vos misma leyendo la etiqueta.</p>",
+        "brand_label": "NaturCalm",
+        "other_label": "Otros",
+        "button_label": "Empezar con NaturCalm",
+        "button_link": "shopify://products/apoyo-para-la-menopausia",
+        "button_note": "Pago seguro · [Completar: plazos de envío y política de devolución]",
+        "bg_color": "#F8EDEC",
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56
+      }
+    },
+    "nc_reviews": {
+      "type": "nc-reviews",
+      "blocks": {
+        "rv_1": {
+          "type": "review",
+          "settings": {
+            "title": "[Titular de la reseña]",
+            "text": "[Texto de una reseña real de una clienta. No publicar testimonios inventados.]",
+            "name": "[Nombre]",
+            "meta": "Compra verificada"
+          }
+        },
+        "rv_2": {
+          "type": "review",
+          "settings": {
+            "title": "[Titular de la reseña]",
+            "text": "[Texto de una reseña real de una clienta. No publicar testimonios inventados.]",
+            "name": "[Nombre]",
+            "meta": "Compra verificada"
+          }
+        },
+        "rv_3": {
+          "type": "review",
+          "settings": {
+            "title": "[Titular de la reseña]",
+            "text": "[Texto de una reseña real de una clienta. No publicar testimonios inventados.]",
+            "name": "[Nombre]",
+            "meta": "Compra verificada"
+          }
+        }
+      },
+      "block_order": [
+        "rv_1",
+        "rv_2",
+        "rv_3"
+      ],
+      "settings": {
+        "eyebrow": "Prueba social",
+        "heading": "Mujeres reales, opiniones reales",
+        "score": "[0,0] de 5",
+        "count_label": "Basado en [N] reseñas verificadas",
+        "note": "⚠︎ Bloques de ejemplo. Cargá reseñas reales o conectá tu app de reseñas antes de publicar.",
+        "button_label": "",
+        "button_link": "",
+        "bg_color": "#FDF9F7",
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56
+      }
+    },
+    "nc_faq": {
+      "type": "nc-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "¿NaturCalm contiene hormonas?",
+            "answer": "<p>No. La fórmula es 100% botánica y no incorpora hormonas de ningún tipo. Si estás bajo terapia hormonal, consultá igualmente con tu profesional.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "¿En cuánto tiempo voy a notar algo?",
+            "answer": "<p>Los botánicos trabajan por acumulación. Recomendamos sostener el uso al menos cuatro semanas antes de evaluar. La respuesta varía de persona a persona.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Puedo tomarlo si estoy con medicación?",
+            "answer": "<p>Consultá siempre con tu médica o médico antes de incorporarlo, especialmente si tomás medicación o tenés una condición diagnosticada.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Cómo son los envíos y las devoluciones?",
+            "answer": "<p>[Completar con tus plazos, zonas de cobertura, costos y política de cambios y devoluciones reales.]</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4"
+      ],
+      "settings": {
+        "eyebrow": "Antes de decidir",
+        "heading": "Las preguntas de siempre",
+        "subheading": "<p>Las respuestas completas están en la página del producto.</p>",
+        "open_first": true,
+        "contact_text": "<p>¿Tu pregunta no está acá? Escribinos a <a href=\"mailto:hola@naturcalm.com\">hola@naturcalm.com</a> — [reemplazar por tu email real]</p>",
+        "bg_color": "#FDF9F7",
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56
+      }
+    },
+    "nc_cta": {
+      "type": "nc-cta-band",
+      "blocks": {
+        "badge_1": {
+          "type": "badge",
+          "settings": {
+            "text": "Fórmula sin hormonas"
+          }
+        },
+        "badge_2": {
+          "type": "badge",
+          "settings": {
+            "text": "Composición publicada"
+          }
+        },
+        "badge_3": {
+          "type": "badge",
+          "settings": {
+            "text": "Envío a todo el país"
+          }
+        },
+        "badge_4": {
+          "type": "badge",
+          "settings": {
+            "text": "Atención por email real"
+          }
+        }
+      },
+      "block_order": [
+        "badge_1",
+        "badge_2",
+        "badge_3",
+        "badge_4"
+      ],
+      "settings": {
+        "eyebrow": "Empezá hoy",
+        "heading": "Tu transición, acompañada",
+        "text": "<p>Un frasco, un gesto diario y cuatro semanas de constancia. Ese es todo el compromiso que te pedimos.</p>",
+        "button_label": "Quiero mi NaturCalm",
+        "button_link": "shopify://products/apoyo-para-la-menopausia",
+        "button_note": "Pago seguro · [Completar: plazos de envío y política de devolución]",
+        "bg_color": "#FDF9F7",
+        "card_color": "#FBEEEF",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "padding_top_mobile": 44,
+        "padding_bottom_mobile": 44
+      }
+    },
+    "nc_disclaimer": {
+      "type": "nc-disclaimer",
+      "settings": {
+        "title": "Información importante",
+        "text": "<p>Este producto es un suplemento dietario. No es un medicamento y no está destinado a diagnosticar, tratar, curar ni prevenir ninguna enfermedad. Consultá con tu médica o médico antes de incorporarlo. Mantener fuera del alcance de los niños.</p><p>[Completar con el número de registro sanitario y las leyendas obligatorias de tu país antes de publicar.]</p>",
+        "refs_label": "Referencias bibliográficas",
+        "refs": "<p>[Cargá acá la bibliografía real que respalda cada ingrediente.]</p>",
+        "bg_color": "#F8EDEC",
+        "padding_top": 56,
+        "padding_bottom": 56,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    }
+  },
+  "order": [
+    "nc_brand",
+    "nc_hero",
+    "nc_press",
+    "nc_problem",
+    "nc_ingredients",
+    "nc_mechanism",
+    "nc_purpose",
+    "nc_comparison",
+    "nc_reviews",
+    "nc_faq",
+    "nc_cta",
+    "nc_disclaimer"
+  ]
+}

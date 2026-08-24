@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" role="img" aria-label="NaturCalm">
+  <title>NaturCalm</title>
+  <!-- Isotipo: hoja/gota. Dibujada como path, así que se ve igual en todos lados. -->
+  <g fill="none" stroke="#B5717A" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M34 14 C 52 32, 52 62, 34 82 C 16 62, 16 32, 34 14 Z"/>
+    <path d="M34 26 L 34 72"/>
+    <path d="M34 44 L 24 36"/>
+    <path d="M34 56 L 44 48"/>
+  </g>
+  <!-- Wordmark. Ojo: es texto vivo con stack serif de respaldo. Si necesitás el
+       logo con la tipografía exacta fuera de la web, vectorizalo en un editor. -->
+  <text x="72" y="60"
+        font-family="'Cormorant Garamond', 'Iowan Old Style', Georgia, 'Times New Roman', serif"
+        font-size="42" font-weight="600" letter-spacing="1.5" fill="#2E2624">NATURCALM</text>
+  <text x="74" y="78"
+        font-family="'Inter', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="10.5" font-weight="500" letter-spacing="4.2" fill="#8E4E58">BIENESTAR FEMENINO</text>
+</svg>

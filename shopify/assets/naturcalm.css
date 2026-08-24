@@ -508,6 +508,60 @@
 .nc-disc__refs .nc-disc__body { margin-top: 16px; text-align: left; }
 
 /* ==========================================================================
+   14 · Barra de marca (logo)
+   ========================================================================== */
+.nc-brand__lockup {
+  display: inline-flex; align-items: center; gap: 12px;
+  text-decoration: none; color: inherit;
+}
+.nc-brand__mark { color: var(--nc-accent-mid); flex: 0 0 auto; }
+.nc-brand__mark svg { width: 30px; height: 42px; display: block; }
+.nc-brand__type { display: flex; flex-direction: column; gap: 3px; }
+.nc-brand__word {
+  font-family: var(--nc-serif); font-weight: 600;
+  font-size: clamp(24px, 5vw, 34px); line-height: 1;
+  letter-spacing: .045em; color: var(--nc-ink);
+}
+.nc-brand__tag {
+  font-family: var(--nc-sans); font-size: 9.5px; font-weight: 500;
+  letter-spacing: .34em; text-transform: uppercase; color: var(--nc-accent-deep);
+}
+
+/* ==========================================================================
+   15 · Hero de portada
+   ========================================================================== */
+.nc-hero__grid { display: grid; grid-template-columns: 1fr; gap: 30px; align-items: center; }
+.nc-hero__content { text-align: center; }
+.nc-hero__h1 {
+  font-family: var(--nc-serif); font-weight: 500;
+  font-size: clamp(36px, 8vw, 64px); line-height: 1.04;
+  letter-spacing: -.015em; margin: 0 0 18px; color: var(--nc-fg);
+}
+.nc-hero__h1 em { font-style: italic; color: var(--nc-accent-deep); }
+.nc-hero__lead {
+  font-size: clamp(15px, 2vw, 18px); line-height: 1.65; font-weight: 300;
+  color: var(--nc-ink-soft); margin: 0 auto 26px; max-width: 480px;
+}
+.nc-hero__points {
+  list-style: none; margin: 24px 0 0; padding: 0;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 20px;
+}
+.nc-hero__points li {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; color: var(--nc-ink-soft);
+}
+.nc-hero__points svg { width: 14px; height: 14px; color: var(--nc-accent-mid); flex: 0 0 14px; }
+.nc-hero__media .nc-media { box-shadow: var(--nc-shadow); }
+
+@media (min-width: 990px) {
+  .nc-hero__grid { grid-template-columns: 1fr 1fr; gap: 60px; }
+  .nc-hero__content { text-align: left; }
+  .nc-hero__lead { margin-left: 0; margin-right: 0; }
+  .nc-hero__points { justify-content: flex-start; }
+  .nc-hero__grid--flip .nc-hero__media { order: -1; }
+}
+
+/* ==========================================================================
    Responsive — desktop upgrades (mobile-first base arriba)
    ========================================================================== */
 @media (min-width: 750px) {

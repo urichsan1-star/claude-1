@@ -1,0 +1,56 @@
+{%- comment -%}
+  NATURCALM · Barra de marca (logo)
+  El wordmark se renderiza como texto con la tipografía de la marca en vez de
+  como imagen: queda nítido en cualquier pantalla, pesa cero y se puede editar
+  desde el editor de temas. El isotipo va como SVG inline (paths), así que no
+  depende de ninguna fuente.
+{%- endcomment -%}
+{{ 'naturcalm.css' | asset_url | stylesheet_tag }}
+
+<div class="nc nc-sec nc-brand"
+     style="--nc-pt:{{ section.settings.padding_top_mobile }}px;--nc-pb:{{ section.settings.padding_bottom_mobile }}px;--nc-pt-d:{{ section.settings.padding_top }}px;--nc-pb-d:{{ section.settings.padding_bottom }}px;--nc-bg:{{ section.settings.bg_color }};">
+  <div class="nc-wrap">
+    <a class="nc-brand__lockup" href="{{ section.settings.link | default: routes.root_url }}"
+       aria-label="{{ section.settings.wordmark }}">
+
+      {%- if section.settings.show_mark -%}
+        <span class="nc-brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 68 96" fill="none" stroke="currentColor"
+               stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M34 14 C 52 32, 52 62, 34 82 C 16 62, 16 32, 34 14 Z"/>
+            <path d="M34 26 L 34 72"/>
+            <path d="M34 44 L 24 36"/>
+            <path d="M34 56 L 44 48"/>
+          </svg>
+        </span>
+      {%- endif -%}
+
+      <span class="nc-brand__type">
+        <span class="nc-brand__word">{{ section.settings.wordmark }}</span>
+        {%- if section.settings.tagline != blank -%}
+          <span class="nc-brand__tag">{{ section.settings.tagline }}</span>
+        {%- endif -%}
+      </span>
+    </a>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "🌸 NC · Marca",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "wordmark", "label": "Nombre de la marca", "default": "NATURCALM" },
+    { "type": "text", "id": "tagline", "label": "Bajada", "default": "Bienestar femenino" },
+    { "type": "checkbox", "id": "show_mark", "label": "Mostrar el isotipo", "default": true },
+    { "type": "url", "id": "link", "label": "Link" },
+    { "type": "color", "id": "bg_color", "label": "Fondo", "default": "#FDF9F7" },
+    { "type": "header", "content": "Espaciado" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 2, "unit": "px", "label": "Superior (desktop)", "default": 26 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 2, "unit": "px", "label": "Inferior (desktop)", "default": 20 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 100, "step": 2, "unit": "px", "label": "Superior (mobile)", "default": 18 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 100, "step": 2, "unit": "px", "label": "Inferior (mobile)", "default": 14 }
+  ],
+  "presets": [ { "name": "🌸 NC · Marca" } ]
+}
+{% endschema %}

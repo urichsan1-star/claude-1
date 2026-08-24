@@ -1,0 +1,92 @@
+{%- comment -%}
+  NATURCALM · Hero de portada
+  Función CRO: en 3 segundos decir qué es, para quién y qué hacer. Es el único
+  bloque de la home cuyo trabajo es que la visitante siga bajando.
+  Pensado para la home, pero sirve en cualquier página.
+{%- endcomment -%}
+{{ 'naturcalm.css' | asset_url | stylesheet_tag }}
+
+<div class="nc nc-sec nc-hero"
+     style="--nc-pt:{{ section.settings.padding_top_mobile }}px;--nc-pb:{{ section.settings.padding_bottom_mobile }}px;--nc-pt-d:{{ section.settings.padding_top }}px;--nc-pb-d:{{ section.settings.padding_bottom }}px;--nc-bg:{{ section.settings.bg_color }};">
+  <div class="nc-wrap">
+    <div class="nc-hero__grid{% if section.settings.media_position == 'left' %} nc-hero__grid--flip{% endif %}">
+
+      <div class="nc-hero__content">
+        {%- if section.settings.eyebrow != blank -%}
+          <span class="nc-eyebrow">{{ section.settings.eyebrow }}</span>
+        {%- endif -%}
+        <h1 class="nc-hero__h1">{{ section.settings.heading }}</h1>
+        {%- if section.settings.text != blank -%}
+          <div class="nc-hero__lead">{{ section.settings.text }}</div>
+        {%- endif -%}
+
+        {%- if section.settings.button_label != blank -%}
+          <a class="nc-btn" href="{{ section.settings.button_link | default: '#' }}">{{ section.settings.button_label }}</a>
+          {%- if section.settings.button_note != blank -%}
+            <span class="nc-btn__note">{{ section.settings.button_note }}</span>
+          {%- endif -%}
+        {%- endif -%}
+
+        {%- if section.blocks.size > 0 -%}
+          <ul class="nc-hero__points">
+            {%- for block in section.blocks -%}
+              <li {{ block.shopify_attributes }}>
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>
+                {{ block.settings.text }}
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      </div>
+
+      <div class="nc-hero__media">
+        <div class="nc-media nc-media--square">
+          {%- if section.settings.image != blank -%}
+            {%- assign nc_alt = section.settings.image.alt | default: section.settings.heading -%}
+            {{ section.settings.image | image_url: width: 1400 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '(min-width: 990px) 50vw, 100vw', widths: '500,800,1100,1400', alt: nc_alt }}
+          {%- else -%}
+            <div class="nc-media__ph">[Imagen principal · producto NaturCalm sobre fondo rosa]</div>
+          {%- endif -%}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "🌸 NC · Hero",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Antetítulo", "default": "Suplemento botánico · Sin hormonas" },
+    { "type": "text", "id": "heading", "label": "Título", "default": "La menopausia no se aguanta. Se acompaña." },
+    { "type": "richtext", "id": "text", "label": "Texto", "default": "<p>Una fórmula botánica pensada para los sofocos, el descanso y la calma, con la composición publicada y sin promesas que no podamos sostener.</p>" },
+    { "type": "text", "id": "button_label", "label": "Texto del botón", "default": "Conocer NaturCalm" },
+    { "type": "url", "id": "button_link", "label": "Link del botón" },
+    { "type": "text", "id": "button_note", "label": "Nota bajo el botón", "default": "Envío a todo el país · [Completar plazos]" },
+    { "type": "image_picker", "id": "image", "label": "Imagen" },
+    { "type": "select", "id": "media_position", "label": "Posición de la imagen (desktop)", "options": [ { "value": "left", "label": "Izquierda" }, { "value": "right", "label": "Derecha" } ], "default": "right" },
+    { "type": "color", "id": "bg_color", "label": "Fondo", "default": "#FBEEEF" },
+    { "type": "header", "content": "Espaciado" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 160, "step": 2, "unit": "px", "label": "Superior (desktop)", "default": 70 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 160, "step": 2, "unit": "px", "label": "Inferior (desktop)", "default": 70 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 120, "step": 2, "unit": "px", "label": "Superior (mobile)", "default": 44 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 120, "step": 2, "unit": "px", "label": "Inferior (mobile)", "default": 44 }
+  ],
+  "blocks": [
+    { "type": "point", "name": "Punto de confianza", "settings": [ { "type": "text", "id": "text", "label": "Texto", "default": "Sin hormonas" } ] }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "🌸 NC · Hero",
+      "blocks": [
+        { "type": "point", "settings": { "text": "Fórmula sin hormonas" } },
+        { "type": "point", "settings": { "text": "Composición publicada" } },
+        { "type": "point", "settings": { "text": "Botánicos de uso tradicional" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
