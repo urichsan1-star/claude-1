@@ -226,23 +226,33 @@ y los acordeones siguen siendo nativos del theme. Todo lo demás son secciones n
 
 ## 4. Identidad visual NaturCalm
 
-Definida en `assets/naturcalm.css` como custom properties sobre `.nc`:
+Definida en `assets/naturcalm.css` como custom properties sobre `.nc`.
+Sistema de **dos colores: rosa cuarzo + crema cálida**.
 
 ```
---nc-cream      #FBF7F0   fondo principal
---nc-cream-2    #F5EFE4   fondo alterno
---nc-sand       #EDE4D5   beige
---nc-linen      #FFFDF9   tarjetas
---nc-olive      #6E7C55   acento
---nc-olive-deep #46512F   botones y banda oscura
---nc-sage       #B7C3A8
---nc-sage-pale  #E4EADC   tags, badges, tarjeta CTA
---nc-clay       #C6A084
---nc-rose       #C2867E   /  --nc-rose-pale #F6E9E5  (placeholders)
---nc-ink        #2C2A25   texto
---nc-ink-soft   #56524A   /  --nc-muted #7A7469
---nc-line       #E4DACA   /  --nc-line-soft #EFE8DC
+--nc-cream        #FDF9F7   fondo principal
+--nc-cream-2      #F8EDEC   fondo alterno
+--nc-sand         #F0DEDC   beige rosado
+--nc-linen        #FFFDFD   tarjetas
+--nc-accent       #E8B9BC   ROSA CUARZO — color de marca
+--nc-accent-soft  #D99AA2
+--nc-accent-mid   #B5717A   3.5:1 sobre crema — solo texto grande e iconos
+--nc-accent-deep  #8E4E58   5.8:1 sobre crema — texto, botones, banda oscura
+--nc-accent-pale  #FBEEEF   tags, badges, tarjeta CTA
+--nc-ink          #2E2624   texto
+--nc-ink-soft     #5A4F4C   /  --nc-muted #756663
+--nc-line         #EBD9D8   /  --nc-line-soft #F4E7E6
+--nc-flag         #FFF3D6   /  --nc-flag-ink #7D5E14   (marcadores de placeholder)
 ```
+
+El rosa cuarzo puro es demasiado claro para texto (1.5:1 sobre crema), por eso la
+escala tiene tres tonos con roles fijos. Los marcadores de placeholder son **ámbar
+a propósito**: en rosa se confundirían con el fondo de la marca.
+
+Los mismos colores están replicados en `config/settings_data.json` (`colors_accent_1`,
+`colors_accent_2`, fondos, checkout), porque el header, el footer y el buy box leen
+los ajustes del theme, no esta hoja de estilos. Si cambiás la paleta, hay que
+tocar los dos lados.
 
 Tipografía (Google Fonts, vía `@import` en el CSS):
 
@@ -265,7 +275,10 @@ con los del theme remoto al 2026-08-24.
 
 | Archivo del theme | Bytes | Nombre en el editor | Función CRO |
 | --- | --- | --- | --- |
-| `assets/naturcalm.css` | 22207 | — | Design system completo |
+| `assets/naturcalm.css` | 26055 | — | Design system completo |
+| `assets/naturcalm-logo.svg` | 1082 | — | Logo suelto (subido también a Archivos de Shopify) |
+| `sections/nc-brandbar.liquid` | 2854 | 🌸 NC · Marca | Logo / identidad |
+| `sections/nc-hero.liquid` | 5042 | 🌸 NC · Hero | Enganche de portada |
 | `sections/nc-press-bar.liquid` | 2762 | 🌿 NC · Prensa | Autoridad prestada |
 | `sections/nc-problem.liquid` | 5307 | 🌿 NC · Problema | Auto-identificación |
 | `sections/nc-stats.liquid` | 4310 | 🌿 NC · Cifras | Respaldo racional |
@@ -279,7 +292,13 @@ con los del theme remoto al 2026-08-24.
 | `sections/nc-cta-band.liquid` | 4624 | 🌿 NC · CTA final | Cierre con garantías |
 | `sections/nc-reviews.liquid` | 5363 | 🌿 NC · Reseñas | Prueba social |
 | `sections/nc-disclaimer.liquid` | 2999 | 🌿 NC · Descargos | Seriedad legal |
-| `templates/product.naturcalm.json` | 37462 | — | Arma las 14 secciones |
+| `templates/product.naturcalm.json` | 37839 | — | Ficha de producto · 15 secciones |
+| `templates/index.json` | 16670 | — | Portada · 12 secciones |
+| `config/settings_data.json` | 25692 * | — | Ajustes globales: logo, colores, carrito, footer |
+\* Shopify **normaliza** `settings_data.json` al guardarlo, así que el tamaño remoto
+(≈18705) no coincide con el local. Es el único archivo donde comparar bytes no sirve:
+verificá los valores, no el tamaño.
+
 Cada sección: `{% schema %}` propio con settings, blocks y preset; carga el CSS con
 `{{ 'naturcalm.css' | asset_url | stylesheet_tag }}`; expone colores y paddings editables.
 El FAQ usa `<details>/<summary>` nativo — **cero JavaScript**.
