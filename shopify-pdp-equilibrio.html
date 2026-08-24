@@ -947,6 +947,10 @@ a { color: inherit; }
 .hero-banner h2 { color: #fff; }
 .hero-banner p { color: rgba(255,255,255,.7); max-width: 560px; margin-left: auto; margin-right: auto; }
 .hero-banner .eyebrow { color: var(--gold-soft); }
+/* Las tarjetas blancas dentro del banner oscuro necesitan recuperar el color
+   de texto propio: si no, heredan el blanco de .hero-banner p y quedan
+   ilegibles (blanco sobre blanco). */
+.hero-banner .balance-card p { color: var(--muted); max-width: none; margin: 0; }
 .banner-ph {
   width: min(260px, 70%);
   aspect-ratio: 1 / 1;
@@ -1049,38 +1053,27 @@ a { color: inherit; }
 <body>
 
 <!-- ============================================================
-     1 · HERO  ·  2 · PRECIO  ·  3 · CANTIDAD  ·  4 · CTA
+     1 · HERO · PRECIO · CANTIDAD · CTA
      ============================================================ -->
 <section class="hero">
   <div class="wrap hero-grid">
 
-    <!-- ========================================================
-         GALERÍA — PLACEHOLDER
-         Todavía no hay fotografía cargada para este producto.
-         Cuando la subas a Shopify, reemplazá este bloque por la
-         misma estructura .gallery-main / .gallery-thumbs que usan
-         Pro 20+ y la Crema Calmante.
-         ======================================================== -->
+    <!-- PLACEHOLDER: reemplazar por las fotos reales del producto. -->
     <div>
       <div class="photo-ph">
         <div class="brand-art" style="padding:0;">
           <svg viewBox="0 0 280 300" fill="none" stroke="#5C1B36" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="max-width:290px;">
             <circle cx="140" cy="150" r="112" stroke="#EBE0D4" stroke-width="1.2"/>
             <circle cx="140" cy="150" r="92" stroke="#F2E9DE" stroke-width="1.2"/>
-
-            <!-- Frasco -->
             <path d="M118 44h44v18h-44z"/>
             <path d="M110 62h60a14 14 0 0 1 14 14v146a14 14 0 0 1-14 14h-60a14 14 0 0 1-14-14V76a14 14 0 0 1 14-14z"/>
             <path d="M104 108h72v88h-72z" stroke="#E3D5C4"/>
-
-            <!-- Botánico en la etiqueta -->
             <path d="M140 128v46"/>
             <path d="M140 142c-11-7-20-6-26-1 8 8 18 8 26 1z"/>
             <path d="M140 142c11-7 20-6 26-1-8 8-18 8-26 1z"/>
             <path d="M140 162c-9-6-16-5-21-1 6 6 15 7 21 1z"/>
             <path d="M140 162c9-6 16-5 21-1-6 6-15 7-21 1z"/>
             <path d="M140 128c-4-6-4-12-2-15 4 3 6 9 2 15z" stroke="#B8912F"/>
-
             <path d="M120 182h40" stroke="#DCCCB8"/>
             <path d="M128 36h24" stroke="#B8912F"/>
             <circle cx="88" cy="96" r="7" stroke="#B8912F"/>
@@ -1091,32 +1084,28 @@ a { color: inherit; }
       </div>
     </div>
 
-    <!-- Panel de compra -->
     <div class="buybox">
-      <p class="kicker">Ayurvédico · Sin hormonas</p>
-      <h1>Equilibrio</h1>
-      <p class="hero-sub">Acompaña el climaterio, sin dejar de ser vos misma.</p>
-
-      <p>Formulado para la transición hacia la menopausia: sofocos, sueño irregular, cambios de
-        ánimo y esa sensación de no tener con quién hablar de esto. Cuatro activos, cada uno con
-        un rol distinto, sin fitoestrógenos hormonales.</p>
+      <p class="kicker">Ayurvédico</p>
+      <h1>Apoyo para la menopausia</h1>
 
       <ul class="hero-bullets">
-        <li>Acompaña los sofocos y sudores nocturnos*</li>
-        <li>Ayuda a sobrellevar la irritabilidad y los cambios de ánimo*</li>
-        <li>Apoya la energía y la claridad mental*</li>
-        <li>Favorece un sueño más reparador*</li>
+        <li><strong>Libre de hormonas</strong></li>
+        <li>Apoyo para los sofocos y sudores nocturnos*</li>
+        <li>Ayuda a aliviar la ansiedad, los cambios de humor y la irritabilidad*</li>
+        <li>Ayuda a controlar el peso hormonal persistente*</li>
+        <li>Favorece la energía y la claridad mental*</li>
+        <li>Promueve un sueño reparador*</li>
+        <li>Ayuda a aliviar la sequedad vaginal*</li>
       </ul>
 
       <div class="stars-row" style="margin-bottom:18px;">
-        <a href="#reseñas">Ver reseñas</a>
+        <a href="#reseñas">Lea sus opiniones</a>
       </div>
 
       <hr class="divider">
 
-      <!-- 2 · Precio  ·  3 · Cantidad -->
       <div class="offer-head">
-        <p class="offer-title">Cantidad</p>
+        <p class="offer-title">Elegí tu plan</p>
         <p class="offer-note">Frasco de 60 cápsulas · 30 días</p>
       </div>
 
@@ -1127,40 +1116,28 @@ a { color: inherit; }
             <span class="radio"></span>
             <span>
               <span class="pack-name">1 frasco</span>
-              <span class="pack-meta">30 días · $1.197/día</span>
+              <span class="pack-meta">30 días</span>
             </span>
             <span class="pack-price"><span class="pack-now">$35.900</span></span>
           </label>
         </div>
         <div class="pack">
           <span class="pack-flag">Más elegido</span>
-          <input type="radio" name="qty" id="qty2" data-qty="2" data-total="$71.800">
-          <label for="qty2">
-            <span class="radio"></span>
-            <span>
-              <span class="pack-name">2 frascos</span>
-              <span class="pack-meta">60 días · $1.197/día</span>
-            </span>
-            <span class="pack-price"><span class="pack-now">$71.800</span></span>
-          </label>
-        </div>
-        <div class="pack">
           <input type="radio" name="qty" id="qty3" data-qty="3" data-total="$107.700">
           <label for="qty3">
             <span class="radio"></span>
             <span>
               <span class="pack-name">3 frascos</span>
-              <span class="pack-meta">90 días · $1.197/día</span>
+              <span class="pack-meta">90 días</span>
             </span>
             <span class="pack-price"><span class="pack-now">$107.700</span></span>
           </label>
         </div>
       </div>
 
-      <!-- 4 · CTA — carrito nativo de Shopify -->
       <a class="btn btn--primary btn--block" id="buyBtn" target="_top"
          href="/cart/add?id=50523094253761&quantity=1">
-        Agregar al carrito — <span id="buyTotal">$35.900</span>
+        Añadir al carrito — <span id="buyTotal">$35.900</span>
       </a>
       <p class="cta-price">Pago seguro procesado por Shopify</p>
 
@@ -1181,32 +1158,30 @@ a { color: inherit; }
 
       <div class="acc">
         <details open>
-          <summary>Qué contiene</summary>
+          <summary>Uso sugerido</summary>
           <div class="acc-body">
-            <p>Ashwagandha KSM-66® (300 mg), Cimicífuga racemosa extracto estandarizado (40 mg),
-              Vitex agnus-castus (200 mg) y magnesio bisglicinato (100 mg) por dosis diaria.
-              Sin fitoestrógenos hormonales añadidos.</p>
+            <p>2 cápsulas al día, preferentemente con la comida principal.</p>
           </div>
         </details>
         <details>
-          <summary>Modo de uso</summary>
+          <summary>Información nutricional</summary>
           <div class="acc-body">
-            <p>2 cápsulas al día, preferentemente con la comida principal. Constancia diaria
-              para notar el efecto acumulado.</p>
+            <!-- PLACEHOLDER: cargar la tabla nutricional del rótulo aprobado. -->
+            <p>La información nutricional completa figura en el rótulo del envase.</p>
           </div>
         </details>
         <details>
-          <summary>Conservación</summary>
+          <summary>Ayurveda + Ciencia</summary>
           <div class="acc-body">
-            <p>Conservar en un lugar fresco y seco, lejos de la luz solar directa. No requiere
-              refrigeración.</p>
+            <p>Botánicos ayurvédicos de uso tradicional, seleccionados en sus formas más puras
+              y en dosis estudiadas, combinados con el conocimiento científico disponible.</p>
           </div>
         </details>
         <details>
-          <summary>Envíos y devoluciones</summary>
+          <summary>Cumplimiento</summary>
           <div class="acc-body">
-            <!-- PLACEHOLDER: ajustá estos plazos a tu operación real -->
-            <p>Envíos a todo el país. 60 días de devolución fácil si el producto no te convence.</p>
+            <!-- PLACEHOLDER: completar con las certificaciones reales del laboratorio. -->
+            <p>Elaborado en planta habilitada. Consultá el rótulo para el detalle de registros.</p>
           </div>
         </details>
       </div>
@@ -1215,53 +1190,42 @@ a { color: inherit; }
 </section>
 
 <!-- ============================================================
-     4b · DETRÁS DE LA FORMULACIÓN (franja oscura)
+     2 · DETRÁS DE LA FORMULACIÓN
      ============================================================ -->
 <section class="detail-band">
   <div class="wrap">
     <p class="eyebrow center">Detrás de la formulación</p>
-    <h2 class="center">Cómo se hizo Equilibrio</h2>
-    <p class="lede center">Cada decisión de la fórmula tiene un motivo. Acá el detrás de escena
-      de por qué está compuesta como está.</p>
+    <h2 class="center">Cómo se hizo esta fórmula</h2>
 
-    <!-- PLACEHOLDER: reemplazar cada tile por fotografía real del proceso —
-         materia prima, laboratorio, cápsula, envase. -->
+    <!-- PLACEHOLDER: reemplazar cada tile por fotografía real del proceso. -->
     <div class="detail-grid">
-      <div class="detail-tile">
-        <div>
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="rgba(224,200,127,.6)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 19.5C4.5 10.5 10.5 4.5 19.5 4.5c0 9-6 15-15 15z"/></svg>
-          <span>Selección de materia prima</span>
-        </div>
-      </div>
-      <div class="detail-tile">
-        <div>
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="rgba(224,200,127,.6)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v7.5L4.2 19a2 2 0 0 0 1.7 3h12.2a2 2 0 0 0 1.7-3L15 10.5V3"/><path d="M8 3h8"/></svg>
-          <span>Estandarización de extractos</span>
-        </div>
-      </div>
-      <div class="detail-tile">
-        <div>
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="rgba(224,200,127,.6)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg>
-          <span>Control de calidad</span>
-        </div>
-      </div>
-      <div class="detail-tile">
-        <div>
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="rgba(224,200,127,.6)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6"/></svg>
-          <span>Envasado final</span>
-        </div>
-      </div>
+      <div class="detail-tile"><div class="botanic"><div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(224,200,127,.6)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 19.5C4.5 10.5 10.5 4.5 19.5 4.5c0 9-6 15-15 15z"/></svg>
+        <span>Selección de botánicos</span>
+      </div></div></div>
+      <div class="detail-tile"><div class="botanic"><div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(224,200,127,.6)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v7.5L4.2 19a2 2 0 0 0 1.7 3h12.2a2 2 0 0 0 1.7-3L15 10.5V3"/><path d="M8 3h8"/></svg>
+        <span>Estandarización de extractos</span>
+      </div></div></div>
+      <div class="detail-tile"><div class="botanic"><div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(224,200,127,.6)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg>
+        <span>Control de calidad</span>
+      </div></div></div>
+      <div class="detail-tile"><div class="botanic"><div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(224,200,127,.6)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6"/></svg>
+        <span>Envasado final</span>
+      </div></div></div>
     </div>
   </div>
 </section>
 
 <!-- ============================================================
-     5 · PARA QUIÉN ES (con media al costado, como la referencia)
+     3 · PARA QUIÉN ES
      ============================================================ -->
 <section class="section section--white">
   <div class="wrap media-split">
     <div class="media-split-visual">
-      <!-- Composición de marca. PLACEHOLDER: reemplazar por foto lifestyle real. -->
+      <!-- PLACEHOLDER: reemplazar por foto lifestyle real. -->
       <div class="media-ph">
         <div class="brand-art">
           <svg viewBox="0 0 240 320" fill="none" stroke="#5C1B36" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
@@ -1283,186 +1247,243 @@ a { color: inherit; }
     </div>
 
     <div>
-    <p class="eyebrow">Por qué existe Equilibrio</p>
-    <h2>Para mujeres que no dejan que la edad las defina</h2>
-    <p class="lede">Equilibrio está pensado para mujeres que atraviesan el climaterio y
-      quieren volver a sentirse como ellas mismas, sin resignarse a que "es la edad" y ya está.</p>
+      <p class="eyebrow">Para quién es</p>
+      <h2>Para mujeres que no dejan que la edad las defina</h2>
+      <p class="lede">Está formulado para mujeres que buscan volver a ser ellas mismas sin
+        preocuparse por nada de lo siguiente:</p>
 
-    <ul class="reasons-list">
-      <li>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5C1B36" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
-        <span>Empezaron los sofocos y los sudores nocturnos, de un día para el otro.</span>
-      </li>
-      <li>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5C1B36" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-        <span>Te cuesta dormir de corrido y te despertás más cansada de lo que te acostaste.</span>
-      </li>
-      <li>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5C1B36" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21.2l8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg>
-        <span>El ánimo cambia sin aviso, y la irritabilidad aparece con más facilidad.</span>
-      </li>
-      <li>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5C1B36" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h8l-1 8 10-12h-8z"/></svg>
-        <span>Te falta energía incluso en los días en que dormiste bien.</span>
-      </li>
-    </ul>
+      <ul class="reasons-list">
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5C1B36" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+          <span>Estás experimentando repentinos sofocos y sudores nocturnos.</span>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5C1B36" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          <span>A menudo te sentís cansada, irritable, ansiosa o sin concentración.</span>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5C1B36" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21.2l8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          <span>Ganaste un peso hormonal persistente que no cede.</span>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5C1B36" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h8l-1 8 10-12h-8z"/></svg>
+          <span>Con frecuencia te encontrás agotada y sin energía.</span>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
 
 <!-- ============================================================
-     5b · FORMULACIÓN RESPALDADA POR EVIDENCIA (ancho completo)
+     4 · FORMULACIÓN RESPALDADA POR EVIDENCIA
      ============================================================ -->
 <section class="section section--cream2">
   <div class="wrap">
     <p class="eyebrow center">El criterio</p>
     <h2 class="center">Formulación respaldada por evidencia</h2>
-    <p class="lede center">No inventamos resultados propios: nos apoyamos en la investigación
-      publicada de cada activo y respetamos las dosis que se estudiaron.</p>
+    <p class="lede center">Cada ingrediente de la formulación apoya la salud hormonal y emocional
+      de las mujeres durante la menopausia.</p>
 
+    <!-- ========================================================
+         PLACEHOLDER — CIFRAS
+         La página de referencia muestra porcentajes atribuidos a la
+         investigación de cada ingrediente por separado. No podemos
+         publicarlos sin tener a mano los estudios que los respaldan.
+         Completá cada valor cuando tengas la fuente, y sumá la nota
+         al pie indicando de dónde sale cada número.
+         ======================================================== -->
     <div class="evidence-band">
       <div class="evidence-card">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#5C1B36" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5C4 18.1 5.1 17 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-        <h3>Activos con estudios propios</h3>
-        <p>Cada ingrediente tiene investigación publicada e independiente detrás — no es una
-          mezcla armada solo por tradición.</p>
+        <h3>Activos con estudios publicados</h3>
+        <p>Cada botánico de la fórmula tiene investigación publicada e independiente detrás.</p>
       </div>
       <div class="evidence-card">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#5C1B36" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <h3>Dosis, no trazas</h3>
-        <p>Usamos las dosis que se estudiaron en esas investigaciones, no cantidades simbólicas
-          para poder listar el ingrediente en la etiqueta.</p>
+        <h3>Dosis estudiadas</h3>
+        <p>Usamos las dosis con las que se hicieron esas investigaciones, no trazas simbólicas.</p>
       </div>
       <div class="evidence-card">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#5C1B36" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg>
-        <h3>Sin hormonas</h3>
-        <p>Ni estrógenos ni progesterona sintéticos. Activos vegetales que acompañan los
-          procesos de tu propio cuerpo.</p>
+        <h3>Libre de hormonas</h3>
+        <p>Sin estrógenos ni progesterona sintéticos, ni ninguna forma de reemplazo hormonal.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============================================================
-     6 · LOS 4 ACTIVOS (con investigación real por ingrediente)
+     5 · LOS 7 INGREDIENTES
      ============================================================ -->
 <section class="section section--white">
   <div class="wrap">
     <p class="eyebrow center">Ingredientes</p>
-    <h2 class="center">Los 4 activos</h2>
-    <p class="lede center">Cada uno elegido por un rol distinto, no por sumar ingredientes
-      a la etiqueta.</p>
+    <h2 class="center">Ingredientes ayurvédicos 100% orgánicos</h2>
+    <p class="lede center">Es de origen vegetal y está enraizado en la medicina ayurvédica.
+      Siete botánicos seleccionados por sus beneficios clínicamente estudiados para el bienestar
+      hormonal: cada uno es un héroe por sí mismo, pero juntos son una potencia.</p>
 
-    <!-- PLACEHOLDER: reemplazar cada .ing-photo-top por la foto real del botánico. -->
+    <!-- PLACEHOLDER: reemplazar cada ilustración por la foto real del botánico. -->
     <div class="ing-photo-grid">
+
       <div class="ing-photo-card">
-        <!-- Ilustración: raíz de ashwagandha con bayas -->
         <div class="ing-photo-top"><div class="botanic">
           <svg viewBox="0 0 120 120" fill="none" stroke="#5C1B36" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M60 26v46"/>
-            <path d="M60 40c-9-6-17-5-22-1 6 6 15 7 22 1z"/>
-            <path d="M60 40c9-6 17-5 22-1-6 6-15 7-22 1z"/>
-            <path d="M60 56c-8-5-15-4-19-1 5 5 13 6 19 1z"/>
-            <path d="M60 56c8-5 15-4 19-1-5 5-13 6-19 1z"/>
+            <path d="M60 40c-9-6-17-5-22-1 6 6 15 7 22 1z"/><path d="M60 40c9-6 17-5 22-1-6 6-15 7-22 1z"/>
+            <path d="M60 56c-8-5-15-4-19-1 5 5 13 6 19 1z"/><path d="M60 56c8-5 15-4 19-1-5 5-13 6-19 1z"/>
             <path d="M60 72c-3 8-9 14-15 18M60 72c3 8 9 14 15 18M60 72v22"/>
-            <path d="M52 84c-4 4-6 8-7 12M68 84c4 4 6 8 7 12"/>
-            <circle cx="48" cy="34" r="5" stroke="#B8912F"/>
-            <circle cx="72" cy="30" r="4" stroke="#B8912F"/>
-            <path d="M48 29v-4M72 26v-3" stroke="#B8912F"/>
+            <circle cx="48" cy="34" r="5" stroke="#B8912F"/><circle cx="72" cy="30" r="4" stroke="#B8912F"/>
           </svg>
         </div></div>
         <div class="ing-photo-body">
-          <div class="ing-sci-tags"><span>Cortisol</span><span>Sueño</span></div>
+          <div class="ing-sci-tags"><span>Control del cortisol</span><span>Sueño</span></div>
           <span class="ing-photo-name">Ashwagandha KSM-66®</span>
-          <p>Adaptógeno con estudios clínicos en reducción de cortisol y mejora en la calidad
-            del sueño frente a placebo.</p>
+          <p>Apoya una respuesta saludable al estrés ayudando a reducir los niveles de cortisol.
+            Promueve un sueño reparador.*</p>
           <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6979308/" target="_blank" rel="noopener">Ver investigación →</a>
         </div>
       </div>
+
       <div class="ing-photo-card">
-        <!-- Ilustración: espiga floral de cimicífuga -->
         <div class="ing-photo-top"><div class="botanic">
           <svg viewBox="0 0 120 120" fill="none" stroke="#5C1B36" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M60 96V30"/>
-            <path d="M60 30c-4-4-6-8-6-12M60 30c4-4 6-8 6-12" stroke="#B8912F"/>
-            <circle cx="53" cy="38" r="3.4" stroke="#B8912F"/>
-            <circle cx="67" cy="42" r="3.4" stroke="#B8912F"/>
-            <circle cx="52" cy="50" r="3.4" stroke="#B8912F"/>
-            <circle cx="68" cy="55" r="3.4" stroke="#B8912F"/>
-            <circle cx="53" cy="63" r="3.4" stroke="#B8912F"/>
-            <circle cx="67" cy="68" r="3.4" stroke="#B8912F"/>
-            <path d="M56.4 38.6 60 40M63.6 42.6 60 44M55.4 50.6 60 52M64.6 55.6 60 57"/>
-            <path d="M60 80c-9 0-15-5-18-11 8-2 15 3 18 11z"/>
-            <path d="M60 80c9 0 15-5 18-11-8-2-15 3-18 11z"/>
+            <path d="M60 96V30"/><path d="M60 30c-4-4-6-8-6-12M60 30c4-4 6-8 6-12" stroke="#B8912F"/>
+            <circle cx="53" cy="38" r="3.4" stroke="#B8912F"/><circle cx="67" cy="42" r="3.4" stroke="#B8912F"/>
+            <circle cx="52" cy="50" r="3.4" stroke="#B8912F"/><circle cx="68" cy="55" r="3.4" stroke="#B8912F"/>
+            <circle cx="53" cy="63" r="3.4" stroke="#B8912F"/><circle cx="67" cy="68" r="3.4" stroke="#B8912F"/>
+            <path d="M60 80c-9 0-15-5-18-11 8-2 15 3 18 11z"/><path d="M60 80c9 0 15-5 18-11-8-2-15 3-18 11z"/>
           </svg>
         </div></div>
         <div class="ing-photo-body">
           <div class="ing-sci-tags"><span>Sofocos</span><span>Sudores nocturnos</span></div>
-          <span class="ing-photo-name">Cimicífuga racemosa</span>
-          <p>El botánico más estudiado para síntomas vasomotores de la menopausia, con décadas
-            de uso documentado.</p>
-          <a href="https://pubmed.ncbi.nlm.nih.gov/22336815/" target="_blank" rel="noopener">Ver investigación →</a>
+          <span class="ing-photo-name">Cimicífuga negra</span>
+          <p>Ayuda a reducir los sofocos y los sudores nocturnos. Favorece un estado de ánimo
+            positivo y una piel sana.*</p>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/37192826/" target="_blank" rel="noopener">Ver investigación →</a>
         </div>
       </div>
+
       <div class="ing-photo-card">
-        <!-- Ilustración: hoja palmada y bayas de vitex -->
         <div class="ing-photo-top"><div class="botanic">
           <svg viewBox="0 0 120 120" fill="none" stroke="#5C1B36" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M60 94V54"/>
-            <path d="M60 54 40 34M60 54 60 28M60 54 80 34M60 54 44 50M60 54 76 50"/>
-            <path d="M40 34c-5-4-6-10-4-14 5 1 8 6 4 14z"/>
-            <path d="M60 28c-4-5-4-11-1-14 4 3 5 9 1 14z"/>
-            <path d="M80 34c5-4 6-10 4-14-5 1-8 6-4 14z"/>
-            <path d="M44 50c-6-1-10-5-11-9 5-1 10 2 11 9z"/>
-            <path d="M76 50c6-1 10-5 11-9-5-1-10 2-11 9z"/>
-            <circle cx="52" cy="74" r="4" stroke="#B8912F"/>
-            <circle cx="68" cy="78" r="4" stroke="#B8912F"/>
-            <circle cx="58" cy="86" r="4" stroke="#B8912F"/>
+            <path d="M60 96V46"/>
+            <path d="M60 60c-12-8-22-6-28-1 9 9 20 10 28 1z"/><path d="M60 60c12-8 22-6 28-1-9 9-20 10-28 1z"/>
+            <path d="M60 78c-10-6-18-5-23-1 7 7 16 8 23 1z"/><path d="M60 78c10-6 18-5 23-1-7 7-16 8-23 1z"/>
+            <path d="M60 46c-5-6-6-13-3-17 5 4 8 11 3 17z" stroke="#B8912F"/>
+            <circle cx="42" cy="40" r="4" stroke="#B8912F"/><circle cx="78" cy="36" r="3.4" stroke="#B8912F"/>
           </svg>
         </div></div>
         <div class="ing-photo-body">
-          <div class="ing-sci-tags"><span>Ciclo</span><span>Equilibrio hormonal</span></div>
-          <span class="ing-photo-name">Vitex agnus-castus</span>
-          <p>Tradicionalmente usado para acompañar la irregularidad del ciclo en la transición
-            hacia la menopausia.</p>
-          <!-- PLACEHOLDER: confirmar con el laboratorio si se mantiene este activo o se
-               reemplaza — tiene menos evidencia sólida que los otros tres y puede interactuar
-               con anticonceptivos hormonales. -->
+          <div class="ing-sci-tags"><span>Sofocos</span><span>Sequedad vaginal</span></div>
+          <span class="ing-photo-name">Shatavari</span>
+          <p>Ayuda a reducir los sofocos y los sudores nocturnos y alivia la sequedad vaginal.
+            Apoya la resiliencia emocional.*</p>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11079574/" target="_blank" rel="noopener">Ver investigación →</a>
         </div>
       </div>
+
       <div class="ing-photo-card">
-        <!-- Ilustración: estructura mineral cristalina -->
         <div class="ing-photo-top"><div class="botanic">
           <svg viewBox="0 0 120 120" fill="none" stroke="#5C1B36" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M60 24 84 38v28L60 80 36 66V38z"/>
-            <path d="M60 24v18M36 38l18 10M84 38 66 48M60 80V62M36 66l18-10M84 66 66 56"/>
-            <path d="M54 48h12l6 8-6 8H54l-6-8z" stroke="#B8912F"/>
-            <circle cx="60" cy="96" r="3" stroke="#B8912F"/>
-            <circle cx="44" cy="90" r="2.4" stroke="#B8912F"/>
-            <circle cx="76" cy="90" r="2.4" stroke="#B8912F"/>
+            <path d="M60 96V34"/>
+            <path d="M60 34c-8 2-14 8-16 16 9 0 15-6 16-16z"/><path d="M60 34c8 2 14 8 16 16-9 0-15-6-16-16z"/>
+            <path d="M60 60c-8 2-14 8-16 16 9 0 15-6 16-16z"/><path d="M60 60c8 2 14 8 16 16-9 0-15-6-16-16z"/>
+            <circle cx="60" cy="28" r="4" stroke="#B8912F"/>
           </svg>
         </div></div>
         <div class="ing-photo-body">
-          <div class="ing-sci-tags"><span>Sueño</span><span>Calambres</span></div>
-          <span class="ing-photo-name">Magnesio bisglicinato</span>
-          <p>Forma de magnesio de alta absorción, vinculada a mejor calidad de sueño y menor
-            incidencia de calambres nocturnos.</p>
+          <div class="ing-sci-tags"><span>Inmunidad</span><span>Salud ósea</span></div>
+          <span class="ing-photo-name">Guduchi</span>
+          <p>Apoya la inmunidad y la salud ósea. Ayuda a mejorar la concentración y la
+            cognición.*</p>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6148058/" target="_blank" rel="noopener">Ver investigación →</a>
         </div>
+      </div>
+
+      <div class="ing-photo-card">
+        <div class="ing-photo-top"><div class="botanic">
+          <svg viewBox="0 0 120 120" fill="none" stroke="#5C1B36" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M60 94V64"/>
+            <circle cx="60" cy="48" r="16"/>
+            <path d="M60 32c-6 5-9 10-9 16 0 6 3 11 9 16 6-5 9-10 9-16 0-6-3-11-9-16z" stroke="#B8912F"/>
+            <path d="M44 48c5-6 10-9 16-9 6 0 11 3 16 9-5 6-10 9-16 9-6 0-11-3-16-9z" stroke="#B8912F"/>
+            <path d="M60 76c-7-1-12-4-15-8M60 76c7-1 12-4 15-8"/>
+          </svg>
+        </div></div>
+        <div class="ing-photo-body">
+          <div class="ing-sci-tags"><span>Ánimo</span><span>Libido</span><span>Sofocos</span></div>
+          <span class="ing-photo-name">Pétalos de rosa</span>
+          <p>Apoya el estado de ánimo y la libido. Alivia el calor interno, los sofocos y la
+            irritabilidad.*</p>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/39580876/" target="_blank" rel="noopener">Ver investigación →</a>
+        </div>
+      </div>
+
+      <div class="ing-photo-card">
+        <div class="ing-photo-top"><div class="botanic">
+          <svg viewBox="0 0 120 120" fill="none" stroke="#5C1B36" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M60 94V50"/>
+            <path d="M60 50c-10 0-18-6-20-14 10-2 19 4 20 14z"/><path d="M60 50c10 0 18-6 20-14-10-2-19 4-20 14z"/>
+            <path d="M60 72c-8 0-14-5-16-11 8-2 15 3 16 11z"/><path d="M60 72c8 0 14-5 16-11-8-2-15 3-16 11z"/>
+            <circle cx="60" cy="32" r="5" stroke="#B8912F"/>
+          </svg>
+        </div></div>
+        <div class="ing-photo-body">
+          <div class="ing-sci-tags"><span>Ánimo</span><span>Claridad mental</span></div>
+          <span class="ing-photo-name">Shankhpushpi</span>
+          <p>Favorece la estabilidad emocional y la resiliencia. Ayuda a calmar el sistema
+            nervioso y promueve la claridad mental.*</p>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3255406/" target="_blank" rel="noopener">Ver investigación →</a>
+        </div>
+      </div>
+
+      <div class="ing-photo-card">
+        <div class="ing-photo-top"><div class="botanic">
+          <svg viewBox="0 0 120 120" fill="none" stroke="#5C1B36" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M60 94V58"/>
+            <path d="M60 58c-14-2-24-11-26-22 14 1 25 10 26 22z"/>
+            <path d="M60 58c14-2 24-11 26-22-14 1-25 10-26 22z"/>
+            <path d="M46 78c-6-1-11-4-13-9 6-1 12 2 13 9z"/>
+            <path d="M74 78c6-1 11-4 13-9-6-1-12 2-13 9z"/>
+            <circle cx="60" cy="30" r="4" stroke="#B8912F"/>
+          </svg>
+        </div></div>
+        <div class="ing-photo-body">
+          <div class="ing-sci-tags"><span>Memoria</span><span>Estrés</span><span>Piel</span></div>
+          <span class="ing-photo-name">Gotu Kola</span>
+          <p>Apoya la memoria y la concentración. Alivia el estrés y promueve la salud de la
+            piel al aumentar el colágeno.*</p>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4908235/" target="_blank" rel="noopener">Ver investigación →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     6 · CÓMO AYUDA LA FÓRMULA
+     ============================================================ -->
+<section class="hero-banner">
+  <div class="wrap">
+    <p class="eyebrow">Cómo esta fórmula ayuda a</p>
+    <h2>Una transición menopáusica más suave</h2>
+    <p>La fórmula utiliza hierbas refrescantes y hierbas equilibrantes en sinergia intencionada.</p>
+
+    <div class="balance-grid" style="max-width:760px;margin:30px auto 0;">
+      <div class="balance-card">
+        <h3>Hierbas refrescantes</h3>
+        <p>Reducen el calor, la irritación y la intensidad inflamatoria.</p>
+      </div>
+      <div class="balance-card">
+        <h3>Hierbas de enraizamiento</h3>
+        <p>Desarrollan resiliencia emocional y apoyan la digestión y una energía estable.</p>
       </div>
     </div>
 
-    <div class="balance-grid">
-      <div class="balance-card">
-        <h3>Activos calmantes</h3>
-        <p>Ashwagandha y magnesio trabajan sobre el estrés, el sueño y la sensación general
-          de sobrecarga.</p>
-      </div>
-      <div class="balance-card">
-        <h3>Activos reguladores</h3>
-        <p>Cimicífuga y vitex apuntan más puntualmente a los síntomas vasomotores y a la
-          irregularidad propia de esta etapa.</p>
-      </div>
-    </div>
+    <p style="margin-top:26px;">Juntas, apoyan el equilibrio hormonal y emocional, la base del
+      bienestar durante la menopausia.</p>
   </div>
 </section>
 
@@ -1471,211 +1492,174 @@ a { color: inherit; }
      ============================================================ -->
 <section class="section section--cream2" id="reseñas">
   <div class="wrap">
-    <p class="eyebrow center">Reseñas de clientas</p>
+    <p class="eyebrow center">Mujeres reales, opiniones reales</p>
     <h2 class="center">Todavía no hay reseñas publicadas</h2>
-    <!-- PLACEHOLDER: reemplazar por reseñas reales de clientas apenas existan.
-         No publicar testimonios que no provengan de compras verificadas. -->
-    <p class="lede center">Equilibrio es un lanzamiento reciente. Vamos a publicar acá las
-      opiniones de clientas reales a medida que lleguen, sin editarlas.</p>
+    <!-- ========================================================
+         PLACEHOLDER — RESEÑAS
+         Reemplazar por reseñas de clientas reales cuando existan.
+         Formato por reseña:
+           <div class="proof-card">
+             <span class="stars small">★★★★★</span>
+             <p>"Texto textual de la clienta"</p>
+             <strong>Nombre · Compra verificada</strong>
+           </div>
+         ======================================================== -->
+    <p class="lede center">Es un lanzamiento reciente. Vamos a publicar acá las opiniones de
+      clientas reales a medida que lleguen, sin editarlas.</p>
   </div>
 </section>
 
 <!-- ============================================================
-     8 · CÓMO AYUDA LA FÓRMULA
+     8 · LA DIFERENCIA
      ============================================================ -->
-<section class="hero-banner">
-  <div class="wrap">
-    <p class="eyebrow">Cómo funciona</p>
-    <h2>Una transición menopáusica más suave</h2>
-    <p>Ningún activo resuelve todo por sí solo. La combinación cubre los dos frentes que más
-      pesan en esta etapa: el estrés que se acumula y los síntomas físicos que aparecen de golpe.</p>
-    <!-- Ilustración del frasco. PLACEHOLDER: reemplazar por la foto real del producto. -->
-    <div class="banner-ph">
-      <div class="brand-art">
-        <svg viewBox="0 0 160 200" fill="none" stroke="rgba(224,200,127,.75)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M62 28h36v14H62z"/>
-          <path d="M56 42h48a10 10 0 0 1 10 10v106a10 10 0 0 1-10 10H56a10 10 0 0 1-10-10V52a10 10 0 0 1 10-10z"/>
-          <path d="M58 78h44v56H58z" stroke="rgba(255,255,255,.5)"/>
-          <path d="M80 92c-8-5-15-4-19-1 5 5 13 6 19 1z" stroke="rgba(255,255,255,.75)"/>
-          <path d="M80 92c8-5 15-4 19-1-5 5-13 6-19 1z" stroke="rgba(255,255,255,.75)"/>
-          <path d="M80 92v22" stroke="rgba(255,255,255,.75)"/>
-          <path d="M68 124h24" stroke="rgba(255,255,255,.4)"/>
-          <path d="M74 22h12" stroke="rgba(224,200,127,.5)"/>
-        </svg>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="section section--white">
   <div class="wrap">
-    <div class="formul-panel" style="max-width:720px;margin:0 auto;">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B8912F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3"/></svg>
-      <div>
-        <h3>Criterio de formulación</h3>
-        <p>Elegimos cada activo y su dosis siguiendo la evidencia publicada disponible para
-          esa sustancia, priorizando ingredientes con estudios en humanos por sobre la cantidad
-          de componentes en la etiqueta.</p>
-        <!-- PLACEHOLDER: si contás con un profesional de la salud real dispuesto a figurar
-             con nombre, matrícula y firma respaldando la fórmula, este es el lugar para
-             sumarlo — con su autorización explícita, nunca sin ella. -->
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     9 · LA DIFERENCIA
-     ============================================================ -->
-<section class="section section--cream2">
-  <div class="wrap">
     <p class="eyebrow center">La diferencia</p>
-    <h2 class="center">Por qué no es un multivitamínico genérico</h2>
+    <h2 class="center">Por qué no es un suplemento genérico</h2>
+    <p class="lede center">Seleccionamos botánicos ayurvédicos de uso tradicional, combinados con
+      conocimientos científicos, para crear un enfoque integral para la salud hormonal femenina.</p>
 
     <div class="diff-table" style="max-width:720px;margin:32px auto 0;">
       <div class="diff-row diff-head">
         <span>Característica</span>
-        <span>Equilibrio</span>
-        <span>Multivitamínico genérico</span>
+        <span>Nosotros</span>
+        <span>Otros</span>
       </div>
       <div class="diff-row">
-        <span>Dosis por activo</span>
+        <span>Formulado específicamente para menopausia</span>
         <span class="diff-check">✓</span>
         <span class="diff-cross">–</span>
       </div>
       <div class="diff-row">
-        <span>Formulado para climaterio específicamente</span>
+        <span>Aborda la causa raíz</span>
         <span class="diff-check">✓</span>
         <span class="diff-cross">–</span>
       </div>
       <div class="diff-row">
-        <span>Sin hormonas</span>
-        <span class="diff-check">✓</span>
-        <span class="diff-check">✓</span>
-      </div>
-      <div class="diff-row">
-        <span>Activos con estudios en humanos</span>
+        <span>Botánicos en su forma más pura</span>
         <span class="diff-check">✓</span>
         <span class="diff-cross">–</span>
       </div>
+      <div class="diff-row">
+        <span>Libre de hormonas</span>
+        <span class="diff-check">✓</span>
+        <span class="diff-check">✓</span>
+      </div>
+      <!-- PLACEHOLDER: sumá acá las certificaciones reales de tu laboratorio
+           (pruebas de metales pesados, planta habilitada, etc.) cuando las tengas. -->
     </div>
   </div>
 </section>
 
 <!-- ============================================================
-     10 · GARANTÍA
-     ============================================================ -->
-<section class="section section--white">
-  <div class="wrap">
-    <div class="guarantee-band" style="max-width:560px;margin:0 auto;">
-      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#5C1B36" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-      <h3>60 días de devolución</h3>
-      <p>Si después de tomarlo de forma constante no notás diferencia, escribinos y te
-        devolvemos el dinero.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     11 · FAQ
+     9 · FAQ
      ============================================================ -->
 <section class="section section--cream2" id="faq">
   <div class="wrap">
-    <p class="eyebrow center">Preguntas frecuentes</p>
-    <h2 class="center">¿Preguntas? Las tenemos cubiertas</h2>
+    <p class="eyebrow center">Comience hoy</p>
+    <h2 class="center">¿Preguntas? ¡Las tenemos cubiertas!</h2>
 
     <div class="faq-split">
-    <div class="faq">
-      <details open>
-        <summary>¿Qué es el Ayurveda?</summary>
-        <div class="faq-body"><p>Un sistema de medicina tradicional con miles de años de uso,
-          centrado en el equilibrio del cuerpo. Muchos de sus botánicos, como la ashwagandha
-          y la cimicífuga, hoy cuentan además con estudios clínicos publicados.</p></div>
-      </details>
-      <details>
-        <summary>¿Es una alternativa a la terapia de reemplazo hormonal (TRH)?</summary>
-        <div class="faq-body"><p>No la reemplaza ni la sustituye. Es un suplemento, no un
-          medicamento. Algunas mujeres prueban primero opciones no hormonales antes de
-          evaluar la TRH con su médico/a; los resultados varían de persona a persona.
-          Consultá siempre a tu profesional de salud antes de empezar cualquier suplemento.</p></div>
-      </details>
-      <details>
-        <summary>¿Contiene hormonas?</summary>
-        <div class="faq-body"><p>No. No lleva estrógenos ni progesterona sintéticos. Sus
-          activos vegetales acompañan procesos del propio cuerpo, pero no son hormonas en sí
-          mismos.</p></div>
-      </details>
-      <details>
-        <summary>¿Cuándo empieza a notarse?</summary>
-        <div class="faq-body"><p>Varía mucho según cada persona. Algunas notan cambios en el
-          sueño o el ánimo en las primeras semanas; los efectos sobre los síntomas vasomotores
-          suelen requerir más tiempo y constancia. No podemos prometer un plazo exacto.</p></div>
-      </details>
-      <details>
-        <summary>¿Cuánto tiempo lo puedo tomar?</summary>
-        <div class="faq-body"><p>Podés tomarlo mientras te resulte útil. Como con cualquier
-          suplemento de uso prolongado, consultá periódicamente con tu profesional de salud.</p></div>
-      </details>
-      <details>
-        <summary>¿Es seguro? ¿Tiene efectos secundarios?</summary>
-        <div class="faq-body"><p>Los efectos adversos reportados para estos activos son poco
-          frecuentes y leves. Aun así, consultá con tu médico/a antes de empezar, sobre todo
-          si tomás otra medicación o tenés una condición preexistente.</p></div>
-      </details>
-      <details>
-        <summary>¿Cómo funciona la garantía de devolución?</summary>
-        <div class="faq-body"><p>Tenés 60 días desde la compra. Si lo tomaste de forma
-          constante y no notás diferencia, escribinos para gestionar el reembolso.</p></div>
-      </details>
-    </div>
-
-    <!-- Composición de marca. PLACEHOLDER: reemplazar por foto lifestyle real. -->
-    <div class="faq-aside-ph">
-      <div class="brand-art">
-        <svg viewBox="0 0 200 280" fill="none" stroke="#5C1B36" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="100" cy="104" r="62" stroke="#E8DCCF" stroke-width="1.2"/>
-          <path d="M100 178V72"/>
-          <path d="M100 96c-14-9-26-8-34-2 10 10 24 11 34 2z"/>
-          <path d="M100 96c14-9 26-8 34-2-10 10-24 11-34 2z"/>
-          <path d="M100 128c-11-8-21-6-27-2 8 8 18 9 27 2z"/>
-          <path d="M100 128c11-8 21-6 27-2-8 8-18 9-27 2z"/>
-          <path d="M100 72c-5-7-5-15-2-19 5 4 7 12 2 19z" stroke="#B8912F"/>
-          <circle cx="74" cy="66" r="6" stroke="#B8912F"/>
-          <circle cx="128" cy="62" r="4.5" stroke="#B8912F"/>
-          <path d="M56 220h88M68 238h64" stroke="#E8DCCF" stroke-width="1.2"/>
-          <path d="M100 178v30" stroke="#E8DCCF" stroke-width="1.2"/>
-        </svg>
+      <div class="faq">
+        <details open>
+          <summary>¿Qué es el Ayurveda?</summary>
+          <div class="faq-body"><p>El Ayurveda es el sistema medicinal en continua práctica más
+            antiguo del mundo, que busca el bienestar restaurando el equilibrio en el cuerpo y la
+            mente. Aborda la causa principal de un problema, en lugar de limitarse a suprimir los
+            síntomas asociados. Las hierbas ayurvédicas se han utilizado durante miles de años
+            para la salud hormonal femenina, y solo recientemente empezaron a estudiarse con
+            metodología científica.</p></div>
+        </details>
+        <details>
+          <summary>¿Es una buena alternativa a la terapia hormonal sustitutiva (THS)?</summary>
+          <div class="faq-body"><p>Muchas mujeres prefieren probar formas naturales de acompañar
+            su proceso de menopausia antes de explorar opciones médicas como la terapia de
+            reemplazo hormonal. Cada persona es diferente y los resultados varían. Te
+            recomendamos consultar a tu médico/a antes de comenzar cualquier suplemento.</p></div>
+        </details>
+        <details>
+          <summary>¿No contiene hormonas?</summary>
+          <div class="faq-body"><p>Correcto. No contiene estrógenos sintéticos, progesterona ni
+            ninguna forma de reemplazo hormonal. Las hierbas de la fórmula contienen compuestos
+            vegetales naturales que acompañan los procesos hormonales de tu propio cuerpo, pero
+            no son hormonas en sí mismas.</p></div>
+        </details>
+        <details>
+          <summary>¿Cuándo empezará a funcionar?</summary>
+          <div class="faq-body"><p>Varía según cada persona y no podemos prometer un plazo.
+            Equilibrar los ciclos hormonales suele requerir varias semanas de toma continua, ya
+            que el cuerpo tarda un tiempo en ajustarse.</p></div>
+        </details>
+        <details>
+          <summary>¿Qué contiene? ¿Los ingredientes son orgánicos?</summary>
+          <div class="faq-body"><p>Contiene 7 botánicos ayurvédicos: Ashwagandha KSM-66®,
+            Shatavari, Cimicífuga negra, pétalos de rosa, Guduchi, Shankhapushpi y Gotu Kola.
+            La lista completa de ingredientes figura en el rótulo del envase.</p></div>
+        </details>
+        <details>
+          <summary>¿Durante cuánto tiempo puedo tomarlo?</summary>
+          <div class="faq-body"><p>Podés tomarlo mientras te resulte útil. Como con cualquier
+            suplemento de uso prolongado, consultá periódicamente con tu profesional de salud.</p></div>
+        </details>
+        <details>
+          <summary>¿Es seguro el suplemento? ¿Tiene efectos secundarios?</summary>
+          <div class="faq-body"><p>Los efectos secundarios de los ingredientes de esta
+            formulación son poco frecuentes y leves. Aunque en general se considera seguro,
+            recomendamos consultar a tu médico/a antes de empezar a tomar cualquier suplemento
+            nuevo, sobre todo si tomás otra medicación.</p></div>
+        </details>
+        <details>
+          <summary>¿Cómo funciona la garantía de devolución?</summary>
+          <div class="faq-body"><p>Tenés 60 días desde la compra. Si lo tomaste de forma
+            constante y no notás diferencia, escribinos para gestionar el reembolso.</p></div>
+        </details>
       </div>
-    </div>
+
+      <!-- PLACEHOLDER: reemplazar por foto lifestyle real. -->
+      <div class="faq-aside-ph">
+        <div class="brand-art">
+          <svg viewBox="0 0 200 280" fill="none" stroke="#5C1B36" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="100" cy="104" r="62" stroke="#E8DCCF" stroke-width="1.2"/>
+            <path d="M100 178V72"/>
+            <path d="M100 96c-14-9-26-8-34-2 10 10 24 11 34 2z"/>
+            <path d="M100 96c14-9 26-8 34-2-10 10-24 11-34 2z"/>
+            <path d="M100 128c-11-8-21-6-27-2 8 8 18 9 27 2z"/>
+            <path d="M100 128c11-8 21-6 27-2-8 8-18 9-27 2z"/>
+            <path d="M100 72c-5-7-5-15-2-19 5 4 7 12 2 19z" stroke="#B8912F"/>
+            <circle cx="74" cy="66" r="6" stroke="#B8912F"/>
+            <circle cx="128" cy="62" r="4.5" stroke="#B8912F"/>
+            <path d="M56 220h88M68 238h64" stroke="#E8DCCF" stroke-width="1.2"/>
+            <path d="M100 178v30" stroke="#E8DCCF" stroke-width="1.2"/>
+          </svg>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ============================================================
-     12 · CTA FINAL
+     10 · CTA FINAL
      ============================================================ -->
 <section class="section section--wine final">
   <div class="wrap final-inner">
-    <p class="eyebrow">Empezá hoy</p>
-    <h2>Volvé a sentirte como vos misma</h2>
+    <p class="eyebrow">Obtené apoyo para la menopausia</p>
+    <h2>Comenzá hoy</h2>
     <p>El pack de 3 frascos cubre 90 días, el plazo con el que tiene sentido evaluar
       un suplemento de este tipo.</p>
     <a class="btn btn--light" target="_top" href="/cart/add?id=50523094253761&quantity=3">
       Llevar el pack de 3 — $107.700
     </a>
-    <p class="final-note">También disponible por unidad y en pack de 2.</p>
   </div>
 </section>
 
-<!-- ---------- Aviso legal ---------- -->
+<!-- ---------- Exenciones de responsabilidad ---------- -->
 <div class="legal">
   <div class="wrap">
     <p>*Estas afirmaciones no han sido evaluadas por ANMAT. Este producto es un suplemento
-      dietario, no un medicamento: no está destinado a diagnosticar, tratar, curar ni prevenir
-      ninguna enfermedad, y no reemplaza un tratamiento médico ni la terapia de reemplazo
-      hormonal. Mantener fuera del alcance de los niños. Conservar en lugar fresco y seco.
-      Consultá a tu profesional de salud antes de iniciar cualquier suplemento, especialmente
-      si tomás otra medicación.</p>
+      dietario y no está destinado a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.
+      No reemplaza un tratamiento médico ni la terapia de reemplazo hormonal. Mantener fuera del
+      alcance de los niños. Almacenar en un lugar fresco y seco. Consultá a tu profesional de
+      salud antes de iniciar cualquier suplemento, especialmente si tomás otra medicación.</p>
   </div>
 </div>
 
