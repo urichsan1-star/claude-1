@@ -336,7 +336,8 @@
         "padding_top": 90,
         "padding_bottom": 90,
         "padding_top_mobile": 56,
-        "padding_bottom_mobile": 56
+        "padding_bottom_mobile": 56,
+        "image": "shopify://shop_images/24c6ac95-3f8f-4394-af58-d00cf2d41991.png"
       }
     },
     "nc_reviews": {

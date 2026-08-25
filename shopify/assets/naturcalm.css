@@ -31,6 +31,11 @@
   --nc-white:       #FFFFFF;
   /* Marcador de placeholder: ámbar a propósito, para que NO se confunda con
      el rosa de la marca y siga saltando a la vista en una página rosada. */
+  /* Verde de verificación: los tildes leen como "comprobado" y suben la
+     confianza sin romper el sistema de dos colores. */
+  --nc-ok:          #3E8E5A;
+  --nc-ok-deep:     #2C6B42;
+  --nc-ok-pale:     #E7F3EA;
   --nc-flag:        #FFF3D6;
   --nc-flag-ink:    #7D5E14;
 
@@ -212,8 +217,8 @@
 .nc-leaf {
   width: 26px; height: 26px; flex: 0 0 26px;
   border-radius: 50%;
-  background: var(--nc-accent-pale);
-  color: var(--nc-accent-deep);
+  background: var(--nc-ok-pale);
+  color: var(--nc-ok-deep);
   display: inline-flex; align-items: center; justify-content: center;
 }
 .nc-leaf svg { width: 14px; height: 14px; }
@@ -369,6 +374,10 @@
 /* ==========================================================================
    8 · Comparación
    ========================================================================== */
+.nc-cmp__layout { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center; }
+@media (min-width: 990px) {
+  .nc-cmp__layout--with-media { grid-template-columns: .82fr 1.18fr; gap: 48px; }
+}
 .nc-cmp {
   border: 1px solid var(--nc-line); border-radius: var(--nc-radius);
   overflow: hidden; background: var(--nc-linen);
@@ -393,7 +402,7 @@
 .nc-cmp__label { padding: 16px 18px; font-size: 14px; line-height: 1.45; color: var(--nc-ink); }
 .nc-cmp__cell { text-align: center; padding: 16px 6px; }
 .nc-cmp__cell--brand { background: rgba(251, 238, 239, .70); height: 100%; display: flex; align-items: center; justify-content: center; }
-.nc-cmp__yes { color: var(--nc-accent-mid); }
+.nc-cmp__yes { color: var(--nc-ok); }
 .nc-cmp__no { color: #D6C4C2; }
 .nc-cmp__yes svg, .nc-cmp__no svg { width: 20px; height: 20px; display: block; }
 
@@ -427,7 +436,7 @@
 .nc-faq__q { display: flex; align-items: flex-start; gap: 11px; }
 .nc-faq__tick {
   flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px;
-  border-radius: 50%; background: var(--nc-accent-pale); color: var(--nc-accent-deep);
+  border-radius: 50%; background: var(--nc-ok-pale); color: var(--nc-ok-deep);
   display: inline-flex; align-items: center; justify-content: center;
 }
 .nc-faq__tick svg { width: 12px; height: 12px; }
@@ -466,7 +475,7 @@
   font-size: 12px; letter-spacing: .04em; color: var(--nc-ink-soft);
 }
 .nc-cta__badges span { display: inline-flex; align-items: center; gap: 7px; }
-.nc-cta__badges svg { width: 14px; height: 14px; color: var(--nc-accent-mid); }
+.nc-cta__badges svg { width: 14px; height: 14px; color: var(--nc-ok); }
 
 /* ==========================================================================
    12 · Reviews
@@ -493,7 +502,7 @@
 .nc-rv__avatar img { width: 100%; height: 100%; object-fit: cover; }
 .nc-rv__name { font-size: 13.5px; font-weight: 600; color: var(--nc-ink); }
 .nc-rv__meta { font-size: 11.5px; color: var(--nc-muted); display: flex; align-items: center; gap: 5px; }
-.nc-rv__meta svg { width: 12px; height: 12px; color: var(--nc-accent-mid); }
+.nc-rv__meta svg { width: 12px; height: 12px; color: var(--nc-ok); }
 .nc-rv__text { font-size: 14.5px; line-height: 1.65; color: var(--nc-ink-soft); font-weight: 300; }
 .nc-rv__title { font-size: 14.5px; font-weight: 600; color: var(--nc-ink); }
 
@@ -557,7 +566,7 @@
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 13px; color: var(--nc-ink-soft);
 }
-.nc-hero__points svg { width: 14px; height: 14px; color: var(--nc-accent-mid); flex: 0 0 14px; }
+.nc-hero__points svg { width: 14px; height: 14px; color: var(--nc-ok); flex: 0 0 14px; }
 .nc-hero__media .nc-media { box-shadow: var(--nc-shadow); }
 
 @media (min-width: 990px) {
@@ -579,9 +588,9 @@
 .nc-trust__item { display: flex; align-items: center; gap: 10px; }
 .nc-trust__icon {
   flex: 0 0 30px; width: 30px; height: 30px; border-radius: 50%;
-  background: var(--nc-linen); color: var(--nc-accent-deep);
+  background: var(--nc-ok-pale); color: var(--nc-ok-deep);
   display: inline-flex; align-items: center; justify-content: center;
-  border: 1px solid var(--nc-line);
+  border: 1px solid #D2E6D8;
 }
 .nc-trust__icon svg { width: 16px; height: 16px; }
 .nc-trust__label {
@@ -601,7 +610,7 @@
 }
 .nc-gua__icon {
   width: 56px; height: 56px; margin: 0 auto 18px;
-  border-radius: 50%; background: var(--nc-accent-pale); color: var(--nc-accent-deep);
+  border-radius: 50%; background: var(--nc-ok-pale); color: var(--nc-ok-deep);
   display: flex; align-items: center; justify-content: center;
 }
 .nc-gua__icon svg { width: 28px; height: 28px; }
