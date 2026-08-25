@@ -47,7 +47,7 @@
         "text": "<p>Una fórmula botánica pensada para los sofocos, el descanso y la calma, con la composición publicada y sin promesas que no podamos sostener.</p>",
         "button_label": "Conocer NaturCalm",
         "button_link": "shopify://products/apoyo-para-la-menopausia",
-        "button_note": "Envío a todo el país · [Completar plazos]",
+        "button_note": "Envío $5.555 a todo el país · Gratis llevando 2 frascos o más",
         "media_position": "right",
         "bg_color": "#FBEEEF",
         "padding_top": 70,
@@ -97,7 +97,8 @@
         "padding_bottom": 40,
         "padding_top_mobile": 28,
         "padding_bottom_mobile": 28
-      }
+      },
+      "disabled": true
     },
     "nc_problem": {
       "type": "nc-problem",
@@ -164,7 +165,7 @@
             "latin": "Withania somnifera",
             "tags": "Calma, Descanso",
             "text": "Adaptógeno con siglos de uso en la tradición ayurvédica, incorporado por su papel histórico frente al estrés sostenido.",
-            "dose": "[Dosis por porción — completar]"
+            "dose": ""
           }
         },
         "ing_2": {
@@ -174,7 +175,7 @@
             "latin": "Salvia officinalis",
             "tags": "Termorregulación",
             "text": "Clásica de la herboristería europea, asociada tradicionalmente al confort térmico durante la menopausia.",
-            "dose": "[Dosis por porción — completar]"
+            "dose": ""
           }
         },
         "ing_3": {
@@ -184,7 +185,7 @@
             "latin": "Trifolium pratense",
             "tags": "Equilibrio",
             "text": "Fuente vegetal de isoflavonas, con vínculo tradicional con el equilibrio femenino en esta etapa.",
-            "dose": "[Dosis por porción — completar]"
+            "dose": ""
           }
         }
       },
@@ -197,7 +198,7 @@
         "eyebrow": "Qué lleva",
         "heading": "Botánicos elegidos uno por uno",
         "subheading": "<p>Una selección corta, con nombre y apellido. La fórmula completa y las dosis están publicadas en la página del producto.</p>",
-        "note": "⚠︎ Cargá las dosis exactas desde la ficha técnica antes de publicar.",
+        "note": "",
         "button_label": "Ver la fórmula completa",
         "button_link": "shopify://products/apoyo-para-la-menopausia",
         "bg_color": "#FDF9F7",
@@ -326,7 +327,7 @@
         "other_label": "Otros",
         "button_label": "Empezar con NaturCalm",
         "button_link": "shopify://products/apoyo-para-la-menopausia",
-        "button_note": "Pago seguro · [Completar: plazos de envío y política de devolución]",
+        "button_note": "Envío $5.555 a todo el país · Gratis llevando 2 frascos o más",
         "bg_color": "#F8EDEC",
         "padding_top": 90,
         "padding_bottom": 90,
@@ -383,7 +384,8 @@
         "padding_bottom": 90,
         "padding_top_mobile": 56,
         "padding_bottom_mobile": 56
-      }
+      },
+      "disabled": true
     },
     "nc_faq": {
       "type": "nc-faq",
@@ -413,7 +415,7 @@
           "type": "faq",
           "settings": {
             "question": "¿Cómo son los envíos y las devoluciones?",
-            "answer": "<p>[Completar con tus plazos, zonas de cobertura, costos y política de cambios y devoluciones reales.]</p>"
+            "answer": "<p>Enviamos a todo el país por $5.555, y el envío es gratis llevando 2 frascos o más. El plazo de entrega depende de tu localidad y se confirma al finalizar la compra.</p>"
           }
         }
       },
@@ -428,7 +430,7 @@
         "heading": "Las preguntas de siempre",
         "subheading": "<p>Las respuestas completas están en la página del producto.</p>",
         "open_first": true,
-        "contact_text": "<p>¿Tu pregunta no está acá? Escribinos a <a href=\"mailto:hola@naturcalm.com\">hola@naturcalm.com</a> — [reemplazar por tu email real]</p>",
+        "contact_text": "<p>¿Tu pregunta no está acá? Escribinos a <a href=\"mailto:urichsan1@gmail.com\">urichsan1@gmail.com</a> y te responde una persona.</p>",
         "bg_color": "#FDF9F7",
         "padding_top": 90,
         "padding_bottom": 90,
@@ -476,7 +478,7 @@
         "text": "<p>Un frasco, un gesto diario y cuatro semanas de constancia. Ese es todo el compromiso que te pedimos.</p>",
         "button_label": "Quiero mi NaturCalm",
         "button_link": "shopify://products/apoyo-para-la-menopausia",
-        "button_note": "Pago seguro · [Completar: plazos de envío y política de devolución]",
+        "button_note": "Envío $5.555 a todo el país · Gratis llevando 2 frascos o más",
         "bg_color": "#FDF9F7",
         "card_color": "#FBEEEF",
         "padding_top": 70,
@@ -489,9 +491,9 @@
       "type": "nc-disclaimer",
       "settings": {
         "title": "Información importante",
-        "text": "<p>Este producto es un suplemento dietario. No es un medicamento y no está destinado a diagnosticar, tratar, curar ni prevenir ninguna enfermedad. Consultá con tu médica o médico antes de incorporarlo. Mantener fuera del alcance de los niños.</p><p>[Completar con el número de registro sanitario y las leyendas obligatorias de tu país antes de publicar.]</p>",
+        "text": "<p>Este producto es un suplemento dietario. No es un medicamento y no está destinado a diagnosticar, tratar, curar ni prevenir ninguna enfermedad. Consultá con tu médica o médico antes de incorporarlo. Mantener fuera del alcance de los niños.</p>",
         "refs_label": "Referencias bibliográficas",
-        "refs": "<p>[Cargá acá la bibliografía real que respalda cada ingrediente.]</p>",
+        "refs": "",
         "bg_color": "#F8EDEC",
         "padding_top": 56,
         "padding_bottom": 56,

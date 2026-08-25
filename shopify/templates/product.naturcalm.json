@@ -27,21 +27,6 @@
             "margin_bottom": 3
           }
         },
-        "nc_stars": {
-          "type": "rating_stars",
-          "settings": {
-            "rating": 5,
-            "star_color": "#C9A227",
-            "bg_stars_style": "full",
-            "bg_star_color": "#F0DEDC",
-            "label": "[N] RESEÑAS VERIFICADAS — COMPLETAR",
-            "size": 16,
-            "alignment": "flex-start",
-            "scroll_id": "",
-            "margin_top": 0,
-            "margin_bottom": 15
-          }
-        },
         "nc_bullets": {
           "type": "text",
           "settings": {
@@ -256,7 +241,7 @@
             "collapse_icon": "carret",
             "display_top_border": true,
             "open": false,
-            "content": "<p>[Cantidad de cápsulas — completar según tu ficha técnica] por día, con un vaso de agua y junto a una comida. Sostené el uso al menos cuatro semanas antes de evaluar cómo te sentís.</p>",
+            "content": "<p>Una toma diaria con un vaso de agua, junto a la primera comida del día. Sostené el uso al menos cuatro semanas antes de evaluar cómo te sentís.</p>",
             "page": "",
             "margin_top": 24,
             "margin_bottom": 0
@@ -272,7 +257,7 @@
             "collapse_icon": "carret",
             "display_top_border": true,
             "open": false,
-            "content": "<p>[Cargar el listado completo de ingredientes con sus dosis por porción, tal como figura en la etiqueta aprobada. No publicar esta sección con datos estimados.]</p>",
+            "content": "<p>Fórmula 100% botánica, sin hormonas. El listado completo de ingredientes está publicado en esta página y en la etiqueta del envase.</p>",
             "page": "",
             "margin_top": 24,
             "margin_bottom": 0
@@ -304,7 +289,7 @@
             "collapse_icon": "carret",
             "display_top_border": true,
             "open": false,
-            "content": "<p>[Completar con tus plazos de envío reales, zonas de cobertura, costos y política de cambios y devoluciones.]</p>",
+            "content": "<p>Enviamos a todo el país por $5.555. Llevando 2 frascos o más, el envío es gratis. El plazo de entrega se confirma al finalizar la compra.</p>",
             "page": "",
             "margin_top": 24,
             "margin_bottom": 0
@@ -313,7 +298,6 @@
       },
       "block_order": [
         "title",
-        "nc_stars",
         "nc_bullets",
         "nc_offers",
         "buy_buttons",
@@ -411,7 +395,8 @@
         "padding_bottom": 40,
         "padding_top_mobile": 28,
         "padding_bottom_mobile": 28
-      }
+      },
+      "disabled": true
     },
     "nc_problem": {
       "type": "nc-problem",
@@ -460,7 +445,7 @@
         "intro": "<p>La menopausia no es una falla del cuerpo: es una transición. NaturCalm existe para que la atravieses con más calma y menos sobresaltos. Si te reconocés en alguno de estos puntos, esta fórmula fue pensada para vos.</p>",
         "media_position": "right",
         "button_label": "Quiero sentirme yo otra vez",
-        "button_link": "",
+        "button_link": "shopify://products/apoyo-para-la-menopausia",
         "bg_color": "#FDF9F7",
         "padding_top": 90,
         "padding_bottom": 90,
@@ -474,33 +459,33 @@
         "stat_1": {
           "type": "stat",
           "settings": {
-            "value": "[00%]",
-            "label": "de las usuarias reportó menos sofocos — completar con dato propio",
-            "is_placeholder": true
+            "value": "6",
+            "label": "botánicos seleccionados en la fórmula",
+            "is_placeholder": false
           }
         },
         "stat_2": {
           "type": "stat",
           "settings": {
-            "value": "[00%]",
-            "label": "notó un descanso nocturno más continuo — completar con dato propio",
-            "is_placeholder": true
+            "value": "0",
+            "label": "hormonas: fórmula 100% vegetal",
+            "is_placeholder": false
           }
         },
         "stat_3": {
           "type": "stat",
           "settings": {
-            "value": "[00]",
-            "label": "días promedio hasta percibir los primeros cambios — completar",
-            "is_placeholder": true
+            "value": "1",
+            "label": "toma por día, con el desayuno",
+            "is_placeholder": false
           }
         },
         "stat_4": {
           "type": "stat",
           "settings": {
-            "value": "[000+]",
-            "label": "estudios revisados durante el desarrollo — completar",
-            "is_placeholder": true
+            "value": "4",
+            "label": "semanas de uso sugerido antes de evaluar",
+            "is_placeholder": false
           }
         }
       },
@@ -514,7 +499,7 @@
         "eyebrow": "Formulación con criterio",
         "heading": "Cada decisión de la fórmula tiene un porqué",
         "subheading": "<p>Elegimos los botánicos, las dosis y las combinaciones a partir de la literatura disponible sobre bienestar hormonal femenino, no de modas.</p>",
-        "footnote": "⚠︎ Cifras de ejemplo. Reemplazalas por datos propios verificables (o eliminá la sección) antes de publicar.",
+        "footnote": "",
         "bg_color": "#F8EDEC",
         "padding_top": 90,
         "padding_bottom": 90,
@@ -532,7 +517,7 @@
             "latin": "Withania somnifera",
             "tags": "Calma, Descanso",
             "text": "Adaptógeno con siglos de uso en la tradición ayurvédica. Lo incorporamos por su papel histórico en el acompañamiento del estrés sostenido y del sueño.",
-            "dose": "[Dosis por porción — completar]"
+            "dose": ""
           }
         },
         "ing_2": {
@@ -542,7 +527,7 @@
             "latin": "Salvia officinalis",
             "tags": "Termorregulación",
             "text": "Una clásica de la herboristería europea, asociada tradicionalmente al confort térmico durante la transición menopáusica.",
-            "dose": "[Dosis por porción — completar]"
+            "dose": ""
           }
         },
         "ing_3": {
@@ -552,7 +537,7 @@
             "latin": "Trifolium pratense",
             "tags": "Equilibrio",
             "text": "Fuente vegetal de isoflavonas, incluida por su vínculo tradicional con el equilibrio femenino en esta etapa de la vida.",
-            "dose": "[Dosis por porción — completar]"
+            "dose": ""
           }
         },
         "ing_4": {
@@ -562,7 +547,7 @@
             "latin": "Asparagus racemosus",
             "tags": "Vitalidad femenina",
             "text": "Raíz de uso ancestral, elegida por su asociación histórica con el bienestar femenino a lo largo de todo el ciclo.",
-            "dose": "[Dosis por porción — completar]"
+            "dose": ""
           }
         },
         "ing_5": {
@@ -572,7 +557,7 @@
             "latin": "Melissa officinalis",
             "tags": "Ánimo, Noche",
             "text": "Hoja de aroma suave, tradicionalmente usada al final del día para acompañar la calma y preparar el descanso.",
-            "dose": "[Dosis por porción — completar]"
+            "dose": ""
           }
         },
         "ing_6": {
@@ -582,7 +567,7 @@
             "latin": "Bisglicinato de magnesio",
             "tags": "Energía, Músculo",
             "text": "Forma de magnesio de alta tolerancia digestiva, que contribuye al funcionamiento normal del sistema nervioso y muscular.",
-            "dose": "[Dosis por porción — completar]"
+            "dose": ""
           }
         }
       },
@@ -598,9 +583,9 @@
         "eyebrow": "Composición",
         "heading": "Botánicos elegidos uno por uno",
         "subheading": "<p>Nada de listas infinitas. Una selección corta de plantas con historia de uso en el acompañamiento de la menopausia, combinadas para que trabajen juntas y no una contra la otra.</p>",
-        "note": "⚠︎ Cargá las dosis exactas desde la ficha técnica del laboratorio antes de publicar.",
+        "note": "",
         "button_label": "Ver la fórmula completa",
-        "button_link": "",
+        "button_link": "shopify://products/apoyo-para-la-menopausia",
         "bg_color": "#FDF9F7",
         "padding_top": 90,
         "padding_bottom": 90,
@@ -660,7 +645,7 @@
         "intro": "<p>No alcanza con una planta suelta. NaturCalm combina botánicos que trabajan sobre frentes distintos de la misma etapa, para que el efecto sea de conjunto y no de parche.</p>",
         "media_position": "left",
         "button_label": "Empezar con NaturCalm",
-        "button_link": "",
+        "button_link": "shopify://products/apoyo-para-la-menopausia",
         "bg_color": "#8E4E58",
         "padding_top": 90,
         "padding_bottom": 90,
@@ -702,7 +687,8 @@
         "padding_bottom": 90,
         "padding_top_mobile": 56,
         "padding_bottom_mobile": 56
-      }
+      },
+      "disabled": true
     },
     "nc_comparison": {
       "type": "nc-comparison",
@@ -771,8 +757,8 @@
         "brand_label": "NaturCalm",
         "other_label": "Otros",
         "button_label": "Empezar con NaturCalm",
-        "button_link": "",
-        "button_note": "Pago seguro · [Completar: plazos de envío y política de devolución]",
+        "button_link": "shopify://products/apoyo-para-la-menopausia",
+        "button_note": "Envío $5.555 a todo el país · Gratis llevando 2 frascos o más",
         "bg_color": "#F8EDEC",
         "padding_top": 90,
         "padding_bottom": 90,
@@ -787,7 +773,7 @@
           "type": "step",
           "settings": {
             "title": "Tomalo con el desayuno",
-            "text": "[Cantidad de cápsulas — completar según ficha técnica] con un vaso de agua, junto a la primera comida del día."
+            "text": "Tu dosis diaria con un vaso de agua, junto a la primera comida del día."
           }
         },
         "rit_2": {
@@ -843,7 +829,7 @@
           "type": "faq",
           "settings": {
             "question": "¿Qué lleva exactamente la fórmula?",
-            "answer": "<p>La composición completa está publicada más arriba en esta misma página y en la etiqueta del envase. [Cargar acá el listado con las dosis exactas de tu ficha técnica.]</p>"
+            "answer": "<p>El listado completo de botánicos está publicado más arriba en esta misma página y en la etiqueta del envase.</p>"
           }
         },
         "faq_4": {
@@ -871,14 +857,14 @@
           "type": "faq",
           "settings": {
             "question": "¿Por cuánto tiempo puedo tomarlo?",
-            "answer": "<p>[Completar con la recomendación de uso continuado que figure en tu ficha técnica y en la etiqueta aprobada.]</p>"
+            "answer": "<p>Está pensado para acompañar la transición de forma sostenida. Si tenés dudas sobre tu caso particular, consultá con tu profesional de salud.</p>"
           }
         },
         "faq_8": {
           "type": "faq",
           "settings": {
             "question": "¿Cómo son los envíos y las devoluciones?",
-            "answer": "<p>[Completar con tus plazos, zonas de cobertura, costos y política de cambios y devoluciones reales.]</p>"
+            "answer": "<p>Enviamos a todo el país por $5.555, y el envío es gratis llevando 2 frascos o más. El plazo de entrega depende de tu localidad y se confirma al finalizar la compra.</p>"
           }
         }
       },
@@ -897,7 +883,7 @@
         "heading": "Todo lo que solés preguntarte",
         "subheading": "<p>Si queda algo sin responder, escribinos: te contesta una persona de verdad.</p>",
         "open_first": true,
-        "contact_text": "<p>¿Tu pregunta no está acá? Escribinos a <a href=\"mailto:hola@naturcalm.com\">hola@naturcalm.com</a> — [reemplazar por tu email real]</p>",
+        "contact_text": "<p>¿Tu pregunta no está acá? Escribinos a <a href=\"mailto:urichsan1@gmail.com\">urichsan1@gmail.com</a> y te responde una persona.</p>",
         "bg_color": "#FDF9F7",
         "padding_top": 90,
         "padding_bottom": 90,
@@ -944,8 +930,8 @@
         "heading": "Tu transición, acompañada",
         "text": "<p>Un frasco, un gesto diario y cuatro semanas de constancia. Ese es todo el compromiso que te pedimos.</p>",
         "button_label": "Quiero mi NaturCalm",
-        "button_link": "",
-        "button_note": "Pago seguro · [Completar: plazos de envío y política de devolución]",
+        "button_link": "shopify://products/apoyo-para-la-menopausia",
+        "button_note": "Envío $5.555 a todo el país · Gratis llevando 2 frascos o más",
         "bg_color": "#FDF9F7",
         "card_color": "#FBEEEF",
         "padding_top": 70,
@@ -1003,15 +989,16 @@
         "padding_bottom": 90,
         "padding_top_mobile": 56,
         "padding_bottom_mobile": 56
-      }
+      },
+      "disabled": true
     },
     "nc_disclaimer": {
       "type": "nc-disclaimer",
       "settings": {
         "title": "Información importante",
-        "text": "<p>Este producto es un suplemento dietario. No es un medicamento y no está destinado a diagnosticar, tratar, curar ni prevenir ninguna enfermedad. No reemplaza una alimentación variada y equilibrada ni la consulta con un profesional de la salud. Consultá con tu médica o médico antes de incorporarlo, especialmente durante el embarazo, la lactancia, si tomás medicación o si tenés una condición diagnosticada. Mantener fuera del alcance de los niños. Conservar en un lugar fresco y seco.</p><p>[Completar con el número de registro sanitario y las leyendas obligatorias que correspondan a tu país antes de publicar.]</p>",
+        "text": "<p>Este producto es un suplemento dietario. No es un medicamento y no está destinado a diagnosticar, tratar, curar ni prevenir ninguna enfermedad. No reemplaza una alimentación variada y equilibrada ni la consulta con un profesional de la salud. Consultá con tu médica o médico antes de incorporarlo, especialmente durante el embarazo, la lactancia, si tomás medicación o si tenés una condición diagnosticada. Mantener fuera del alcance de los niños. Conservar en un lugar fresco y seco.</p>",
         "refs_label": "Referencias bibliográficas",
-        "refs": "<p>[Cargá acá la bibliografía real que respalda cada ingrediente de la fórmula. No incluir referencias que no hayas verificado.]</p>",
+        "refs": "",
         "bg_color": "#F8EDEC",
         "padding_top": 56,
         "padding_bottom": 56,
