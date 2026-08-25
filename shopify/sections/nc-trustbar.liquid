@@ -1,0 +1,79 @@
+{%- comment -%}
+  NATURCALM · Fila de sellos de confianza
+  Espeja la fila de iconos que la referencia coloca inmediatamente debajo del
+  botón de compra: cuatro señales cortas que bajan el riesgo percibido en el
+  momento exacto de decidir.
+{%- endcomment -%}
+{{ 'naturcalm.css' | asset_url | stylesheet_tag }}
+
+<div class="nc nc-sec nc-trust"
+     style="--nc-pt:{{ section.settings.padding_top_mobile }}px;--nc-pb:{{ section.settings.padding_bottom_mobile }}px;--nc-pt-d:{{ section.settings.padding_top }}px;--nc-pb-d:{{ section.settings.padding_bottom }}px;--nc-bg:{{ section.settings.bg_color }};">
+  <div class="nc-wrap">
+    <ul class="nc-trust__row">
+      {%- for block in section.blocks -%}
+        <li class="nc-trust__item" {{ block.shopify_attributes }}>
+          <span class="nc-trust__icon" aria-hidden="true">
+            {%- case block.settings.icon -%}
+              {%- when 'truck' -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg>
+              {%- when 'shield' -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+              {%- when 'lock' -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+              {%- when 'leaf' -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c6 6 6 12 0 18-6-6-6-12 0-18z"/><path d="M12 7v11"/></svg>
+              {%- when 'clock' -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              {%- else -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>
+            {%- endcase -%}
+          </span>
+          <span class="nc-trust__label">{{ block.settings.text }}</span>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "🌸 NC · Sellos",
+  "tag": "section",
+  "settings": [
+    { "type": "color", "id": "bg_color", "label": "Fondo", "default": "#FBEEEF" },
+    { "type": "header", "content": "Espaciado" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 2, "unit": "px", "label": "Superior (desktop)", "default": 22 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 2, "unit": "px", "label": "Inferior (desktop)", "default": 22 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 100, "step": 2, "unit": "px", "label": "Superior (mobile)", "default": 18 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 100, "step": 2, "unit": "px", "label": "Inferior (mobile)", "default": 18 }
+  ],
+  "blocks": [
+    {
+      "type": "seal",
+      "name": "Sello",
+      "settings": [
+        { "type": "select", "id": "icon", "label": "Icono", "options": [
+            { "value": "check", "label": "Tilde" },
+            { "value": "leaf", "label": "Hoja" },
+            { "value": "truck", "label": "Envío" },
+            { "value": "shield", "label": "Garantía" },
+            { "value": "lock", "label": "Candado" },
+            { "value": "clock", "label": "Reloj" } ], "default": "check" },
+        { "type": "text", "id": "text", "label": "Texto", "default": "Sin hormonas" }
+      ]
+    }
+  ],
+  "max_blocks": 5,
+  "presets": [
+    {
+      "name": "🌸 NC · Sellos",
+      "blocks": [
+        { "type": "seal", "settings": { "icon": "leaf", "text": "Fórmula sin hormonas" } },
+        { "type": "seal", "settings": { "icon": "truck", "text": "Envío gratis desde 2 frascos" } },
+        { "type": "seal", "settings": { "icon": "shield", "text": "10 días para arrepentirte" } },
+        { "type": "seal", "settings": { "icon": "lock", "text": "Pago seguro" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

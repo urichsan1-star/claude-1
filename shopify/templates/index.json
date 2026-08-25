@@ -505,11 +505,74 @@
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
+    },
+    "nc_trust": {
+      "type": "nc-trustbar",
+      "blocks": {
+        "seal_1": {
+          "type": "seal",
+          "settings": {
+            "icon": "leaf",
+            "text": "Fórmula sin hormonas"
+          }
+        },
+        "seal_2": {
+          "type": "seal",
+          "settings": {
+            "icon": "truck",
+            "text": "Envío gratis desde 2 frascos"
+          }
+        },
+        "seal_3": {
+          "type": "seal",
+          "settings": {
+            "icon": "shield",
+            "text": "10 días para arrepentirte"
+          }
+        },
+        "seal_4": {
+          "type": "seal",
+          "settings": {
+            "icon": "lock",
+            "text": "Pago seguro"
+          }
+        }
+      },
+      "block_order": [
+        "seal_1",
+        "seal_2",
+        "seal_3",
+        "seal_4"
+      ],
+      "settings": {
+        "bg_color": "#FBEEEF",
+        "padding_top": 22,
+        "padding_bottom": 22,
+        "padding_top_mobile": 18,
+        "padding_bottom_mobile": 18
+      }
+    },
+    "nc_guarantee": {
+      "type": "nc-guarantee",
+      "settings": {
+        "eyebrow": "Comprá tranquila",
+        "heading": "Tenés 10 días para arrepentirte",
+        "text": "<p>Si lo recibís y cambiás de idea, escribinos dentro de los 10 días y te devolvemos el dinero. Sin explicaciones y sin costo para vos.</p>",
+        "legal": "Derecho de arrepentimiento, artículo 34 de la Ley 24.240 de Defensa del Consumidor. El envase debe estar sin abrir.",
+        "button_label": "Empezar sin riesgo",
+        "button_link": "shopify://products/apoyo-para-la-menopausia",
+        "bg_color": "#FDF9F7",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "padding_top_mobile": 46,
+        "padding_bottom_mobile": 46
+      }
     }
   },
   "order": [
     "nc_brand",
     "nc_hero",
+    "nc_trust",
     "nc_press",
     "nc_problem",
     "nc_ingredients",
@@ -518,6 +581,7 @@
     "nc_comparison",
     "nc_reviews",
     "nc_faq",
+    "nc_guarantee",
     "nc_cta",
     "nc_disclaimer"
   ]

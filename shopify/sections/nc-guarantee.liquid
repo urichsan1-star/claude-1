@@ -1,0 +1,51 @@
+{%- comment -%}
+  NATURCALM · Garantía destacada
+  La referencia apoya el cierre en una garantía bien visible. Acá el respaldo es
+  el derecho de arrepentimiento de 10 días de la Ley 24.240: es real, es
+  verificable y no depende de que inventemos una promesa.
+{%- endcomment -%}
+{{ 'naturcalm.css' | asset_url | stylesheet_tag }}
+
+<div class="nc nc-sec nc-gua"
+     style="--nc-pt:{{ section.settings.padding_top_mobile }}px;--nc-pb:{{ section.settings.padding_bottom_mobile }}px;--nc-pt-d:{{ section.settings.padding_top }}px;--nc-pb-d:{{ section.settings.padding_bottom }}px;--nc-bg:{{ section.settings.bg_color }};">
+  <div class="nc-wrap nc-wrap--narrow">
+    <div class="nc-gua__card">
+      <span class="nc-gua__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+      </span>
+      {%- if section.settings.eyebrow != blank -%}<span class="nc-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+      <h2 class="nc-h2">{{ section.settings.heading }}</h2>
+      <div class="nc-lead">{{ section.settings.text }}</div>
+      {%- if section.settings.legal != blank -%}
+        <p class="nc-gua__legal">{{ section.settings.legal }}</p>
+      {%- endif -%}
+      {%- if section.settings.button_label != blank -%}
+        <div class="nc-cta-group">
+          <a class="nc-btn" href="{{ section.settings.button_link | default: '#' }}">{{ section.settings.button_label }}</a>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "🌸 NC · Garantía",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Antetítulo", "default": "Comprá tranquila" },
+    { "type": "text", "id": "heading", "label": "Título", "default": "Tenés 10 días para arrepentirte" },
+    { "type": "richtext", "id": "text", "label": "Texto", "default": "<p>Si lo recibís y cambiás de idea, escribinos dentro de los 10 días y te devolvemos el dinero. Sin explicaciones y sin costo para vos.</p>" },
+    { "type": "text", "id": "legal", "label": "Nota legal", "default": "Derecho de arrepentimiento, artículo 34 de la Ley 24.240 de Defensa del Consumidor. El envase debe estar sin abrir." },
+    { "type": "text", "id": "button_label", "label": "Texto del botón", "default": "Empezar sin riesgo" },
+    { "type": "url", "id": "button_link", "label": "Link del botón" },
+    { "type": "color", "id": "bg_color", "label": "Fondo", "default": "#FDF9F7" },
+    { "type": "header", "content": "Espaciado" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 160, "step": 2, "unit": "px", "label": "Superior (desktop)", "default": 70 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 160, "step": 2, "unit": "px", "label": "Inferior (desktop)", "default": 70 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 120, "step": 2, "unit": "px", "label": "Superior (mobile)", "default": 46 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 120, "step": 2, "unit": "px", "label": "Inferior (mobile)", "default": 46 }
+  ],
+  "presets": [ { "name": "🌸 NC · Garantía" } ]
+}
+{% endschema %}
