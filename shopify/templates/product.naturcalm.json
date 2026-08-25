@@ -250,7 +250,7 @@
             "breaks_style": "normal",
             "breaks_headline": "ELEGÍ TU PACK",
             "breaks_display_selected_indicator": true,
-            "breaks_border_radius": 14,
+            "breaks_border_radius": 10,
             "breaks_border_width": 2,
             "breaks_color_scheme": "accent-1",
             "breaks_badges": "[empty], EL MÁS ELEGIDO, MEJOR VALOR",
@@ -258,7 +258,7 @@
             "breaks_badge_color": "accent-1",
             "breaks_displayed_images": "variant_images",
             "breaks_custom_images": "",
-            "breaks_image_width": 78,
+            "breaks_image_width": 70,
             "breaks_space_images": true,
             "breaks_vertical_images_position": "top",
             "breaks_vertical_prices_layout": "vertical",
@@ -430,7 +430,8 @@
         "padding_top": 90,
         "padding_bottom": 90,
         "padding_top_mobile": 56,
-        "padding_bottom_mobile": 56
+        "padding_bottom_mobile": 56,
+        "image": "shopify://shop_images/24c6ac95-3f8f-4394-af58-d00cf2d41991.png"
       }
     },
     "nc_stats": {
@@ -870,7 +871,8 @@
         "padding_top": 90,
         "padding_bottom": 90,
         "padding_top_mobile": 56,
-        "padding_bottom_mobile": 56
+        "padding_bottom_mobile": 56,
+        "image": "shopify://shop_images/a2939c4d-bf0b-408a-84bb-3bf542d9ddf4.png"
       }
     },
     "nc_cta": {
