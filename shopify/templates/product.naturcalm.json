@@ -510,9 +510,9 @@
       ],
       "settings": {
         "eyebrow": "Formulación con criterio",
-        "heading": "Cada decisión de la fórmula tiene un porqué",
-        "subheading": "<p>Elegimos los botánicos, las dosis y las combinaciones a partir de la literatura disponible sobre bienestar hormonal femenino, no de modas.</p>",
-        "footnote": "",
+        "heading": "Pensada ingrediente por ingrediente",
+        "subheading": "<p>Cada botánico de la fórmula fue elegido por su historia de uso en el acompañamiento hormonal y emocional de la mujer durante la menopausia. Ninguno está por relleno.</p>",
+        "footnote": "Los números de arriba describen la fórmula, no resultados prometidos. La respuesta varía de persona a persona.",
         "bg_color": "#F8EDEC",
         "padding_top": 90,
         "padding_bottom": 90,
@@ -595,7 +595,7 @@
       "settings": {
         "eyebrow": "Composición",
         "heading": "Botánicos elegidos uno por uno",
-        "subheading": "<p>Nada de listas infinitas. Una selección corta de plantas con historia de uso en el acompañamiento de la menopausia, combinadas para que trabajen juntas y no una contra la otra.</p>",
+        "subheading": "<p>NaturCalm es de origen vegetal. Seleccionamos seis botánicos por su historia de uso en el bienestar hormonal femenino: cada uno tiene su propio papel, y juntos cubren los tres frentes de esta etapa.</p>",
         "note": "",
         "button_label": "Ver la fórmula completa",
         "button_link": "shopify://products/apoyo-para-la-menopausia",
