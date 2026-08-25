@@ -170,10 +170,10 @@
         "ing_1": {
           "type": "ingredient",
           "settings": {
-            "name": "Ashwagandha",
+            "name": "Ashwagandha KSM-66®",
             "latin": "Withania somnifera",
             "tags": "Calma, Descanso",
-            "text": "Adaptógeno de la tradición ayurvédica. Para el estrés que no afloja.",
+            "text": "El extracto de referencia. Para el estrés que no afloja.",
             "dose": ""
           }
         },

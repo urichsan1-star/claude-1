@@ -168,7 +168,7 @@
             "collapse_icon": "carret",
             "display_top_border": true,
             "open": false,
-            "content": "<p>Fórmula 100% botánica, sin hormonas:</p><p>✅ Ashwagandha <em>(Withania somnifera)</em><br/>✅ Cimicífuga negra <em>(Actaea racemosa)</em><br/>✅ Shatavari <em>(Asparagus racemosus)</em><br/>✅ Guduchi <em>(Tinospora cordifolia)</em><br/>✅ Pétalos de rosa <em>(Rosa damascena)</em><br/>✅ Shankhpushpi <em>(Convolvulus pluricaulis)</em><br/>✅ Gotu Kola <em>(Centella asiatica)</em></p><p>Cantidades por porción en la etiqueta del envase.</p>",
+            "content": "<p>Fórmula 100% botánica, sin hormonas:</p><p>✅ Ashwagandha KSM-66® <em>(Withania somnifera)</em><br/>✅ Cimicífuga negra <em>(Actaea racemosa)</em><br/>✅ Shatavari <em>(Asparagus racemosus)</em><br/>✅ Guduchi <em>(Tinospora cordifolia)</em><br/>✅ Pétalos de rosa <em>(Rosa damascena)</em><br/>✅ Shankhpushpi <em>(Convolvulus pluricaulis)</em><br/>✅ Gotu Kola <em>(Centella asiatica)</em></p><p>Cantidades por porción en la etiqueta del envase.</p>",
             "page": "",
             "margin_top": 24,
             "margin_bottom": 0
@@ -566,9 +566,9 @@
           "type": "ingredient",
           "settings": {
             "tags": "Calma, Descanso",
-            "name": "Ashwagandha",
+            "name": "Ashwagandha KSM-66®",
             "latin": "Withania somnifera",
-            "text": "Adaptógeno. Para el estrés que no afloja.",
+            "text": "El extracto de referencia. Para el estrés que no afloja.",
             "dose": ""
           }
         },
