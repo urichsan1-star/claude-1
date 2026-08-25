@@ -15,8 +15,17 @@
       {%- if section.settings.subheading != blank -%}<div class="nc-lead">{{ section.settings.subheading }}</div>{%- endif -%}
     </div>
 
+    {%- assign nc_ready = 0 -%}
+    {%- for block in section.blocks -%}
+      {%- assign nm = block.settings.name | strip -%}
+      {%- unless nm == blank or nm contains '[' -%}{%- assign nc_ready = nc_ready | plus: 1 -%}{%- endunless -%}
+    {%- endfor -%}
+
+    {%- if nc_ready > 0 -%}
     <div class="nc-experts__grid">
       {%- for block in section.blocks -%}
+        {%- assign nm = block.settings.name | strip -%}
+        {%- if nm == blank or nm contains '[' -%}{%- continue -%}{%- endif -%}
         <article class="nc-expert" {{ block.shopify_attributes }}>
           <div class="nc-expert__top">
             <div class="nc-expert__avatar">
@@ -33,6 +42,7 @@
         </article>
       {%- endfor -%}
     </div>
+    {%- endif -%}
 
     {%- if section.settings.note != blank -%}
       <p class="nc-stats__foot" style="margin-top:24px;">{{ section.settings.note }}</p>

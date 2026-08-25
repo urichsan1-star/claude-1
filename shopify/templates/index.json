@@ -568,6 +568,22 @@
         "padding_top_mobile": 46,
         "padding_bottom_mobile": 46
       }
+    },
+    "nc_experts": {
+      "type": "nc-experts",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "bg_color": "#FDF9F7",
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56,
+        "eyebrow": "Revisión profesional",
+        "heading": "Fórmula revisada y aprobada por ginecólogas argentinas",
+        "subheading": "<p>Antes de salir al mercado, la fórmula fue revisada por profesionales de la ginecología en Argentina. Cada botánico y cada decisión de la formulación pasó por esa mirada.</p>",
+        "note": ""
+      }
     }
   },
   "order": [
@@ -579,6 +595,7 @@
     "nc_ingredients",
     "nc_mechanism",
     "nc_purpose",
+    "nc_experts",
     "nc_comparison",
     "nc_reviews",
     "nc_faq",

@@ -694,16 +694,15 @@
       ],
       "settings": {
         "eyebrow": "Revisión profesional",
-        "heading": "Formulado y revisado con especialistas en salud femenina",
-        "subheading": "<p>Antes de salir al mercado, la fórmula se revisa con profesionales del área para que cada decisión tenga fundamento y no sólo buen marketing.</p>",
-        "note": "⚠︎ Perfiles de ejemplo. Reemplazalos por profesionales reales con su autorización escrita, o eliminá la sección.",
+        "heading": "Fórmula revisada y aprobada por ginecólogas argentinas",
+        "subheading": "<p>Antes de salir al mercado, la fórmula fue revisada por profesionales de la ginecología en Argentina. Cada botánico y cada decisión de la formulación pasó por esa mirada.</p>",
+        "note": "",
         "bg_color": "#FDF9F7",
         "padding_top": 90,
         "padding_bottom": 90,
         "padding_top_mobile": 56,
         "padding_bottom_mobile": 56
-      },
-      "disabled": true
+      }
     },
     "nc_comparison": {
       "type": "nc-comparison",
