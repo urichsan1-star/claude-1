@@ -571,8 +571,28 @@
     },
     "nc_experts": {
       "type": "nc-experts",
-      "blocks": {},
-      "block_order": [],
+      "blocks": {
+        "exp_1": {
+          "type": "expert",
+          "settings": {
+            "name": "[Nombre de la profesional]",
+            "role": "[Ginecología · Matrícula 00000]",
+            "text": "[Cita autorizada sobre el enfoque de la fórmula. No publicar sin permiso escrito de la profesional.]"
+          }
+        },
+        "exp_2": {
+          "type": "expert",
+          "settings": {
+            "name": "[Nombre de la profesional]",
+            "role": "[Nutrición · Matrícula 00000]",
+            "text": "[Cita autorizada sobre la selección de ingredientes. No publicar sin permiso escrito de la profesional.]"
+          }
+        }
+      },
+      "block_order": [
+        "exp_1",
+        "exp_2"
+      ],
       "settings": {
         "bg_color": "#FDF9F7",
         "padding_top": 90,
