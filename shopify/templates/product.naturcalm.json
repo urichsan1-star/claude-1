@@ -452,9 +452,9 @@
         "item_5"
       ],
       "settings": {
-        "eyebrow": "Para vos, en esta etapa",
-        "heading": "Para mujeres que no piensan poner la vida en pausa",
-        "intro": "<p>La menopausia no es una falla del cuerpo: es una transición. NaturCalm existe para que la atravieses con más calma y menos sobresaltos. Si te reconocés en alguno de estos puntos, esta fórmula fue pensada para vos.</p>",
+        "eyebrow": "¿Te suena?",
+        "heading": "No es tu cabeza. Es tu cuerpo cambiando.",
+        "intro": "<p>Y no tenés por qué aguantártelo sola.</p>",
         "media_position": "right",
         "button_label": "Quiero sentirme yo otra vez",
         "button_link": "shopify://products/apoyo-para-la-menopausia",
@@ -509,10 +509,10 @@
         "stat_4"
       ],
       "settings": {
-        "eyebrow": "Formulación con criterio",
-        "heading": "Pensada ingrediente por ingrediente",
-        "subheading": "<p>Cada botánico de la fórmula fue elegido por su historia de uso en el acompañamiento hormonal y emocional de la mujer durante la menopausia. Ninguno está por relleno.</p>",
-        "footnote": "Los números de arriba describen la fórmula, no resultados prometidos. La respuesta varía de persona a persona.",
+        "eyebrow": "La fórmula",
+        "heading": "Simple a propósito",
+        "subheading": "<p>Seis botánicos. Ninguno de relleno.</p>",
+        "footnote": "Los números describen la fórmula, no resultados prometidos.",
         "bg_color": "#F8EDEC",
         "padding_top": 90,
         "padding_bottom": 90,
@@ -529,7 +529,7 @@
             "name": "Ashwagandha",
             "latin": "Withania somnifera",
             "tags": "Calma, Descanso",
-            "text": "Adaptógeno con siglos de uso en la tradición ayurvédica. Lo incorporamos por su papel histórico en el acompañamiento del estrés sostenido y del sueño.",
+            "text": "Adaptógeno de la tradición ayurvédica. Para el estrés que no afloja.",
             "dose": ""
           }
         },
@@ -539,7 +539,7 @@
             "name": "Salvia",
             "latin": "Salvia officinalis",
             "tags": "Termorregulación",
-            "text": "Una clásica de la herboristería europea, asociada tradicionalmente al confort térmico durante la transición menopáusica.",
+            "text": "Clásica de la herboristería europea. Asociada al confort ante el calor repentino.",
             "dose": ""
           }
         },
@@ -549,7 +549,7 @@
             "name": "Trébol rojo",
             "latin": "Trifolium pratense",
             "tags": "Equilibrio",
-            "text": "Fuente vegetal de isoflavonas, incluida por su vínculo tradicional con el equilibrio femenino en esta etapa de la vida.",
+            "text": "Isoflavonas de origen vegetal, ligadas al equilibrio femenino en esta etapa.",
             "dose": ""
           }
         },
@@ -559,7 +559,7 @@
             "name": "Shatavari",
             "latin": "Asparagus racemosus",
             "tags": "Vitalidad femenina",
-            "text": "Raíz de uso ancestral, elegida por su asociación histórica con el bienestar femenino a lo largo de todo el ciclo.",
+            "text": "Raíz de uso ancestral en el bienestar de la mujer.",
             "dose": ""
           }
         },
@@ -569,7 +569,7 @@
             "name": "Melisa",
             "latin": "Melissa officinalis",
             "tags": "Ánimo, Noche",
-            "text": "Hoja de aroma suave, tradicionalmente usada al final del día para acompañar la calma y preparar el descanso.",
+            "text": "Hoja suave, de las que se toman al final del día.",
             "dose": ""
           }
         },
@@ -579,7 +579,7 @@
             "name": "Magnesio",
             "latin": "Bisglicinato de magnesio",
             "tags": "Energía, Músculo",
-            "text": "Forma de magnesio de alta tolerancia digestiva, que contribuye al funcionamiento normal del sistema nervioso y muscular.",
+            "text": "Bisglicinato: contribuye al sistema nervioso y muscular.",
             "dose": ""
           }
         }
@@ -593,11 +593,11 @@
         "ing_6"
       ],
       "settings": {
-        "eyebrow": "Composición",
-        "heading": "Botánicos elegidos uno por uno",
-        "subheading": "<p>NaturCalm es de origen vegetal. Seleccionamos seis botánicos por su historia de uso en el bienestar hormonal femenino: cada uno tiene su propio papel, y juntos cubren los tres frentes de esta etapa.</p>",
+        "eyebrow": "Qué lleva",
+        "heading": "Seis plantas, cada una con su trabajo",
+        "subheading": "<p>Elegidas una por una. Nada de listas infinitas.</p>",
         "note": "",
-        "button_label": "Ver la fórmula completa",
+        "button_label": "Lo quiero",
         "button_link": "shopify://products/apoyo-para-la-menopausia",
         "bg_color": "#FDF9F7",
         "padding_top": 90,
@@ -609,10 +609,10 @@
     "nc_purpose": {
       "type": "nc-purpose",
       "settings": {
-        "eyebrow": "Por qué existe NaturCalm",
-        "heading": "Una etapa que merece acompañamiento, no silencio",
-        "quote": "“Durante años la menopausia se contó como un problema a esconder. Nosotras preferimos contarla como una etapa a acompañar.”",
-        "text": "<p>NaturCalm nació de una idea simple: que una mujer atravesando este cambio pueda encontrar un producto claro, honesto y bien formulado, sin promesas exageradas ni letra chica.</p><p>Por eso publicamos qué lleva la fórmula, por qué elegimos cada botánico y qué podés esperar de forma realista. Preferimos decir menos y sostener todo lo que decimos.</p>",
+        "eyebrow": "Por qué existimos",
+        "heading": "Porque nadie te cuenta esta etapa",
+        "quote": "“La menopausia se contó siempre como algo a esconder. Nosotras la contamos como algo a acompañar.”",
+        "text": "<p>Publicamos qué lleva la fórmula y qué podés esperar. Preferimos decir menos y cumplir todo.</p>",
         "signature": "— El equipo de NaturCalm",
         "media_position": "left",
         "bg_color": "#F0DEDC",
@@ -630,21 +630,21 @@
           "type": "step",
           "settings": {
             "title": "Confort térmico",
-            "text": "Plantas de uso tradicional frente a las sensaciones de calor repentino y los sudores nocturnos, para que el día y la noche vuelvan a ser previsibles."
+            "text": "Plantas de uso tradicional frente a los sofocos y los sudores nocturnos."
           }
         },
         "mech_2": {
           "type": "step",
           "settings": {
             "title": "Calma y descanso",
-            "text": "Adaptógenos y botánicos de la tradición herbolaria que acompañan el estrés sostenido y ayudan a preparar el cuerpo para dormir."
+            "text": "Adaptógenos que acompañan el estrés y preparan el cuerpo para dormir."
           }
         },
         "mech_3": {
           "type": "step",
           "settings": {
             "title": "Energía sostenida",
-            "text": "Magnesio y cofactores que contribuyen al funcionamiento normal del sistema nervioso, para sostener la energía sin recurrir a estimulantes."
+            "text": "Magnesio y cofactores, sin estimulantes."
           }
         }
       },
@@ -654,11 +654,11 @@
         "mech_3"
       ],
       "settings": {
-        "eyebrow": "Cómo está pensada la fórmula",
-        "heading": "Tres frentes, una sola cápsula",
-        "intro": "<p>No alcanza con una planta suelta. NaturCalm combina botánicos que trabajan sobre frentes distintos de la misma etapa, para que el efecto sea de conjunto y no de parche.</p>",
+        "eyebrow": "Cómo funciona",
+        "heading": "Tres frentes, una cápsula",
+        "intro": "<p>Los sofocos, el sueño y la energía no se arreglan por separado.</p>",
         "media_position": "left",
-        "button_label": "Empezar con NaturCalm",
+        "button_label": "Empezar hoy",
         "button_link": "shopify://products/apoyo-para-la-menopausia",
         "bg_color": "#8E4E58",
         "padding_top": 90,
@@ -693,9 +693,9 @@
         "exp_2"
       ],
       "settings": {
-        "eyebrow": "Revisión profesional",
-        "heading": "Fórmula revisada y aprobada por ginecólogas argentinas",
-        "subheading": "<p>Antes de salir al mercado, la fórmula fue revisada por profesionales de la ginecología en Argentina. Cada botánico y cada decisión de la formulación pasó por esa mirada.</p>",
+        "eyebrow": "Aval profesional",
+        "heading": "Aprobada por ginecólogas argentinas",
+        "subheading": "<p>Revisaron la fórmula botánico por botánico antes de que saliera a la venta.</p>",
         "note": "",
         "bg_color": "#FDF9F7",
         "padding_top": 90,
@@ -766,11 +766,11 @@
       ],
       "settings": {
         "eyebrow": "La diferencia",
-        "heading": "Qué nos separa de un suplemento cualquiera",
-        "subheading": "<p>Una comparación honesta, sobre criterios que podés verificar vos misma leyendo la etiqueta.</p>",
+        "heading": "Por qué esta y no cualquiera",
+        "subheading": "<p>Mirá la etiqueta y comprobalo vos misma.</p>",
         "brand_label": "NaturCalm",
         "other_label": "Otros",
-        "button_label": "Empezar con NaturCalm",
+        "button_label": "Lo quiero",
         "button_link": "shopify://products/apoyo-para-la-menopausia",
         "button_note": "Envío $5.555 a todo el país · Gratis llevando 2 frascos o más",
         "bg_color": "#F8EDEC",
@@ -813,8 +813,8 @@
       ],
       "settings": {
         "eyebrow": "El ritual",
-        "heading": "Un gesto simple, todos los días",
-        "subheading": "<p>Sin licuados, sin polvos, sin cambiar tu rutina. La constancia es lo que hace la diferencia.</p>",
+        "heading": "Un gesto por día. Nada más.",
+        "subheading": "<p>Sin polvos, sin licuados, sin cambiar tu rutina.</p>",
         "note": "Modo de uso sugerido. Consultá con tu profesional de salud antes de incorporar cualquier suplemento, especialmente si tomás medicación o estás en tratamiento.",
         "bg_color": "#FDF9F7",
         "padding_top": 90,
@@ -830,56 +830,56 @@
           "type": "faq",
           "settings": {
             "question": "¿NaturCalm contiene hormonas?",
-            "answer": "<p>No. La fórmula es 100% botánica y no incorpora hormonas de ningún tipo. Si estás bajo terapia hormonal, consultá igualmente con tu profesional antes de sumar cualquier suplemento.</p>"
+            "answer": "<p>No. Es 100% botánica. Si estás con terapia hormonal, consultá igual con tu profesional.</p>"
           }
         },
         "faq_2": {
           "type": "faq",
           "settings": {
             "question": "¿En cuánto tiempo voy a notar algo?",
-            "answer": "<p>Los botánicos trabajan por acumulación, no de un día para el otro. Recomendamos sostener el uso al menos cuatro semanas antes de evaluar. La respuesta varía de persona a persona y no podemos garantizar un resultado.</p>"
+            "answer": "<p>Los botánicos trabajan por acumulación. Dale cuatro semanas. La respuesta varía en cada persona.</p>"
           }
         },
         "faq_3": {
           "type": "faq",
           "settings": {
             "question": "¿Qué lleva exactamente la fórmula?",
-            "answer": "<p>El listado completo de botánicos está publicado más arriba en esta misma página y en la etiqueta del envase.</p>"
+            "answer": "<p>Los seis botánicos están listados más arriba y en la etiqueta del envase.</p>"
           }
         },
         "faq_4": {
           "type": "faq",
           "settings": {
             "question": "¿Puedo tomarlo si estoy con medicación?",
-            "answer": "<p>Consultá siempre con tu médica o médico antes de incorporarlo, especialmente si tomás medicación, tenés una condición diagnosticada o estás en tratamiento oncológico.</p>"
+            "answer": "<p>Consultá con tu médica antes, sobre todo si tomás medicación o tenés algo diagnosticado.</p>"
           }
         },
         "faq_5": {
           "type": "faq",
           "settings": {
             "question": "¿Tiene efectos adversos?",
-            "answer": "<p>Es un suplemento dietario con ingredientes de uso tradicional. Como con cualquier producto, puede haber sensibilidad individual. Ante cualquier reacción, suspendé el uso y consultá a un profesional.</p>"
+            "answer": "<p>Es un suplemento con ingredientes de uso tradicional. Puede haber sensibilidad individual: ante cualquier reacción, suspendé y consultá.</p>"
           }
         },
         "faq_6": {
           "type": "faq",
           "settings": {
             "question": "¿Sirve si todavía estoy en perimenopausia?",
-            "answer": "<p>La fórmula está pensada para acompañar toda la transición, desde los primeros cambios del ciclo. Si tenés dudas sobre en qué etapa estás, tu ginecóloga es la mejor referencia.</p>"
+            "answer": "<p>Sí, acompaña toda la transición desde los primeros cambios.</p>"
           }
         },
         "faq_7": {
           "type": "faq",
           "settings": {
             "question": "¿Por cuánto tiempo puedo tomarlo?",
-            "answer": "<p>Está pensado para acompañar la transición de forma sostenida. Si tenés dudas sobre tu caso particular, consultá con tu profesional de salud.</p>"
+            "answer": "<p>Está pensado para uso sostenido. Ante dudas, consultá con tu profesional.</p>"
           }
         },
         "faq_8": {
           "type": "faq",
           "settings": {
             "question": "¿Cómo son los envíos y las devoluciones?",
-            "answer": "<p>Enviamos a todo el país por $5.555, y el envío es gratis llevando 2 frascos o más. El plazo de entrega depende de tu localidad y se confirma al finalizar la compra.</p>"
+            "answer": "<p>Envío a todo el país por $5.555, gratis desde 2 frascos. Tenés 10 días para arrepentirte.</p>"
           }
         }
       },
@@ -895,8 +895,8 @@
       ],
       "settings": {
         "eyebrow": "Antes de decidir",
-        "heading": "Todo lo que solés preguntarte",
-        "subheading": "<p>Si queda algo sin responder, escribinos: te contesta una persona de verdad.</p>",
+        "heading": "Lo que todas preguntan",
+        "subheading": "<p>Y si falta algo, te contesta una persona.</p>",
         "open_first": true,
         "contact_text": "<p>¿Tu pregunta no está acá? Escribinos a <a href=\"mailto:urichsan1@gmail.com\">urichsan1@gmail.com</a> y te responde una persona.</p>",
         "bg_color": "#FDF9F7",
@@ -944,7 +944,7 @@
       "settings": {
         "eyebrow": "Empezá hoy",
         "heading": "Tu transición, acompañada",
-        "text": "<p>Un frasco, un gesto diario y cuatro semanas de constancia. Ese es todo el compromiso que te pedimos.</p>",
+        "text": "<p>Un frasco, un gesto diario, cuatro semanas. Ese es todo el compromiso.</p>",
         "button_label": "Quiero mi NaturCalm",
         "button_link": "shopify://products/apoyo-para-la-menopausia",
         "button_note": "Envío $5.555 a todo el país · Gratis llevando 2 frascos o más",
