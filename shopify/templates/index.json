@@ -286,7 +286,7 @@
         "cmp_2": {
           "type": "row",
           "settings": {
-            "label": "Pensada específicamente para la transición menopáusica",
+            "label": "Revisada y aprobada por ginecólogas argentinas",
             "brand_has": true,
             "other_has": false
           }
@@ -294,7 +294,7 @@
         "cmp_3": {
           "type": "row",
           "settings": {
-            "label": "Composición completa publicada en la página",
+            "label": "Pensada específicamente para la transición menopáusica",
             "brand_has": true,
             "other_has": false
           }
@@ -302,12 +302,20 @@
         "cmp_4": {
           "type": "row",
           "settings": {
-            "label": "Dosis por porción visibles, sin mezclas ocultas",
+            "label": "Seis botánicos, cada uno con una función clara",
             "brand_has": true,
             "other_has": false
           }
         },
         "cmp_5": {
+          "type": "row",
+          "settings": {
+            "label": "Composición completa publicada en la página",
+            "brand_has": true,
+            "other_has": false
+          }
+        },
+        "cmp_6": {
           "type": "row",
           "settings": {
             "label": "Sin promesas de resultados que no podemos sostener",
@@ -321,7 +329,8 @@
         "cmp_2",
         "cmp_3",
         "cmp_4",
-        "cmp_5"
+        "cmp_5",
+        "cmp_6"
       ],
       "settings": {
         "eyebrow": "La diferencia",
