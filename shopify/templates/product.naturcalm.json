@@ -35,8 +35,8 @@
             "alignment": "left",
             "text_color": "#2E2624",
             "text_1": "<strong>Fórmula 100% botánica, sin hormonas</strong>",
-            "text_2": "<strong>Pensada para el confort térmico y el descanso</strong>",
-            "text_3": "<strong>Un gesto diario, sin cambiar tu rutina</strong>",
+            "text_2": "<strong>Pensada para el confort térmico: sofocos y sudores nocturnos</strong>",
+            "text_3": "<strong>Contribuye a la energía diaria, sin estimulantes</strong>",
             "icon_scale": 120,
             "icon_color": "#B5717A",
             "icon_1": "check_circle",
@@ -55,7 +55,7 @@
             "border_size": 0,
             "border_color": "#EBD9D8",
             "margin_top": 9,
-            "margin_bottom": 18
+            "margin_bottom": 0
           }
         },
         "nc_offers": {
@@ -294,11 +294,43 @@
             "margin_top": 24,
             "margin_bottom": 0
           }
+        },
+        "nc_bullets_2": {
+          "type": "text",
+          "settings": {
+            "mobile_text_size": 12,
+            "desktop_text_size": 14,
+            "alignment": "left",
+            "text_color": "#2E2624",
+            "text_1": "<strong>Acompaña el descanso y el sueño reparador</strong>",
+            "text_2": "<strong>Ayuda a sostener la calma y el ánimo</strong>",
+            "text_3": "<strong>Una sola toma por día, con el desayuno</strong>",
+            "icon_scale": 120,
+            "icon_color": "#B5717A",
+            "icon_1": "check_circle",
+            "filled_icon_1": false,
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "icon_3": "check_circle",
+            "filled_icon_3": false,
+            "width": "100%",
+            "direction": "vertical",
+            "column_gap": 3,
+            "enable_bg": true,
+            "bg_color": "#F8EDEC",
+            "corner_radius": 20,
+            "padding": 3,
+            "border_size": 0,
+            "border_color": "#EBD9D8",
+            "margin_top": 0,
+            "margin_bottom": 18
+          }
         }
       },
       "block_order": [
         "title",
         "nc_bullets",
+        "nc_bullets_2",
         "nc_offers",
         "buy_buttons",
         "nc_shipping",
@@ -606,7 +638,8 @@
         "padding_top": 90,
         "padding_bottom": 90,
         "padding_top_mobile": 56,
-        "padding_bottom_mobile": 56
+        "padding_bottom_mobile": 56,
+        "image": "shopify://shop_images/naturcalm-petalos-rosa.jpg"
       }
     },
     "nc_mechanism": {
@@ -650,7 +683,8 @@
         "padding_top": 90,
         "padding_bottom": 90,
         "padding_top_mobile": 56,
-        "padding_bottom_mobile": 56
+        "padding_bottom_mobile": 56,
+        "image": "shopify://shop_images/naturcalm-capsula-botanicos.webp"
       }
     },
     "nc_experts": {
@@ -937,7 +971,8 @@
         "padding_top": 70,
         "padding_bottom": 70,
         "padding_top_mobile": 44,
-        "padding_bottom_mobile": 44
+        "padding_bottom_mobile": 44,
+        "image": "shopify://shop_images/c51dffc8-ccd3-4292-8643-0afacb6f3d35.png"
       }
     },
     "nc_reviews": {

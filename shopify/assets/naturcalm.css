@@ -424,6 +424,13 @@
   color: var(--nc-ink);
 }
 .nc-faq__item > summary::-webkit-details-marker { display: none; }
+.nc-faq__q { display: flex; align-items: flex-start; gap: 11px; }
+.nc-faq__tick {
+  flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px;
+  border-radius: 50%; background: var(--nc-accent-pale); color: var(--nc-accent-deep);
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.nc-faq__tick svg { width: 12px; height: 12px; }
 .nc-faq__item > summary:focus-visible { outline: 2px solid var(--nc-accent-deep); outline-offset: 2px; }
 .nc-faq__icon {
   flex: 0 0 22px; width: 22px; height: 22px; position: relative;

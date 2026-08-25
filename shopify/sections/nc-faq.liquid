@@ -21,7 +21,12 @@
           {%- for block in section.blocks -%}
             <details class="nc-faq__item"{% if forloop.first and section.settings.open_first %} open{% endif %} {{ block.shopify_attributes }}>
               <summary>
-                <span>{{ block.settings.question }}</span>
+                <span class="nc-faq__q">
+                  <span class="nc-faq__tick" aria-hidden="true">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>
+                  </span>
+                  {{ block.settings.question }}
+                </span>
                 <span class="nc-faq__icon" aria-hidden="true"></span>
               </summary>
               <div class="nc-faq__answer">
