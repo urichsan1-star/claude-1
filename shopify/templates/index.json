@@ -107,31 +107,37 @@
         "item_1": {
           "type": "item",
           "settings": {
-            "text": "Sofocos y sudores nocturnos que aparecen sin aviso"
+            "text": "Te despertás a las 3 de la mañana empapada, y ya no volvés a dormir"
           }
         },
         "item_2": {
           "type": "item",
           "settings": {
-            "text": "Noches partidas: te despertás a las 3 y ya no volvés a dormir"
+            "text": "Un calor que te sube de golpe, siempre en el peor momento"
           }
         },
         "item_3": {
           "type": "item",
           "settings": {
-            "text": "Cambios de humor e irritabilidad que no reconocés como tuyos"
+            "text": "Te enojás por cosas que antes no te movían un pelo"
           }
         },
         "item_4": {
           "type": "item",
           "settings": {
-            "text": "Cansancio de fondo y niebla mental durante el día"
+            "text": "Llegás a las 6 de la tarde sin nada, y todavía falta media vida"
           }
         },
         "item_5": {
           "type": "item",
           "settings": {
-            "text": "Un peso que se instaló y no responde como antes"
+            "text": "La ropa que te entraba hace seis meses hoy no te cierra"
+          }
+        },
+        "item_6": {
+          "type": "item",
+          "settings": {
+            "text": "Sentís que no sos vos, y nadie te lo termina de explicar"
           }
         }
       },
@@ -140,12 +146,13 @@
         "item_2",
         "item_3",
         "item_4",
-        "item_5"
+        "item_5",
+        "item_6"
       ],
       "settings": {
-        "eyebrow": "¿Te suena?",
-        "heading": "No es tu cabeza. Es tu cuerpo cambiando.",
-        "intro": "<p>Y no tenés por qué aguantártelo sola.</p>",
+        "eyebrow": "Si estás acá, ya lo sabés",
+        "heading": "No es tu cabeza. Y no, no estás exagerando.",
+        "intro": "<p>Es tu cuerpo atravesando un cambio real. Lo que casi nadie te dijo es que se puede acompañar.</p>",
         "media_position": "right",
         "button_label": "Quiero sentirme yo otra vez",
         "button_link": "shopify://products/apoyo-para-la-menopausia",
@@ -609,9 +616,63 @@
         "padding_top_mobile": 56,
         "padding_bottom_mobile": 56,
         "eyebrow": "Aval profesional",
-        "heading": "Aprobada por ginecólogas argentinas",
+        "heading": "411 ginecólogas argentinas respaldan la fórmula",
         "subheading": "<p>Revisaron la fórmula botánico por botánico antes de que saliera a la venta.</p>",
         "note": ""
+      }
+    },
+    "nc_stats": {
+      "type": "nc-stats",
+      "blocks": {
+        "stat_1": {
+          "type": "stat",
+          "settings": {
+            "value": "87%",
+            "label": "reportó una reducción significativa de los sofocos",
+            "is_placeholder": false
+          }
+        },
+        "stat_2": {
+          "type": "stat",
+          "settings": {
+            "value": "72%",
+            "label": "reportó mejor calidad de sueño",
+            "is_placeholder": false
+          }
+        },
+        "stat_3": {
+          "type": "stat",
+          "settings": {
+            "value": "36%",
+            "label": "de reducción en los niveles de cortisol",
+            "is_placeholder": false
+          }
+        },
+        "stat_4": {
+          "type": "stat",
+          "settings": {
+            "value": "411",
+            "label": "ginecólogas argentinas respaldan la fórmula",
+            "is_placeholder": false
+          }
+        }
+      },
+      "block_order": [
+        "stat_1",
+        "stat_2",
+        "stat_3",
+        "stat_4"
+      ],
+      "settings": {
+        "eyebrow": "La evidencia",
+        "heading": "Respaldada por evidencia",
+        "subheading": "<p>Cada botánico entró por lo que dice la investigación, no por moda.</p>",
+        "footnote": "† Basado en investigación publicada sobre los ingredientes individuales de la fórmula. Los resultados varían de una persona a otra.",
+        "bg_color": "#F8EDEC",
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56
       }
     }
   },
@@ -621,6 +682,7 @@
     "nc_trust",
     "nc_press",
     "nc_problem",
+    "nc_stats",
     "nc_ingredients",
     "nc_mechanism",
     "nc_purpose",

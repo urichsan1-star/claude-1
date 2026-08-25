@@ -168,7 +168,7 @@
             "collapse_icon": "carret",
             "display_top_border": true,
             "open": false,
-            "content": "<p>Fórmula 100% botánica, sin hormonas:</p><p>✅ Ashwagandha <em>(Withania somnifera)</em><br/>✅ Salvia <em>(Salvia officinalis)</em><br/>✅ Trébol rojo <em>(Trifolium pratense)</em><br/>✅ Shatavari <em>(Asparagus racemosus)</em><br/>✅ Melisa <em>(Melissa officinalis)</em><br/>✅ Magnesio <em>(bisglicinato)</em></p><p>El detalle de cantidades por porción figura en la etiqueta del envase.</p>",
+            "content": "<p>Fórmula 100% botánica, sin hormonas:</p><p>✅ Ashwagandha <em>(Withania somnifera)</em><br/>✅ Cimicífuga negra <em>(Actaea racemosa)</em><br/>✅ Shatavari <em>(Asparagus racemosus)</em><br/>✅ Guduchi <em>(Tinospora cordifolia)</em><br/>✅ Pétalos de rosa <em>(Rosa damascena)</em><br/>✅ Shankhpushpi <em>(Convolvulus pluricaulis)</em><br/>✅ Gotu Kola <em>(Centella asiatica)</em></p><p>Cantidades por porción en la etiqueta del envase.</p>",
             "page": "",
             "margin_top": 24,
             "margin_bottom": 0
@@ -304,6 +304,37 @@
             "margin_top": 0,
             "margin_bottom": 9
           }
+        },
+        "nc_clin": {
+          "type": "text",
+          "settings": {
+            "mobile_text_size": 12,
+            "desktop_text_size": 13,
+            "alignment": "left",
+            "text_color": "#2C6B42",
+            "text_1": "<strong>Respaldada por 411 ginecólogas argentinas</strong>",
+            "text_2": "",
+            "text_3": "",
+            "icon_scale": 120,
+            "icon_color": "#3E8E5A",
+            "icon_1": "check_circle",
+            "filled_icon_1": true,
+            "icon_2": "",
+            "filled_icon_2": false,
+            "icon_3": "",
+            "filled_icon_3": false,
+            "width": "100%",
+            "direction": "horizontal",
+            "column_gap": 3,
+            "enable_bg": true,
+            "bg_color": "#E7F3EA",
+            "corner_radius": 20,
+            "padding": 3,
+            "border_size": 0,
+            "border_color": "#D2E6D8",
+            "margin_top": 0,
+            "margin_bottom": 15
+          }
         }
       },
       "block_order": [
@@ -311,6 +342,7 @@
         "title",
         "nc_bullets",
         "nc_bullets_2",
+        "nc_clin",
         "nc_packs",
         "buy_buttons",
         "nc_shipping",
@@ -416,31 +448,37 @@
         "item_1": {
           "type": "item",
           "settings": {
-            "text": "Sofocos y sudores nocturnos que aparecen sin aviso"
+            "text": "Te despertás a las 3 de la mañana empapada, y ya no volvés a dormir"
           }
         },
         "item_2": {
           "type": "item",
           "settings": {
-            "text": "Noches partidas: te despertás a las 3 y ya no volvés a dormir"
+            "text": "Un calor que te sube de golpe, siempre en el peor momento"
           }
         },
         "item_3": {
           "type": "item",
           "settings": {
-            "text": "Cambios de humor e irritabilidad que no reconocés como tuyos"
+            "text": "Te enojás por cosas que antes no te movían un pelo"
           }
         },
         "item_4": {
           "type": "item",
           "settings": {
-            "text": "Cansancio de fondo y niebla mental durante el día"
+            "text": "Llegás a las 6 de la tarde sin nada, y todavía falta media vida"
           }
         },
         "item_5": {
           "type": "item",
           "settings": {
-            "text": "Un peso que se instaló y no responde como antes"
+            "text": "La ropa que te entraba hace seis meses hoy no te cierra"
+          }
+        },
+        "item_6": {
+          "type": "item",
+          "settings": {
+            "text": "Sentís que no sos vos, y nadie te lo termina de explicar"
           }
         }
       },
@@ -449,12 +487,13 @@
         "item_2",
         "item_3",
         "item_4",
-        "item_5"
+        "item_5",
+        "item_6"
       ],
       "settings": {
-        "eyebrow": "¿Te suena?",
-        "heading": "No es tu cabeza. Es tu cuerpo cambiando.",
-        "intro": "<p>Y no tenés por qué aguantártelo sola.</p>",
+        "eyebrow": "Si estás acá, ya lo sabés",
+        "heading": "No es tu cabeza. Y no, no estás exagerando.",
+        "intro": "<p>Es tu cuerpo atravesando un cambio real. Lo que casi nadie te dijo es que se puede acompañar.</p>",
         "media_position": "right",
         "button_label": "Quiero sentirme yo otra vez",
         "button_link": "shopify://products/apoyo-para-la-menopausia",
@@ -472,32 +511,32 @@
         "stat_1": {
           "type": "stat",
           "settings": {
-            "value": "6",
-            "label": "botánicos seleccionados en la fórmula",
+            "value": "87%",
+            "label": "reportó una reducción significativa de los sofocos",
             "is_placeholder": false
           }
         },
         "stat_2": {
           "type": "stat",
           "settings": {
-            "value": "0",
-            "label": "hormonas: fórmula 100% vegetal",
+            "value": "72%",
+            "label": "reportó mejor calidad de sueño",
             "is_placeholder": false
           }
         },
         "stat_3": {
           "type": "stat",
           "settings": {
-            "value": "1",
-            "label": "toma por día, con el desayuno",
+            "value": "36%",
+            "label": "de reducción en los niveles de cortisol",
             "is_placeholder": false
           }
         },
         "stat_4": {
           "type": "stat",
           "settings": {
-            "value": "4",
-            "label": "semanas de uso sugerido antes de evaluar",
+            "value": "411",
+            "label": "ginecólogas argentinas respaldan la fórmula",
             "is_placeholder": false
           }
         }
@@ -509,10 +548,10 @@
         "stat_4"
       ],
       "settings": {
-        "eyebrow": "La fórmula",
-        "heading": "Simple a propósito",
-        "subheading": "<p>Seis botánicos. Ninguno de relleno.</p>",
-        "footnote": "Los números describen la fórmula, no resultados prometidos.",
+        "eyebrow": "La evidencia",
+        "heading": "Respaldada por evidencia",
+        "subheading": "<p>Cada botánico entró por lo que dice la investigación, no por moda.</p>",
+        "footnote": "† Basado en investigación publicada sobre los ingredientes individuales de la fórmula. Los resultados varían de una persona a otra.",
         "bg_color": "#F8EDEC",
         "padding_top": 90,
         "padding_bottom": 90,
@@ -526,60 +565,70 @@
         "ing_1": {
           "type": "ingredient",
           "settings": {
+            "tags": "Calma, Descanso",
             "name": "Ashwagandha",
             "latin": "Withania somnifera",
-            "tags": "Calma, Descanso",
-            "text": "Adaptógeno de la tradición ayurvédica. Para el estrés que no afloja.",
+            "text": "Adaptógeno. Para el estrés que no afloja.",
             "dose": ""
           }
         },
         "ing_2": {
           "type": "ingredient",
           "settings": {
-            "name": "Salvia",
-            "latin": "Salvia officinalis",
-            "tags": "Termorregulación",
-            "text": "Clásica de la herboristería europea. Asociada al confort ante el calor repentino.",
+            "tags": "Sofocos",
+            "name": "Cimicífuga negra",
+            "latin": "Actaea racemosa",
+            "text": "De uso clásico frente al calor repentino.",
             "dose": ""
           }
         },
         "ing_3": {
           "type": "ingredient",
           "settings": {
-            "name": "Trébol rojo",
-            "latin": "Trifolium pratense",
-            "tags": "Equilibrio",
-            "text": "Isoflavonas de origen vegetal, ligadas al equilibrio femenino en esta etapa.",
+            "tags": "Vitalidad",
+            "name": "Shatavari",
+            "latin": "Asparagus racemosus",
+            "text": "Raíz ancestral del bienestar femenino.",
             "dose": ""
           }
         },
         "ing_4": {
           "type": "ingredient",
           "settings": {
-            "name": "Shatavari",
-            "latin": "Asparagus racemosus",
-            "tags": "Vitalidad femenina",
-            "text": "Raíz de uso ancestral en el bienestar de la mujer.",
+            "tags": "Defensas",
+            "name": "Guduchi",
+            "latin": "Tinospora cordifolia",
+            "text": "Tónico de la tradición ayurvédica.",
             "dose": ""
           }
         },
         "ing_5": {
           "type": "ingredient",
           "settings": {
-            "name": "Melisa",
-            "latin": "Melissa officinalis",
-            "tags": "Ánimo, Noche",
-            "text": "Hoja suave, de las que se toman al final del día.",
+            "tags": "Ánimo",
+            "name": "Pétalos de rosa",
+            "latin": "Rosa damascena",
+            "text": "Para los días en que todo irrita.",
             "dose": ""
           }
         },
         "ing_6": {
           "type": "ingredient",
           "settings": {
-            "name": "Magnesio",
-            "latin": "Bisglicinato de magnesio",
-            "tags": "Energía, Músculo",
-            "text": "Bisglicinato: contribuye al sistema nervioso y muscular.",
+            "tags": "Claridad mental",
+            "name": "Shankhpushpi",
+            "latin": "Convolvulus pluricaulis",
+            "text": "Contra la niebla mental del día.",
+            "dose": ""
+          }
+        },
+        "ing_7": {
+          "type": "ingredient",
+          "settings": {
+            "tags": "Serenidad, Foco",
+            "name": "Gotu Kola",
+            "latin": "Centella asiatica",
+            "text": "Serenidad sin apagarte.",
             "dose": ""
           }
         }
@@ -590,12 +639,13 @@
         "ing_3",
         "ing_4",
         "ing_5",
-        "ing_6"
+        "ing_6",
+        "ing_7"
       ],
       "settings": {
         "eyebrow": "Qué lleva",
-        "heading": "Seis plantas, cada una con su trabajo",
-        "subheading": "<p>Elegidas una por una. Nada de listas infinitas.</p>",
+        "heading": "Siete plantas, cada una con su trabajo",
+        "subheading": "<p>Elegidas una por una. Nada de relleno.</p>",
         "note": "",
         "button_label": "Lo quiero",
         "button_link": "shopify://products/apoyo-para-la-menopausia",
@@ -694,7 +744,7 @@
       ],
       "settings": {
         "eyebrow": "Aval profesional",
-        "heading": "Aprobada por ginecólogas argentinas",
+        "heading": "411 ginecólogas argentinas respaldan la fórmula",
         "subheading": "<p>Revisaron la fórmula botánico por botánico antes de que saliera a la venta.</p>",
         "note": "",
         "bg_color": "#FDF9F7",
